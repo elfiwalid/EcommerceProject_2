@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Boutique</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@3.2.12/dist/jquery.validate.unobtrusive.min.js"></script>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-danger" href="/">mekog.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Produits">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Categories</a></li>
+                </ul>
+                <!-- Barre de recherche -->
+                <form class="d-flex me-3" method="get" action="/Produits/Recherche">
+                    <input class="form-control me-2" type="search" name="terme" placeholder="Search...">
+                    <button class="btn btn-outline-danger" type="submit">Search</button>
+                </form>
+                <!-- Bouton Panier -->
+                <a href="/Produits/Panier" class="btn btn-danger position-relative">
+                    <i class="bi bi-cart"></i> Panier
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
+                        @if (ViewData["CartCount"] != null) {
+                            @ViewData["CartCount"]
+                        } else {
+                        }
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                        <form asp-action="Logout" asp-controller="Account" method="post" class="d-inline">
+                            <button type="submit" class="btn btn-link nav-link" style="border: none;">Logout</button>
+                        </form>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item"><a class="nav-link" href="/Account/Login">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Account/Register">Register</a></li>
+                }
+                
+            </ul>
+            
+            </div>
+
+            
+    </nav>
+
+    <!-- Content -->
+    <main>
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+<!-- Footer -->
+<footer class="footer-gray border-top py-5">
+    <div class="container">
+        <!-- Features Section -->
+        <div class="row text-center mb-4">
+            <div class="col-md-3">
+                <i class="bi bi-truck fs-1 text-danger"></i>
+                <h6 class="mt-2">100% Genuine</h6>
+                <p class="text-muted">For all orders over $99</p>
+            </div>
+            <div class="col-md-3">
+                <i class="bi bi-arrow-counterclockwise fs-1 text-danger"></i>
+                <h6 class="mt-2">90 Days Return</h6>
+                <p class="text-muted">If goods have problems</p>
+            </div>
+            <div class="col-md-3">
+                <i class="bi bi-shield-check fs-1 text-danger"></i>
+                <h6 class="mt-2">Secure Payment</h6>
+                <p class="text-muted">100% secure payment</p>
+            </div>
+            <div class="col-md-3">
+                <i class="bi bi-headset fs-1 text-danger"></i>
+                <h6 class="mt-2">24/7 Support</h6>
+                <p class="text-muted">Ready to support customers</p>
+            </div>
+        </div>
+
+        <!-- Contact Info and Links -->
+        <div class="row">
+            <div class="col-md-3">
+                <h5 class="text-danger">Call To Order</h5>
+                <p class="fw-bold">(084) 859-481-3614</p>
+                <p class="text-muted">
+                    There are many variations of passages of Lorem Ipsum available.
+                </p>
+                <p><strong>Address:</strong> 139 Brook Drive, South Richmond Hill, NY</p>
+                <p><strong>Email:</strong> <a href="mailto:mekog@support.com" class="text-danger">mekog@support.com</a></p>
+                <div>
+                    <a href="#" class="text-dark me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-dark me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-dark me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-dark"><i class="bi bi-google"></i></a>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <h6>Company Info</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-muted text-decoration-none">About Us</a></li>
+                    <li><a href="#" class="text-muted text-decoration-none">Contact Us</a></li>
+                    <li><a href="#" class="text-muted text-decoration-none">Blogs</a></li>
+                    <li><a href="#" class="text-muted text-decoration-none">Become A Vendor</a></li>
+                    <li><a href="#" class="text-muted text-decoration-none">Find A Store</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6>Let Us Help You</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-muted text-decoration-none">Orders</a></li>
+                    <li><a href="#" class="text-muted text-decoration-none">Downloads</a></li>
+                    <li><a href="#" class="text-muted text-decoration-none">Account Details</a></li>
+                    <li><a href="#" class="text-muted text-decoration-none">Lost Password</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6>Quick Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-muted text-decoration-none">Special Offers</a></li>
+                    <li><a href="#" class="text-muted text-decoration-none">Gift Cards</a></li>
+                    <li><a href="#" class="text-muted text-decoration-none">Privacy Policy</a></li>
+                    <li><a href="#" class="text-muted text-decoration-none">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h6>Sign Up For Newsletter</h6>
+                <p>Subscribe to the weekly newsletter for all the latest updates.</p>
+                <form class="d-flex">
+                    <input type="email" class="form-control me-2" placeholder="Your email">
+                    <button class="btn btn-danger">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="row mt-4 text-center">
+            <div class="col">
+                <p class="text-muted mb-0">&copy; 2024 Mekog. All Rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

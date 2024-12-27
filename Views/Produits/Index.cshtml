@@ -1,0 +1,59 @@
+@model List<EcommerceProject.Models.Produit>
+
+<!-- Hero Section -->
+<div class="hero bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Bienvenue à Mekog</h1>
+        <p class="lead">Découvrez nos offres exclusives aujourd'hui !</p>
+        <a href="#" class="btn btn-light btn-lg">Shop Now</a>
+    </div>
+</div>
+
+<!-- Categories Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Rechercher par catégorie</h2>
+    <div class="row text-center">
+        <div class="col-md-2">
+            <img src="/images/camera.png" alt="Camera" class="img-fluid">
+            <p>Caméra</p>
+        </div>
+        <div class="col-md-2">
+            <img src="/images/phone.png" alt="Phone" class="img-fluid">
+            <p>Téléphones</p>
+        </div>
+        <div class="col-md-2">
+            <img src="/images/laptop.png" alt="Laptop" class="img-fluid">
+            <p>PC & Laptops</p>
+        </div>
+        <div class="col-md-2">
+            <img src="/images/headphones.png" alt="Headphones" class="img-fluid">
+            <p>Écouteurs</p>
+        </div>
+        <div class="col-md-2">
+            <img src="/images/furniture.png" alt="Furniture" class="img-fluid">
+            <p>Meubles</p>
+        </div>
+    </div>
+</div>
+
+<!-- Products Section -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Flash Deals</h2>
+    <div class="row">
+        @foreach (var produit in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow">
+                    <img src="@produit.ImageUrl" class="card-img-top" alt="@produit.Nom">
+                    <div class="card-body">
+                        <h5 class="card-title">@produit.Nom</h5>
+                        <p class="card-text">@produit.Description</p>
+                        <p class="fw-bold text-danger">@produit.Prix €</p>
+                        <a href="/Produits/Details/@produit.Id" class="btn btn-primary">Détails</a>
+                        <a href="/Produits/AjouterAuPanier/@produit.Id" class="btn btn-success">Ajouter au panier</a>
+                    </div>
+                </div>
+            </div>
+        }
+    
+</div>

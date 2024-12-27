@@ -1,0 +1,25 @@
+@model List<EcommerceProject.Models.Produit>
+
+<h2>Produits dans la catégorie : @ViewData["Categorie"]</h2>
+
+@if (!Model.Any())
+{
+    <p>Aucun produit trouvé dans cette catégorie.</p>
+}
+else
+{
+    <div class="row">
+        @foreach (var produit in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">@produit.Nom</h5>
+                        <p class="card-text">Prix : @produit.Prix €</p>
+                        <a href="/Produits/Details/@produit.Id" class="btn btn-primary">Voir Détails</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

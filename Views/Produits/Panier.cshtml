@@ -1,0 +1,101 @@
+@model List<EcommerceProject.Models.CartItem>
+
+<div class="container py-5">
+    <h1 class="text-center mb-4">Votre Panier</h1>
+
+    @if (!Model.Any())
+    {
+        <div class="text-center">
+            <p class="lead">Votre panier est vide.</p>
+            <a href="/Produits" class="btn btn-primary btn-lg">Continuer mes achats</a>
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <!-- Liste des produits -->
+            <div class="col-md-8">
+                <div class="card shadow mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h4>Articles dans le panier</h4>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-hover align-middle">
+                            <thead>
+                                <tr>
+                                    <th>Produit</th>
+                                    <th>Prix</th>
+                                    <th>Quantité</th>
+                                    <th>Total</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <img src="@item.Nom.Replace(" ", "").ToLower() + ".jpg" alt="@item.Nom" class="rounded me-3" style="width: 50px; height: 50px; object-fit: cover;">
+                                                <span>@item.Nom</span>
+                                            </div>
+                                        </td>
+                                        <td>@item.Prix €</td>
+                                        <td>
+                                            <!-- Formulaire pour modifier la quantité -->
+                                            <form method="post" action="/Produits/ModifierQuantite" class="d-inline">
+                                                <input type="hidden" name="id" value="@item.ProduitId" />
+                                                <input type="number" name="quantite" value="@item.Quantite" min="1" class="form-control d-inline-block w-50" />
+                                                <button type="submit" class="btn btn-warning btn-sm">Modifier</button>
+                                            </form>
+                                        </td>
+                                        <td>@(item.Prix * item.Quantite) €</td>
+                                        <td>
+                                            <!-- Formulaire pour supprimer une certaine quantité -->
+                                            <form method="post" action="/Produits/SupprimerQuantite" class="d-inline">
+                                                <input type="hidden" name="id" value="@item.ProduitId" />
+                                                <input type="number" name="quantite" min="1" max="@item.Quantite" value="1" class="form-control d-inline-block w-50" />
+                                                <button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Résumé de la commande -->
+            <div class="col-md-4">
+                <div class="card shadow">
+                    <div class="card-header bg-success text-white">
+                        <h4>Résumé de la commande</h4>
+                    </div>
+                    <div class="card-body">
+                        <p class="d-flex justify-content-between">
+    <span>Sous-total :</span>
+    <strong>@Model.Sum(i => i.Prix * i.Quantite) €</strong>
+</p>
+<hr />
+<p class="d-flex justify-content-between">
+    <span>Taxes (10%) :</span>
+    <strong>@(Model.Sum(i => i.Prix * i.Quantite) * 0.1m) €</strong>
+    
+</p>
+<hr />
+<p class="d-flex justify-content-between">
+    <span><strong>Total :</strong></span>
+    <strong>@(Model.Sum(i => i.Prix * i.Quantite) * 1.1m) €</strong>
+</p>
+
+                        <hr />
+                        <a href="/Produits/Payment" class="btn btn-success btn-lg w-100">Valider la commande</a>
+                        <a href="/Produits" class="btn btn-secondary btn-lg w-100 mt-2">Continuer mes achats</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+</div>
