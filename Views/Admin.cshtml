@@ -1,0 +1,153 @@
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container-fluid">
+    <!-- Sidebar -->
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <h5 class="my-3 text-center">Aeon</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="bi bi-bar-chart"></i> Overview
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-box-seam"></i> Product
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-people"></i> Orders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-cart-check"></i> Checkout
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="bi bi-gear"></i> Settings
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <h1 class="h2 mt-3">Welcome Back, Admin</h1>
+            <p class="lead">Here is the information about all your orders</p>
+
+            <div class="row my-4">
+                <!-- Cards -->
+                <div class="col-md-3">
+                    <div class="card text-center bg-light shadow-sm">
+                        <div class="card-body">
+                            <h5>Total Users</h5>
+                            <h2>89,935</h2>
+                            <p class="text-success">+1.01% this week</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center bg-light shadow-sm">
+                        <div class="card-body">
+                            <h5>Total Products</h5>
+                            <h2>23,283.5</h2>
+                            <p class="text-success">+0.49% this week</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center bg-light shadow-sm">
+                        <div class="card-body">
+                            <h5>Total Orders</h5>
+                            <h2>46,827</h2>
+                            <p class="text-danger">-0.91% this week</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-center bg-light shadow-sm">
+                        <div class="card-body">
+                            <h5>Refunded</h5>
+                            <h2>124,854</h2>
+                            <p class="text-success">+1.51% this week</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orders Analytics -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5>Orders Analytics</h5>
+                    <canvas id="ordersAnalytics"></canvas>
+                </div>
+            </div>
+
+            <!-- Order List -->
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5>Order List</h5>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>ID</th>
+                                <th>Date</th>
+                                <th>Customer Name</th>
+                                <th>Location</th>
+                                <th>Amount</th>
+                                <th>Status Order</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>#12594</td>
+                                <td>Dec 1, 2021</td>
+                                <td>Frank Murlo</td>
+                                <td>312 S Wilmette Ave</td>
+                                <td>$847.69</td>
+                                <td><span class="badge bg-success">New Order</span></td>
+                                <td><button class="btn btn-sm btn-danger">Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('ordersAnalytics').getContext('2d');
+    const ordersAnalytics = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            datasets: [
+                {
+                    label: 'Offline Orders',
+                    data: [20, 40, 30, 60, 50, 80, 70, 90, 60, 50, 70, 100],
+                    borderColor: 'blue',
+                    tension: 0.1,
+                },
+                {
+                    label: 'Online Orders',
+                    data: [50, 60, 70, 40, 50, 60, 80, 70, 90, 100, 110, 120],
+                    borderColor: 'orange',
+                    tension: 0.1,
+                },
+            ],
+        },
+    });
+</script>

@@ -1,39 +1,54 @@
 @model EcommerceProject.Models.RegisterViewModel
 
-<div class="container py-5">
+<div class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card shadow-sm">
-                <div class="card-header bg-danger text-white text-center">
-                    <h4>Créer un compte</h4>
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white text-center">
+                    <h3 class="mb-0">Create Your Account</h3>
                 </div>
                 <div class="card-body">
-                    <form asp-action="Register" method="post">
-                        <div class="form-group mb-3">
-                            <label asp-for="Email" class="form-label">Adresse Email</label>
-                            <input asp-for="Email" class="form-control" />
+                    <form asp-action="Register" method="post" class="needs-validation" novalidate>
+                        <!-- Email Field -->
+                        <div class="mb-3">
+                            <label for="Email" class="form-label fw-bold">Email Address</label>
+                            <input asp-for="Email" class="form-control shadow-sm" placeholder="Enter your email" />
                             <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
-                        <div class="form-group mb-3">
-                            <label asp-for="Password" class="form-label">Mot de passe</label>
-                            <input asp-for="Password" type="password" class="form-control" />
+
+                        <!-- Password Field -->
+                        <div class="mb-3">
+                            <label for="Password" class="form-label fw-bold">Password</label>
+                            <input asp-for="Password" class="form-control shadow-sm" type="password" placeholder="Enter your password" />
                             <span asp-validation-for="Password" class="text-danger"></span>
                         </div>
-                        <div class="form-group mb-3">
-                            <label asp-for="ConfirmPassword" class="form-label">Confirmer le mot de passe</label>
-                            <input asp-for="ConfirmPassword" type="password" class="form-control" />
+
+                        <!-- Confirm Password Field -->
+                        <div class="mb-3">
+                            <label for="ConfirmPassword" class="form-label fw-bold">Confirm Password</label>
+                            <input asp-for="ConfirmPassword" class="form-control shadow-sm" type="password" placeholder="Re-enter your password" />
                             <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                         </div>
-                        <div class="d-grid gap-2">
-                            <button type="submit" class="btn btn-danger">S'inscrire</button>
+
+                        <!-- Role Selection -->
+                        <div class="mb-3">
+                            <label for="Role" class="form-label fw-bold">Select Role</label>
+                            <select class="form-select shadow-sm" name="role">
+                                <option value="User" selected>Utilisateur</option>
+                                <option value="Admin">Administrateur</option>
+                            </select>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary btn-lg shadow-sm">
+                                Register
+                            </button>
                         </div>
                     </form>
                 </div>
-                <div class="card-footer text-center">
-                    <p class="mb-0">
-                        Vous avez déjà un compte ?
-                        <a href="/Account/Login" class="text-danger fw-bold">Se connecter</a>
-                    </p>
+                <div class="card-footer text-center text-muted">
+                    Already have an account? <a href="/Account/Login" class="text-primary">Login here</a>
                 </div>
             </div>
         </div>

@@ -9,12 +9,14 @@ namespace EcommerceProject.Controllers
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ILogger<AccountController> _logger;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, ILogger<AccountController> logger)
+        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager, ILogger<AccountController> logger)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _roleManager = roleManager;
             _logger = logger;
         }
 
@@ -26,7 +28,7 @@ namespace EcommerceProject.Controllers
 
         // POST: Register
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterViewModel model)
+        public async Task<IActionResult> Register(RegisterViewModel model, string role)
         {
             if (ModelState.IsValid)
             {
@@ -40,6 +42,27 @@ namespace EcommerceProject.Controllers
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("Utilisateur inscrit : {Email}", model.Email);
+
+                    // Ajouter un rôle à l'utilisateur
+                    if (string.IsNullOrEmpty(role) || role.ToLower() == "user")
+                    {
+                        // Assigner le rôle "User" par défaut
+                        if (!await _roleManager.RoleExistsAsync("User"))
+                        {
+                            await _roleManager.CreateAsync(new IdentityRole("User"));
+                        }
+                        await _userManager.AddToRoleAsync(user, "User");
+                    }
+                    else if (role.ToLower() == "admin")
+                    {
+                        // Assigner le rôle "Admin"
+                        if (!await _roleManager.RoleExistsAsync("Admin"))
+                        {
+                            await _roleManager.CreateAsync(new IdentityRole("Admin"));
+                        }
+                        await _userManager.AddToRoleAsync(user, "Admin");
+                    }
+
                     await _signInManager.SignInAsync(user, isPersistent: false);
                     return RedirectToAction("Index", "Home");
                 }

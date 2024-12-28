@@ -220,4 +220,5 @@
 /Users/youssefkitabrhi/EcommerceProject/obj/Debug/net9.0/EcommerceProject.pdb
 /Users/youssefkitabrhi/EcommerceProject/obj/Debug/net9.0/EcommerceProject.genruntimeconfig.cache
 /Users/youssefkitabrhi/EcommerceProject/obj/Debug/net9.0/ref/EcommerceProject.dll
-/Users/youssefkitabrhi/EcommerceProject/obj/Debug/net9.0/compressed/37usvrdvb1-3ujcdq3y3p.gz
+/Users/youssefkitabrhi/EcommerceProject/obj/Debug/net9.0/EcommerceProject.sourcelink.json
+/Users/youssefkitabrhi/EcommerceProject/obj/Debug/net9.0/compressed/37usvrdvb1-7zsrldi1l1.gz
