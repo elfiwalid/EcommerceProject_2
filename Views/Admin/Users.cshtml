@@ -1,0 +1,133 @@
+    @model IEnumerable<IdentityUser>
+    @using Microsoft.AspNetCore.Identity
+
+    @{
+        ViewData["Title"] = "User Management";
+    }
+
+    <div class="container-fluid py-5">
+        <!-- Page Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1 class="fw-bold text-primary">User Management</h1>
+            <button class="btn btn-primary btn-lg shadow-sm" data-bs-toggle="modal" data-bs-target="#addUserModal">
+                <i class="bi bi-person-plus"></i> Add User
+            </button>
+        </div>
+
+        <!-- User Grid -->
+        <div class="row g-4">
+            @if (!Model.Any())
+            {
+                <div class="col-12 text-center">
+                    <p class="text-muted">No users found</p>
+                </div>
+            }
+            else
+            {
+                @foreach (var user in Model)
+                {
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card shadow border-0">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">@user.UserName</h5>
+                                <p class="card-text text-muted"><i class="bi bi-envelope"></i> @user.Email</p>
+                                <div class="d-flex justify-content-between mt-4">
+                                    <!-- Edit Button -->
+                                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editUserModal-@user.Id">
+                                        <i class="bi bi-pencil-square"></i> Edit
+                                    </button>
+
+                                    <!-- Delete Button -->
+                                    <button class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteUserModal-@user.Id">
+                                        <i class="bi bi-trash"></i> Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Edit User Modal -->
+                    <div class="modal fade" id="editUserModal-@user.Id" tabindex="-1" aria-labelledby="editUserModalLabel-@user.Id" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-primary text-white">
+                                    <h5 class="modal-title" id="editUserModalLabel-@user.Id">Edit User</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <form asp-action="EditUser" method="post">
+                                    <div class="modal-body">
+                                        <input type="hidden" name="Id" value="@user.Id" />
+                                        <div class="mb-3">
+                                            <label for="UserName-@user.Id" class="form-label">Username</label>
+                                            <input type="text" name="UserName" class="form-control shadow-sm" id="UserName-@user.Id" value="@user.UserName" required />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="Email-@user.Id" class="form-label">Email</label>
+                                            <input type="email" name="Email" class="form-control shadow-sm" id="Email-@user.Id" value="@user.Email" required />
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Delete User Modal -->
+                    <div class="modal fade" id="deleteUserModal-@user.Id" tabindex="-1" aria-labelledby="deleteUserModalLabel-@user.Id" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header bg-danger text-white">
+                                    <h5 class="modal-title" id="deleteUserModalLabel-@user.Id">Delete User</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <form asp-action="DeleteUser" method="post">
+                                    <div class="modal-body">
+                                        <p>Are you sure you want to delete <strong>@user.UserName</strong>?</p>
+                                        <input type="hidden" name="Id" value="@user.Id" />
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+    <!-- Add User Modal -->
+    <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="addUserModalLabel">Add New User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form asp-action="AddUser" method="post">
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="UserName" class="form-label">Username</label>
+                            <input type="text" name="UserName" class="form-control shadow-sm" id="UserName" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="Email" class="form-label">Email</label>
+                            <input type="email" name="Email" class="form-control shadow-sm" id="Email" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="Password" class="form-label">Password</label>
+                            <input type="password" name="Password" class="form-control shadow-sm" id="Password" required />
+                        </div>
+              
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Add User</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

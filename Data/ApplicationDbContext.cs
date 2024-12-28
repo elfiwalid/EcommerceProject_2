@@ -1,12 +1,16 @@
 using EcommerceProject.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
+
 
 namespace EcommerceProject.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+        public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { 
+            
+        }
 
         // DbSet for Products
         public DbSet<Produit> Produits { get; set; }

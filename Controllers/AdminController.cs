@@ -1,90 +1,155 @@
 using EcommerceProject.Data;
 using EcommerceProject.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace EcommerceProject.Controllers
 {
     [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
+        private readonly UserManager<IdentityUser> _userManager;
         private readonly ApplicationDbContext _context;
 
-         public IActionResult Dashboard()
+        public AdminController(UserManager<IdentityUser> userManager, ApplicationDbContext context)
+        {
+            _userManager = userManager;
+            _context = context;
+        }
+
+        // Dashboard
+        public IActionResult Dashboard()
         {
             return View();
         }
 
-        public IActionResult AjouterProduit()
-{
-    return View(); // This looks for AjouterProduit.cshtml in Views/Admin
-}
-
-
-
-      public IActionResult ModifierProduit()
-{
-    return View(); // This looks for AjouterProduit.cshtml in Views/Admin
-}
-        public AdminController(ApplicationDbContext context)
+        // View all users
+        public IActionResult Users()
         {
-            _context = context;
+            var users = _userManager.Users.ToList();
+            return View(users);
+        }
+
+        // Add User via Modal
+        [HttpPost]
+public async Task<IActionResult> AddUser(string userName, string email, string password)
+{
+    if (ModelState.IsValid)
+    {
+        var user = new IdentityUser
+        {
+            UserName = userName,
+            Email = email,
+            EmailConfirmed = true // Automatically confirm the email
+        };
+
+        // Create the user
+        var result = await _userManager.CreateAsync(user, password);
+
+        if (result.Succeeded)
+        {
+            // Assign a default role
+            await _userManager.AddToRoleAsync(user, "User");
+
+            return RedirectToAction("Users"); // Redirect to the Users view
+        }
+
+        // Handle errors during user creation
+        foreach (var error in result.Errors)
+        {
+            ModelState.AddModelError("", error.Description);
+        }
+    }
+
+    return RedirectToAction("Users"); // Redirect in case of failure
+}
+
+        // Edit User via Modal
+        [HttpPost]
+        public async Task<IActionResult> EditUser(string id, string userName, string email)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            user.UserName = userName;
+            user.Email = email;
+
+            var result = await _userManager.UpdateAsync(user);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Users");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
+
+            return RedirectToAction("Users");
+        }
+
+        // Delete User via Modal
+        [HttpPost]
+        public async Task<IActionResult> DeleteUser(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user != null)
+            {
+                await _userManager.DeleteAsync(user);
+            }
+            return RedirectToAction("Users");
         }
 
         // List Products
         public IActionResult Produits()
-{
-    var produits = _context.Produits.ToList();
-    return View(produits);
-}
-
-[HttpPost]
-[HttpPost]
-public async Task<IActionResult> AjouterProduit(Produit produit)
-{
-    if (!ModelState.IsValid)
-    {
-        // Debugging output
-        foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
         {
-            Console.WriteLine(error.ErrorMessage);
+            var produits = _context.Produits.ToList();
+            return View(produits);
         }
 
-        return View(produit);
-    }
+        // Add Product
+        [HttpPost]
+        public async Task<IActionResult> AjouterProduit(Produit produit)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Produits.Add(produit);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Produits");
+            }
+            return RedirectToAction("Produits");
+        }
 
-    _context.Produits.Add(produit);
-    await _context.SaveChangesAsync();
-    return RedirectToAction("Produits");
-}
+        // Edit Product
+        [HttpPost]
+        public async Task<IActionResult> ModifierProduit(Produit produit)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Produits.Update(produit);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Produits");
+            }
+            return RedirectToAction("Produits");
+        }
 
-
-
-[HttpPost]
-public async Task<IActionResult> ModifierProduit(Produit produit)
-{
-    if (ModelState.IsValid)
-    {
-        _context.Produits.Update(produit);
-        await _context.SaveChangesAsync();
-    }
-    return RedirectToAction("Produits");
-}
-
-[HttpPost]
-public async Task<IActionResult> SupprimerProduit(int id)
-{
-    var produit = await _context.Produits.FindAsync(id);
-    if (produit != null)
-    {
-        _context.Produits.Remove(produit);
-        await _context.SaveChangesAsync();
-    }
-    return RedirectToAction("Produits");
-}
-
-        
+        // Delete Product
+        [HttpPost]
+        public async Task<IActionResult> SupprimerProduit(int id)
+        {
+            var produit = await _context.Produits.FindAsync(id);
+            if (produit != null)
+            {
+                _context.Produits.Remove(produit);
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction("Produits");
+        }
     }
 }
