@@ -1,0 +1,44 @@
+@model EcommerceProject.Models.Produit
+
+@{
+    ViewData["Title"] = "Edit Product";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Edit Product</h2>
+    <form asp-action="ModifierProduit" method="post">
+        <input type="hidden" asp-for="Id" /> <!-- Hidden field for Product ID -->
+        
+        <div class="mb-3">
+            <label for="Nom" class="form-label">Product Name</label>
+            <input asp-for="Nom" class="form-control" />
+            <span asp-validation-for="Nom" class="text-danger"></span>
+        </div>
+        
+        <div class="mb-3">
+            <label for="Description" class="form-label">Description</label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        
+        <div class="mb-3">
+            <label for="Prix" class="form-label">Price</label>
+            <input asp-for="Prix" type="number" step="0.01" class="form-control" />
+            <span asp-validation-for="Prix" class="text-danger"></span>
+        </div>
+        
+        <div class="mb-3">
+            <label for="Categorie" class="form-label">Category</label>
+            <input asp-for="Categorie" class="form-control" />
+            <span asp-validation-for="Categorie" class="text-danger"></span>
+        </div>
+        
+        <div class="mb-3">
+            <label for="ImageUrl" class="form-label">Image URL</label>
+            <input asp-for="ImageUrl" class="form-control" />
+            <span asp-validation-for="ImageUrl" class="text-danger"></span>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </form>
+</div>

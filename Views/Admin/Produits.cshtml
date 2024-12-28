@@ -1,0 +1,192 @@
+@model IEnumerable<EcommerceProject.Models.Produit>
+
+@{
+    ViewData["Title"] = "Product Management Dashboard";
+}
+
+<div class="container-fluid py-5">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold text-danger">Product Management</h1>
+        <button class="btn btn-danger btn-lg shadow-sm" data-bs-toggle="modal" data-bs-target="#addProductModal">
+            <i class="bi bi-plus-circle"></i> Add Product
+        </button>
+    </div>
+
+    <!-- Search and Filter Section -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <input type="text" id="searchBox" class="form-control shadow-sm" placeholder="Search products...">
+        </div>
+        <div class="col-md-4">
+            <select id="categoryFilter" class="form-select shadow-sm">
+                <option value="">All Categories</option>
+                @foreach (var category in Model.Select(p => string.IsNullOrEmpty(p.Categorie) ? "Uncategorized" : p.Categorie).Distinct())
+                {
+                    <option value="@category">@category</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-2 text-end">
+            <button class="btn btn-outline-dark btn-sm shadow-sm" id="resetFilters">
+                <i class="bi bi-arrow-clockwise"></i> Reset Filters
+            </button>
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="productGrid" class="row g-4">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="@product.ImageUrl" class="card-img-top" alt="@product.Nom" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold text-truncate">@product.Nom</h5>
+                        <p class="card-text text-muted text-truncate">@product.Description</p>
+                        <p class="text-success fw-bold">$@product.Prix</p>
+                        <p class="text-muted"><small>Category: @(string.IsNullOrEmpty(product.Categorie) ? "Uncategorized" : product.Categorie)</small></p>
+                    </div>
+                    <div class="card-footer bg-white border-0 d-flex justify-content-between">
+                        <button class="btn btn-warning btn-sm shadow-sm" data-bs-toggle="modal" data-bs-target="#editProductModal-@product.Id">
+                            <i class="bi bi-pencil-square"></i> Edit
+                        </button>
+                        <button class="btn btn-danger btn-sm shadow-sm" data-bs-toggle="modal" data-bs-target="#deleteProductModal-@product.Id">
+                            <i class="bi bi-trash"></i> Delete
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Edit Product Modal -->
+            <div class="modal fade" id="editProductModal-@product.Id" tabindex="-1" aria-labelledby="editProductModalLabel-@product.Id" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title" id="editProductModalLabel-@product.Id">Edit Product</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form asp-action="ModifierProduit" method="post">
+                            <div class="modal-body">
+                                <input type="hidden" name="Id" value="@product.Id" />
+                                <div class="mb-3">
+                                    <label for="Nom-@product.Id" class="form-label">Name</label>
+                                    <input type="text" name="Nom" class="form-control shadow-sm" id="Nom-@product.Id" value="@product.Nom" required />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Description-@product.Id" class="form-label">Description</label>
+                                    <textarea name="Description" class="form-control shadow-sm" id="Description-@product.Id" required>@product.Description</textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Prix-@product.Id" class="form-label">Price</label>
+                                    <input type="number" name="Prix" class="form-control shadow-sm" id="Prix-@product.Id" value="@product.Prix" required />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Categorie-@product.Id" class="form-label">Category</label>
+                                    <input type="text" name="Categorie" class="form-control shadow-sm" id="Categorie-@product.Id" value="@product.Categorie" required />
+                                </div>
+                                <div class="mb-3">
+                                    <label for="ImageUrl-@product.Id" class="form-label">Image URL</label>
+                                    <input type="text" name="ImageUrl" class="form-control shadow-sm" id="ImageUrl-@product.Id" value="@product.ImageUrl" required />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delete Product Modal -->
+            <div class="modal fade" id="deleteProductModal-@product.Id" tabindex="-1" aria-labelledby="deleteProductModalLabel-@product.Id" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title" id="deleteProductModalLabel-@product.Id">Delete Product</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form asp-action="SupprimerProduit" method="post">
+                            <div class="modal-body">
+                                <p>Are you sure you want to delete <strong>@product.Nom</strong>?</p>
+                                <input type="hidden" name="Id" value="@product.Id" />
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<!-- Add Product Modal -->
+<div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="AjouterProduit" method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="Nom" class="form-label">Name</label>
+                        <input type="text" name="Nom" class="form-control shadow-sm" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Description" class="form-label">Description</label>
+                        <textarea name="Description" class="form-control shadow-sm" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Prix" class="form-label">Price</label>
+                        <input type="number" name="Prix" class="form-control shadow-sm" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Categorie" class="form-label">Category</label>
+                        <input type="text" name="Categorie" class="form-control shadow-sm" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="ImageUrl" class="form-label">Image URL</label>
+                        <input type="text" name="ImageUrl" class="form-control shadow-sm" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger">Add Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Search Functionality
+    document.getElementById('searchBox').addEventListener('input', function () {
+        const searchQuery = this.value.toLowerCase();
+        document.querySelectorAll('#productGrid .card').forEach(card => {
+            const productName = card.querySelector('.card-title').innerText.toLowerCase();
+            card.style.display = productName.includes(searchQuery) ? 'block' : 'none';
+        });
+    });
+
+    // Filter by Category
+    document.getElementById('categoryFilter').addEventListener('change', function () {
+        const selectedCategory = this.value.toLowerCase();
+        document.querySelectorAll('#productGrid .card').forEach(card => {
+            const productCategory = card.querySelector('p.text-muted small').innerText.toLowerCase();
+            card.style.display = selectedCategory === '' || productCategory.includes(selectedCategory) ? 'block' : 'none';
+        });
+    });
+
+    // Reset Filters
+    document.getElementById('resetFilters').addEventListener('click', function () {
+        document.getElementById('searchBox').value = '';
+        document.getElementById('categoryFilter').value = '';
+        document.querySelectorAll('#productGrid .card').forEach(card => {
+            card.style.display = 'block';
+        });
+    });
+</script>
