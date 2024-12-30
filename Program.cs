@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
+
 
 // Configurer les règles de mot de passe pour Identity
 builder.Services.Configure<IdentityOptions>(options =>
@@ -73,5 +75,17 @@ app.MapControllerRoute(
 app.MapControllerRoute(
     name: "admin",
     pattern: "{controller=Admin}/{action=Dashboard}/{id?}");
+
+    app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Account}/{action=ForgotPassword}/{id?}");
+
+    //     app.MapControllerRoute(
+    // name: "admin",
+    // pattern: "{controller=Account}/{action=ForgotPassword}/{id?}");
+
+    
+
+
 
 app.Run();

@@ -14,6 +14,50 @@ namespace EcommerceProject.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ApplicationDbContext _context;
 
+         public class AccountController : Controller
+    {
+        private readonly UserManager<IdentityUser> _userManager;
+
+        public AccountController(UserManager<IdentityUser> userManager)
+        {
+            _userManager = userManager;
+        }
+
+        // Forgot Password - GET
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        // Forgot Password - POST
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+            {
+                ModelState.AddModelError("", "Email is required.");
+                return View();
+            }
+
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user == null)
+            {
+                ModelState.AddModelError("", "No user found with this email.");
+                return View();
+            }
+
+            // Generate reset token
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            // Build reset link
+            var resetLink = Url.Action("ResetPassword", "Account", new { token, email = user.Email }, Request.Scheme);
+
+            // Log the reset link (for testing purposes; replace with email logic in production)
+            ViewBag.Message = $"Password reset link: <a href='{resetLink}'>{resetLink}</a>";
+            return View();
+        }
+    }
+
         public AdminController(UserManager<IdentityUser> userManager, ApplicationDbContext context)
         {
             _userManager = userManager;
