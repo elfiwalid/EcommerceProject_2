@@ -6,27 +6,29 @@ using Microsoft.AspNetCore.Identity;
 
 namespace EcommerceProject.Data
 {
-        public class ApplicationDbContext : IdentityDbContext<IdentityUser>
+      public class ApplicationDbContext : IdentityDbContext<IdentityUser>
+{
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+
+    public DbSet<Produit> Produits { get; set; }
+    public DbSet<DeliveryViewModel> Deliveries { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
+
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { 
-            
-        }
+        base.OnModelCreating(modelBuilder);
 
-        // DbSet for Products
-        public DbSet<Produit> Produits { get; set; }
+        modelBuilder.Entity<Produit>()
+            .HasKey(p => p.Id);
 
-        // DbSet for CartItem is not required because it's not a database entity.
-        // DbSet for other models like LoginViewModel, PaymentViewModel, RegisterViewModel 
-        // are also not included because these are view models, not database entities.
+        modelBuilder.Entity<Produit>()
+            .Property(p => p.Prix)
+            .HasColumnType("decimal(18,2)");
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-
-            // Configure precision for decimal fields
-            modelBuilder.Entity<Produit>()
-                .Property(p => p.Prix)
-                .HasColumnType("decimal(18,2)");
-        }
+        modelBuilder.Entity<DeliveryViewModel>()
+            .HasKey(d => d.Id);
     }
+}
 }

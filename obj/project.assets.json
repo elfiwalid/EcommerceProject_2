@@ -5830,11 +5830,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/youssefkitabrhi/EcommerceProject/EcommerceProject.csproj",
+      "projectUniqueName": "/Users/youssefkitabrhi/Desktop/EcommerceProject/EcommerceProject.csproj",
       "projectName": "EcommerceProject",
-      "projectPath": "/Users/youssefkitabrhi/EcommerceProject/EcommerceProject.csproj",
+      "projectPath": "/Users/youssefkitabrhi/Desktop/EcommerceProject/EcommerceProject.csproj",
       "packagesPath": "/Users/youssefkitabrhi/.nuget/packages/",
-      "outputPath": "/Users/youssefkitabrhi/EcommerceProject/obj/",
+      "outputPath": "/Users/youssefkitabrhi/Desktop/EcommerceProject/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/youssefkitabrhi/.nuget/NuGet/NuGet.Config"

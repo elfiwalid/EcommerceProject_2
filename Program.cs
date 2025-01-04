@@ -83,6 +83,13 @@ app.MapControllerRoute(
     //     app.MapControllerRoute(
     // name: "admin",
     // pattern: "{controller=Account}/{action=ForgotPassword}/{id?}");
+   app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+});
+
 
     
 

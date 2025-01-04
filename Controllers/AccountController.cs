@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using EcommerceProject.Models;
+using EcommerceProject.Data;
 using Microsoft.Extensions.Logging;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace EcommerceProject.Controllers
 {
@@ -11,13 +14,19 @@ namespace EcommerceProject.Controllers
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly ILogger<AccountController> _logger;
+        private readonly ApplicationDbContext _context;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager, ILogger<AccountController> logger)
+        public AccountController(UserManager<IdentityUser> userManager, 
+                                 SignInManager<IdentityUser> signInManager, 
+                                 RoleManager<IdentityRole> roleManager, 
+                                 ILogger<AccountController> logger, 
+                                 ApplicationDbContext context)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
             _logger = logger;
+            _context = context;
         }
 
         // GET: Register
@@ -43,10 +52,8 @@ namespace EcommerceProject.Controllers
                 {
                     _logger.LogInformation("Utilisateur inscrit : {Email}", model.Email);
 
-                    // Ajouter un rôle à l'utilisateur
                     if (string.IsNullOrEmpty(role) || role.ToLower() == "user")
                     {
-                        // Assigner le rôle "User" par défaut
                         if (!await _roleManager.RoleExistsAsync("User"))
                         {
                             await _roleManager.CreateAsync(new IdentityRole("User"));
@@ -55,7 +62,6 @@ namespace EcommerceProject.Controllers
                     }
                     else if (role.ToLower() == "admin")
                     {
-                        // Assigner le rôle "Admin"
                         if (!await _roleManager.RoleExistsAsync("Admin"))
                         {
                             await _roleManager.CreateAsync(new IdentityRole("Admin"));
@@ -118,6 +124,69 @@ namespace EcommerceProject.Controllers
             _logger.LogInformation("Utilisateur déconnecté.");
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
+        }
+
+        // GET: Shop
+        [Route("account/shop")]
+        public IActionResult Shop()
+        {
+            _logger.LogInformation("La méthode Shop a été appelée.");
+
+            var produits = _context.Produits.ToList();
+            return View(produits);
+        }
+
+        // GET: Profile
+        public async Task<IActionResult> Profile()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+            {
+                _logger.LogWarning("Aucun utilisateur connecté.");
+                return RedirectToAction("Login");
+            }
+
+            var userProfile = new ProfileViewModel
+            {
+                Email = user.Email,
+                UserName = user.UserName
+            };
+
+            return View(userProfile);
+        }
+
+        // POST: Update Profile
+        [HttpPost]
+        public async Task<IActionResult> Profile(ProfileViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.GetUserAsync(User);
+                if (user == null)
+                {
+                    _logger.LogWarning("Aucun utilisateur connecté.");
+                    return RedirectToAction("Login");
+                }
+
+                user.UserName = model.UserName;
+                user.Email = model.Email;
+
+                var result = await _userManager.UpdateAsync(user);
+                if (result.Succeeded)
+                {
+                    _logger.LogInformation("Profil mis à jour pour : {Email}", user.Email);
+                    TempData["SuccessMessage"] = "Profil mis à jour avec succès.";
+                    return RedirectToAction("Profile");
+                }
+
+                foreach (var error in result.Errors)
+                {
+                    _logger.LogWarning("Erreur lors de la mise à jour du profil : {Error}", error.Description);
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+            }
+
+            return View(model);
         }
     }
 }

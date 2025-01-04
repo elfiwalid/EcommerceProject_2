@@ -1,59 +1,316 @@
 @model List<EcommerceProject.Models.Produit>
 
 <!-- Hero Section -->
-<div class="hero bg-primary text-white text-center py-5">
-    <div class="container">
-        <h1 class="display-4 fw-bold">Bienvenue à Mekog</h1>
-        <p class="lead">Découvrez nos offres exclusives aujourd'hui !</p>
-        <a href="#" class="btn btn-light btn-lg">Shop Now</a>
+<!-- Hero Section -->
+<section class="hero bg-dark text-white text-center py-5" style="background-image: url('/images/hero-bg.jpg'); background-size: cover; background-position: center; position: relative;">
+    <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-shadow">
+        <h1 class="display-2 fw-bold mb-4 animated fadeInUp">Bienvenue à <span class="text-primary">Mekog</span></h1>
+        <p class="fs-4 mb-5 animated fadeInUp" style="animation-delay: 0.5s;">Des produits exceptionnels, des prix incroyables. Profitez-en maintenant !</p>
+        <a href="#products" class="btn btn-primary btn-lg px-4 py-2 rounded-pill shadow-lg animated fadeInUp" style="animation-delay: 1s;">Shop Now</a>
     </div>
-</div>
+    <!-- Overlay to darken the background -->
+    <div class="overlay"></div>
+</section>
+
 
 <!-- Categories Section -->
-<div class="container my-5">
-    <h2 class="text-center mb-4">Rechercher par catégorie</h2>
-    <div class="row text-center">
-        <div class="col-md-2">
-            <img src="/images/camera.png" alt="Camera" class="img-fluid">
-            <p>Caméra</p>
-        </div>
-        <div class="col-md-2">
-            <img src="/images/phone.png" alt="Phone" class="img-fluid">
-            <p>Téléphones</p>
-        </div>
-        <div class="col-md-2">
-            <img src="/images/laptop.png" alt="Laptop" class="img-fluid">
-            <p>PC & Laptops</p>
-        </div>
-        <div class="col-md-2">
-            <img src="/images/headphones.png" alt="Headphones" class="img-fluid">
-            <p>Écouteurs</p>
-        </div>
-        <div class="col-md-2">
-            <img src="/images/furniture.png" alt="Furniture" class="img-fluid">
-            <p>Meubles</p>
-        </div>
-    </div>
-</div>
-
-<!-- Products Section -->
-<div class="container my-5">
-    <h2 class="text-center mb-4">Flash Deals</h2>
-    <div class="row">
-        @foreach (var produit in Model)
-        {
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow">
-                    <img src="@produit.ImageUrl" class="card-img-top" alt="@produit.Nom">
-                    <div class="card-body">
-                        <h5 class="card-title">@produit.Nom</h5>
-                        <p class="card-text">@produit.Description</p>
-                        <p class="fw-bold text-danger">@produit.Prix €</p>
-                        <a href="/Produits/Details/@produit.Id" class="btn btn-primary">Détails</a>
-                        <a href="/Produits/AjouterAuPanier/@produit.Id" class="btn btn-success">Ajouter au panier</a>
+<section class="categories py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold display-4 text-dark">Explorez Nos Catégories</h2>
+        <div class="row g-4">
+            <!-- Category Card with Image -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="category-card d-flex flex-column justify-content-center align-items-center shadow-lg rounded py-4">
+                    <div class="icon-container mb-3">
+                        <img src="/images/camera-icon.png" alt="Caméras" class="img-fluid" style="max-height: 80px; object-fit: contain;">
                     </div>
+                    <h5 class="fw-bold text-secondary">Caméras</h5>
                 </div>
             </div>
-        }
-    
-</div>
+            <!-- Category Card with Image -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="category-card d-flex flex-column justify-content-center align-items-center shadow-lg rounded py-4">
+                    <div class="icon-container mb-3">
+                        <img src="/images/phone-icon.png" alt="Téléphones" class="img-fluid" style="max-height: 80px; object-fit: contain;">
+                    </div>
+                    <h5 class="fw-bold text-secondary">Téléphones</h5>
+                </div>
+            </div>
+            <!-- Category Card with Image -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="category-card d-flex flex-column justify-content-center align-items-center shadow-lg rounded py-4">
+                    <div class="icon-container mb-3">
+                        <img src="/images/laptop-icon.png" alt="PC & Laptops" class="img-fluid" style="max-height: 80px; object-fit: contain;">
+                    </div>
+                    <h5 class="fw-bold text-secondary">PC & Laptops</h5>
+                </div>
+            </div>
+            <!-- Category Card with Image -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="category-card d-flex flex-column justify-content-center align-items-center shadow-lg rounded py-4">
+                    <div class="icon-container mb-3">
+                        <img src="/images/headphone-icon.png" alt="Écouteurs" class="img-fluid" style="max-height: 80px; object-fit: contain;">
+                    </div>
+                    <h5 class="fw-bold text-secondary">Écouteurs</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Flash Deals Section -->
+<section class="flash-deals py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold display-3 text-primary">Offres Flash Exclusives</h2>
+        <div class="row g-5">
+            @foreach (var produit in Model)
+            {
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card position-relative shadow-lg rounded-3 overflow-hidden bg-white">
+                        <!-- Image Produit -->
+                        <div class="product-image position-relative">
+                            <img src="@produit.ImageUrl" alt="@produit.Nom" class="img-fluid w-100">
+                            <div class="badge-discount position-absolute top-0 start-0 bg-danger text-white px-3 py-1 rounded-end">
+                                -20%
+                            </div>
+                            <div class="badge-stock position-absolute bottom-0 end-0 bg-warning text-dark px-3 py-1 rounded-start">
+                                Stock Limité
+                            </div>
+                        </div>
+                        <!-- Détails Produit -->
+                        <div class="product-info p-4 text-center">
+                            <h5 class="fw-bold text-dark mb-2 text-truncate" title="@produit.Nom">@produit.Nom</h5>
+                            <div class="rating mb-2">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                                <i class="far fa-star text-muted"></i>
+                            </div>
+                            <p class="text-muted small text-truncate" title="@produit.Description">@produit.Description</p>
+                            <div class="price-container d-flex justify-content-between align-items-center mt-3">
+                                <span class="text-danger fw-bold h4">@produit.Prix €</span>
+                                <div>
+                                    <a href="/Produits/Details/@produit.Id" class="btn btn-outline-primary btn-sm rounded-pill px-3">
+                                        Détails
+                                    </a>
+                                    <a href="/Produits/AjouterAuPanier/@produit.Id" class="btn btn-primary btn-sm rounded-pill px-3">
+                                        Ajouter
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<style>
+   /* Section Offres Flash */
+   .flash-deals h2 {
+       font-size: 3rem;
+       font-weight: bold;
+       margin-bottom: 40px;
+       color: #0056b3;
+       letter-spacing: 1.5px;
+   }
+
+   /* Carte produit */
+   .product-card {
+       background-color: #fff;
+       border-radius: 15px;
+       transition: transform 0.3s ease, box-shadow 0.3s ease;
+       position: relative;
+       overflow: hidden;
+       height: 100%;
+   }
+
+   .product-card:hover {
+       transform: translateY(-10px);
+       box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+   }
+
+   /* Image du produit */
+   .product-image {
+       position: relative;
+       height: 250px;
+       overflow: hidden;
+   }
+
+   .product-image img {
+       width: 100%;
+       height: 100%;
+       object-fit: cover;
+       transition: transform 0.3s ease;
+   }
+
+   .product-card:hover .product-image img {
+       transform: scale(1.1);
+   }
+
+   /* Badge de réduction */
+   .badge-discount {
+       font-size: 0.9rem;
+       font-weight: bold;
+       border-radius: 0 10px 10px 0;
+       z-index: 1;
+   }
+
+   .badge-stock {
+       font-size: 0.9rem;
+       font-weight: bold;
+       border-radius: 10px 0 0 10px;
+       z-index: 1;
+   }
+
+   /* Informations sur le produit */
+   .product-info {
+       padding: 15px;
+       text-align: center;
+   }
+
+   .product-info h5 {
+       font-size: 1.2rem;
+       font-weight: 700;
+       margin-bottom: 10px;
+       color: #333;
+   }
+
+   .product-info p {
+       font-size: 0.9rem;
+       margin-bottom: 15px;
+       color: #777;
+   }
+
+   /* Boutons */
+   .product-info .btn {
+       font-size: 0.85rem;
+       font-weight: bold;
+       padding: 8px 20px;
+       transition: all 0.3s ease;
+   }
+
+   .btn-primary {
+       background-color: #007bff;
+       border-color: #007bff;
+   }
+
+   .btn-primary:hover {
+       background-color: #0056b3;
+       border-color: #0056b3;
+   }
+
+   .btn-outline-primary {
+       border: 2px solid #007bff;
+       color: #007bff;
+   }
+
+   .btn-outline-primary:hover {
+       background-color: #007bff;
+       color: white;
+   }
+
+   /* Animation des boutons */
+   .btn:hover {
+       opacity: 0.8;
+   }
+
+   /* Responsive */
+   @@media (max-width: 768px) {
+       .product-card {
+           margin-bottom: 30px;
+       }
+
+       .product-info h5 {
+           font-size: 1rem;
+       }
+
+       .product-info p {
+           font-size: 0.85rem;
+       }
+   }
+
+   /* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    color: white;
+    padding: 0;
+}
+
+/* Dark overlay to enhance text visibility */
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
+    z-index: -1;
+}
+
+/* Animations */
+@@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated.fadeInUp {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Text styles */
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding shadow to make text stand out */
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding shadow to make text stand out */
+}
+
+/* Button styles */
+.hero .btn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #003366;
+    transform: translateY(-5px); /* Adding hover effect to the button */
+}
+
+/* Responsive Design */
+@@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero .btn {
+        font-size: 1rem;
+    }
+}
+
+</style>

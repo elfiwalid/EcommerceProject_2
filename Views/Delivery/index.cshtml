@@ -1,0 +1,233 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraison - Mekog</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9fafc;
+            color: #333;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: linear-gradient(90deg, #0056b3, #007bff);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar-brand:hover {
+            color: #ffcc00;
+        }
+
+        .navbar-nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav a:hover {
+            color: #ffcc00;
+        }
+
+        .navbar-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .navbar-icons i {
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar-icons i:hover {
+            color: #ffcc00;
+            transform: scale(1.2);
+        }
+
+        /* Form Container */
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        .form-header {
+            text-align: center;
+            background: linear-gradient(135deg, #4CAF50, #2ECC71);
+            padding: 15px;
+            border-radius: 10px 10px 0 0;
+            color: white;
+        }
+
+        .form-header h2 {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .form-body {
+            padding: 20px;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #333;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        .form-footer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #5a6268;
+        }
+
+        .btn-primary {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        /* Animation */
+        @@keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <!-- Formulaire -->
+    <div class="container">
+        <div class="form-header">
+            <h2><i class="fas fa-truck"></i> Informations de Livraison</h2>
+        </div>
+        <div class="form-body">
+            <form asp-action="Index" method="post">
+                <div>
+                    <label for="FullName">Nom complet</label>
+                    <input type="text" id="FullName" name="FullName" placeholder="Entrez votre nom complet" required />
+                </div>
+                <div>
+                    <label for="Address">Adresse</label>
+                    <input type="text" id="Address" name="Address" placeholder="Entrez votre adresse" required />
+                </div>
+                <div>
+                    <label for="City">Ville</label>
+                    <input type="text" id="City" name="City" placeholder="Entrez votre ville" required />
+                </div>
+                <div>
+                    <label for="PostalCode">Code postal</label>
+                    <input type="text" id="PostalCode" name="PostalCode" placeholder="Entrez votre code postal" required />
+                </div>
+                <div>
+                    <label for="Country">Pays</label>
+                    <input type="text" id="Country" name="Country" placeholder="Entrez votre pays" required />
+                </div>
+                <div>
+                    <label for="PhoneNumber">Numéro de téléphone</label>
+                    <input type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Entrez votre numéro de téléphone" required />
+                </div>
+                <div class="form-footer">
+    <a href="/Produits/Panier" class="btn btn-secondary">
+        <i class="fas fa-arrow-left"></i> Retour
+    </a> 
+    <button type="button" class="btn btn-primary" onclick="window.location.href='/Produits/Payment'">
+        <i class="fas fa-check"></i> Confirmer
+    </button>
+</div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
