@@ -1,21 +1,14 @@
-using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 
-public class PaymentViewModel
+namespace EcommerceProject.Models
 {
-    [Required]
-    public string PaymentMethod { get; set; }
-
-    public IFormFile BankTransferFile { get; set; }
-
-    [RequiredIf("PaymentMethod", "CreditCard", ErrorMessage = "Le nom sur la carte est requis.")]
-    public string CardHolderName { get; set; }
-
-    [RequiredIf("PaymentMethod", "CreditCard", ErrorMessage = "Le numéro de carte est requis.")]
-    public string CardNumber { get; set; }
-
-    [RequiredIf("PaymentMethod", "CreditCard", ErrorMessage = "La date d'expiration est requise.")]
-    public string ExpiryDate { get; set; }
-
-    [RequiredIf("PaymentMethod", "CreditCard", ErrorMessage = "Le CVV est requis.")]
-    public string CVV { get; set; }
+    public class PaymentViewModel
+    {
+        public string PaymentMethod { get; set; }
+        public IFormFile BankTransferFile { get; set; }
+        public string CardHolderName { get; set; }
+        public string CardNumber { get; set; }
+        public string ExpiryDate { get; set; }
+        public string CVV { get; set; }
+    }
 }
