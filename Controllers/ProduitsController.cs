@@ -11,7 +11,7 @@ namespace EcommerceProject.Controllers
     {
         private static List<Produit> produits = new List<Produit>
         {
-            new Produit { Id = 1, Nom = "Produit 1", Description = "Description 1", Prix = 10.99m, ImageUrl = "/images/product1.jpg", Categorie = "Électronique" },
+            new Produit { Id = 1, Nom = "Produit 1", Description = "Description 1", Prix = 10.99m, ImageUrl = "/images/camera-icon.png", Categorie = "Électronique" },
             new Produit { Id = 2, Nom = "Produit 2", Description = "Description 2", Prix = 20.99m, ImageUrl = "/images/product2.jpg", Categorie = "Maison" },
             new Produit { Id = 3, Nom = "Produit 3", Description = "Description 3", Prix = 30.99m, ImageUrl = "/images/product3.jpg", Categorie = "Vêtements" }
         };

@@ -181,7 +181,7 @@
 
         <!-- Body -->
         <div class="card-body">
-<form asp-action="ProcessPayment" method="post" enctype="multipart/form-data">
+<form action="/Payment/ProcessPayment" method="post" enctype="multipart/form-data">
                 <!-- Payment Methods -->
                 <div class="mb-4">
                     <label>Méthode de paiement</label>
@@ -266,6 +266,11 @@
                 document.getElementById('BankDetails').style.display = this.value === 'BankTransfer' ? 'block' : 'none';
             });
         });
+
+        document.querySelector('.btn-primary').addEventListener('click', function () {
+    console.log("Bouton cliqué");
+});
+
     </script>
 </body>
 </html>

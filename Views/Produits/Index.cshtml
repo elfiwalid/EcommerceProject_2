@@ -1,16 +1,18 @@
 @model List<EcommerceProject.Models.Produit>
 
 <!-- Hero Section -->
-<!-- Hero Section -->
-<section class="hero bg-dark text-white text-center py-5" style="background-image: url('/images/hero-bg.jpg'); background-size: cover; background-position: center; position: relative;">
-    <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-shadow">
-        <h1 class="display-2 fw-bold mb-4 animated fadeInUp">Bienvenue à <span class="text-primary">Mekog</span></h1>
-        <p class="fs-4 mb-5 animated fadeInUp" style="animation-delay: 0.5s;">Des produits exceptionnels, des prix incroyables. Profitez-en maintenant !</p>
-        <a href="#products" class="btn btn-primary btn-lg px-4 py-2 rounded-pill shadow-lg animated fadeInUp" style="animation-delay: 1s;">Shop Now</a>
-    </div>
-    <!-- Overlay to darken the background -->
+<section class="hero bg-dark text-white text-center py-5" style="position: relative;">
     <div class="overlay"></div>
+    <img src="/images/techno.png" alt="Techno" class="hero-background" />
+    <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-shadow">
+        <h1 class="display-2 fw-bold mb-4">Bienvenue à <span class="text-primary">Mekog</span></h1>
+        <p class="fs-4 mb-4">Des produits exceptionnels, des prix incroyables. Profitez-en maintenant !</p>
+        <a href="/account/shop" class="btn btn-primary btn-lg px-4 py-2 rounded-pill shadow-lg">Shop Now</a>
+    </div>
 </section>
+
+
+
 
 
 <!-- Categories Section -->
@@ -57,6 +59,7 @@
         </div>
     </div>
 </section>
+
 
 <!-- Flash Deals Section -->
 <section class="flash-deals py-5">
@@ -232,25 +235,64 @@
        }
    }
 
-   /* Hero Section */
+ /* Hero Section */
 .hero {
-    background-size: cover;
-    background-position: center;
     position: relative;
-    height: 100vh;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    padding: 0;
+    animation: fadeInSection 1.5s ease-in-out forwards; /* Section fade-in animation */
 }
 
-/* Dark overlay to enhance text visibility */
+/* Full-Section Background Image */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire section */
+    z-index: 0; /* Place it behind content */
+    animation: zoomInBackground 12s infinite alternate; /* Smooth zoom animation */
+}
+
+/* Overlay */
 .hero .overlay {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
-    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay for better text visibility */
+    z-index: 1;
+    animation: fadeInOverlay 1.5s ease-in-out forwards;
+}
+
+/* Text Content */
+.hero .container {
+    position: relative;
+    z-index: 2; /* Place content above the background and overlay */
+    text-align: center;
+    animation: slideInText 1.5s ease-out forwards; /* Text slide-in animation */
+}
+
+/* Button Styles */
+.hero .btn-primary {
+    margin-top: 20px;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* Animations */
@@ -312,5 +354,146 @@
         font-size: 1rem;
     }
 }
+
+/* Fade-in Effect for Section */
+.categories {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Category Card Hover Effects */
+.category-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon Bounce Effect on Hover */
+.icon-container img {
+    transition: transform 0.3s ease;
+}
+
+.icon-container img:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Responsive Spacing */
+@@media (max-width: 576px) {
+    .category-card {
+        padding: 1rem;
+    }
+}
+
+
+
+
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    color: white;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Button Position Below Text */
+.hero .btn-primary {
+    margin-top: 20px; /* Add spacing between text and button */
+    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Vibrant gradient */
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 2; /* Ensure it's above the overlay */
+}
+
+/* Button Hover Effect */
+.hero .btn-primary:hover {
+    transform: translateY(-5px) scale(1.1); /* Lift and enlarge on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Overlay to Darken Background */
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Stronger dark overlay */
+    z-index: 1;
+}
+
+/* Text Centering */
+.hero h1,
+.hero p {
+    z-index: 2; /* Ensure they appear above the overlay */
+    text-align: center;
+}
+
+
+/* Keyframe for Text Visibility and Fade-Out */
+@@keyframes fadeOutText {
+    0% {
+        opacity: 1; /* Fully visible */
+    }
+    83.33% { /* After 10 seconds (10s / 12s = ~83%) */
+        opacity: 1;
+    }
+    100% {
+        opacity: 0; /* Fully invisible */
+    }
+}
+
+/* Button Hover Effect */
+.hero .btn-primary {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 3;
+}
+
+.hero .btn-primary:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero .btn-primary {
+        padding: 0.8rem 2rem;
+    }
+}
+
+
+
 
 </style>

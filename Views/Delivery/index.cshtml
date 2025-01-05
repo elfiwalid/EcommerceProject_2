@@ -188,46 +188,72 @@
 
     <!-- Formulaire -->
     <div class="container">
-        <div class="form-header">
-            <h2><i class="fas fa-truck"></i> Informations de Livraison</h2>
-        </div>
-        <div class="form-body">
-            <form asp-action="Index" method="post">
-                <div>
-                    <label for="FullName">Nom complet</label>
-                    <input type="text" id="FullName" name="FullName" placeholder="Entrez votre nom complet" required />
-                </div>
-                <div>
-                    <label for="Address">Adresse</label>
-                    <input type="text" id="Address" name="Address" placeholder="Entrez votre adresse" required />
-                </div>
-                <div>
-                    <label for="City">Ville</label>
-                    <input type="text" id="City" name="City" placeholder="Entrez votre ville" required />
-                </div>
-                <div>
-                    <label for="PostalCode">Code postal</label>
-                    <input type="text" id="PostalCode" name="PostalCode" placeholder="Entrez votre code postal" required />
-                </div>
-                <div>
-                    <label for="Country">Pays</label>
-                    <input type="text" id="Country" name="Country" placeholder="Entrez votre pays" required />
-                </div>
-                <div>
-                    <label for="PhoneNumber">Numéro de téléphone</label>
-                    <input type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Entrez votre numéro de téléphone" required />
-                </div>
-                <div class="form-footer">
-    <a href="/Produits/Panier" class="btn btn-secondary">
-        <i class="fas fa-arrow-left"></i> Retour
-    </a> 
-    <button type="button" class="btn btn-primary" onclick="window.location.href='/Produits/Payment'">
-        <i class="fas fa-check"></i> Confirmer
-    </button>
-</div>
-            </form>
-        </div>
+    <div class="form-header">
+        <h2><i class="fas fa-truck"></i> Informations de Livraison</h2>
     </div>
+    <div class="form-body">
+        <form asp-action="Index" method="post" id="deliveryForm">
+            <div>
+                <label for="FullName">Nom complet</label>
+                <input type="text" id="FullName" name="FullName" placeholder="Entrez votre nom complet" required />
+            </div>
+            <div>
+                <label for="Address">Adresse</label>
+                <input type="text" id="Address" name="Address" placeholder="Entrez votre adresse" required />
+            </div>
+            <div>
+                <label for="City">Ville</label>
+                <input type="text" id="City" name="City" placeholder="Entrez votre ville" required />
+            </div>
+            <div>
+                <label for="PostalCode">Code postal</label>
+                <input type="text" id="PostalCode" name="PostalCode" placeholder="Entrez votre code postal" required />
+            </div>
+            <div>
+                <label for="Country">Pays</label>
+                <input type="text" id="Country" name="Country" placeholder="Entrez votre pays" required />
+            </div>
+            <div>
+                <label for="PhoneNumber">Numéro de téléphone</label>
+                <input type="text" id="PhoneNumber" name="PhoneNumber" placeholder="Entrez votre numéro de téléphone" required />
+            </div>
+            <div class="form-footer">
+                <a href="/Produits/Panier" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Retour
+                </a>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-check"></i> Confirmer
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById("deliveryForm").addEventListener("submit", function (event) {
+        let form = event.target;
+        let inputs = form.querySelectorAll("input[required]");
+        let valid = true;
+
+        // Vérifier chaque champ requis
+        inputs.forEach(input => {
+            if (!input.value.trim()) {
+                valid = false;
+                input.style.borderColor = "red";
+                input.addEventListener("input", function () {
+                    input.style.borderColor = "";
+                });
+            }
+        });
+
+        // Si un champ est vide, empêcher la soumission
+        if (!valid) {
+            alert("Veuillez remplir tous les champs obligatoires.");
+            event.preventDefault();
+        }
+    });
+</script>
+
 
 </body>
 </html>

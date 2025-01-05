@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cXsCvG/e/G4QloFk39GOY1L3DhmFCU2BUZ/W8ZQjkIU=",
+  "Hash": "JhtdQEXJ2kNpnlquMtDxc/QSQrSqZ6xoN0yai8bFp7o=",
   "Source": "EcommerceProject",
   "BasePath": "_content/EcommerceProject",
   "Mode": "Default",
@@ -1485,6 +1485,111 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/camera-icon.png",
+      "SourceId": "EcommerceProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/",
+      "BasePath": "_content/EcommerceProject",
+      "RelativePath": "images/camera-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ieur7an4ii",
+      "Integrity": "qhF/vJWwjds3E79CmrfpoczsMaiWptU7l9FkJadEK7A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/camera-icon.png"
+    },
+    {
+      "Identity": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/headphone-icon.png",
+      "SourceId": "EcommerceProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/",
+      "BasePath": "_content/EcommerceProject",
+      "RelativePath": "images/headphone-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hxlne4r41p",
+      "Integrity": "OyO5J+2HJcSlWQx9UDCF8793ovQfyo7ffQXM2y+AX30=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/headphone-icon.png"
+    },
+    {
+      "Identity": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/laptop-icon.png",
+      "SourceId": "EcommerceProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/",
+      "BasePath": "_content/EcommerceProject",
+      "RelativePath": "images/laptop-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "vqpbp80tdj",
+      "Integrity": "6Y8LX6ZwIzum3f+ntyXE+BL1Snz6lQ7GmDmCSYwxMTA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/laptop-icon.png"
+    },
+    {
+      "Identity": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/phone-icon.png",
+      "SourceId": "EcommerceProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/",
+      "BasePath": "_content/EcommerceProject",
+      "RelativePath": "images/phone-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w3vdux1qi8",
+      "Integrity": "vHCd8+ZJMod9SipZ37ulkIGUrRwfeN5WkgZrGa5eQnQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/phone-icon.png"
+    },
+    {
+      "Identity": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/techno.png",
+      "SourceId": "EcommerceProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/",
+      "BasePath": "_content/EcommerceProject",
+      "RelativePath": "images/techno#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zfvvwfxirv",
+      "Integrity": "EQONfcqdQJPu6SMsLEzyxwJ5fH4l7HLFCJpe3LYWFng=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/techno.png"
     },
     {
       "Identity": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/js/site.js",
@@ -4256,6 +4361,416 @@
         {
           "Name": "integrity",
           "Value": "sha256-+/824NtfTA0L7Mr42Fo+86YJP4R5cigdi9S7Fx5VVl4="
+        }
+      ]
+    },
+    {
+      "Route": "images/camera-icon.ieur7an4ii.png",
+      "AssetFile": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/camera-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37576"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qhF/vJWwjds3E79CmrfpoczsMaiWptU7l9FkJadEK7A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 13:40:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ieur7an4ii"
+        },
+        {
+          "Name": "label",
+          "Value": "images/camera-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qhF/vJWwjds3E79CmrfpoczsMaiWptU7l9FkJadEK7A="
+        }
+      ]
+    },
+    {
+      "Route": "images/camera-icon.png",
+      "AssetFile": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/camera-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "37576"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qhF/vJWwjds3E79CmrfpoczsMaiWptU7l9FkJadEK7A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 13:40:35 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qhF/vJWwjds3E79CmrfpoczsMaiWptU7l9FkJadEK7A="
+        }
+      ]
+    },
+    {
+      "Route": "images/headphone-icon.hxlne4r41p.png",
+      "AssetFile": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/headphone-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22303"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OyO5J+2HJcSlWQx9UDCF8793ovQfyo7ffQXM2y+AX30=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 13:39:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hxlne4r41p"
+        },
+        {
+          "Name": "label",
+          "Value": "images/headphone-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OyO5J+2HJcSlWQx9UDCF8793ovQfyo7ffQXM2y+AX30="
+        }
+      ]
+    },
+    {
+      "Route": "images/headphone-icon.png",
+      "AssetFile": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/headphone-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "22303"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OyO5J+2HJcSlWQx9UDCF8793ovQfyo7ffQXM2y+AX30=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 13:39:05 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OyO5J+2HJcSlWQx9UDCF8793ovQfyo7ffQXM2y+AX30="
+        }
+      ]
+    },
+    {
+      "Route": "images/laptop-icon.png",
+      "AssetFile": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/laptop-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41127"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6Y8LX6ZwIzum3f+ntyXE+BL1Snz6lQ7GmDmCSYwxMTA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 13:40:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6Y8LX6ZwIzum3f+ntyXE+BL1Snz6lQ7GmDmCSYwxMTA="
+        }
+      ]
+    },
+    {
+      "Route": "images/laptop-icon.vqpbp80tdj.png",
+      "AssetFile": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/laptop-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "41127"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6Y8LX6ZwIzum3f+ntyXE+BL1Snz6lQ7GmDmCSYwxMTA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 13:40:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "vqpbp80tdj"
+        },
+        {
+          "Name": "label",
+          "Value": "images/laptop-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6Y8LX6ZwIzum3f+ntyXE+BL1Snz6lQ7GmDmCSYwxMTA="
+        }
+      ]
+    },
+    {
+      "Route": "images/phone-icon.png",
+      "AssetFile": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/phone-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39311"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vHCd8+ZJMod9SipZ37ulkIGUrRwfeN5WkgZrGa5eQnQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 22:14:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vHCd8+ZJMod9SipZ37ulkIGUrRwfeN5WkgZrGa5eQnQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/phone-icon.w3vdux1qi8.png",
+      "AssetFile": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/phone-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "39311"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vHCd8+ZJMod9SipZ37ulkIGUrRwfeN5WkgZrGa5eQnQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 22:14:09 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w3vdux1qi8"
+        },
+        {
+          "Name": "label",
+          "Value": "images/phone-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vHCd8+ZJMod9SipZ37ulkIGUrRwfeN5WkgZrGa5eQnQ="
+        }
+      ]
+    },
+    {
+      "Route": "images/techno.png",
+      "AssetFile": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/techno.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "139475"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EQONfcqdQJPu6SMsLEzyxwJ5fH4l7HLFCJpe3LYWFng=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 22:15:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EQONfcqdQJPu6SMsLEzyxwJ5fH4l7HLFCJpe3LYWFng="
+        }
+      ]
+    },
+    {
+      "Route": "images/techno.zfvvwfxirv.png",
+      "AssetFile": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/techno.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "139475"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EQONfcqdQJPu6SMsLEzyxwJ5fH4l7HLFCJpe3LYWFng=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 04 Jan 2025 22:15:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zfvvwfxirv"
+        },
+        {
+          "Name": "label",
+          "Value": "images/techno.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-EQONfcqdQJPu6SMsLEzyxwJ5fH4l7HLFCJpe3LYWFng="
         }
       ]
     },

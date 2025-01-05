@@ -17,6 +17,26 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/camera-icon.png",
+      "PackagePath": "staticwebassets/images/camera-icon.png"
+    },
+    {
+      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/headphone-icon.png",
+      "PackagePath": "staticwebassets/images/headphone-icon.png"
+    },
+    {
+      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/laptop-icon.png",
+      "PackagePath": "staticwebassets/images/laptop-icon.png"
+    },
+    {
+      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/phone-icon.png",
+      "PackagePath": "staticwebassets/images/phone-icon.png"
+    },
+    {
+      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/techno.png",
+      "PackagePath": "staticwebassets/images/techno.png"
+    },
+    {
       "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

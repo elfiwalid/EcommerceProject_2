@@ -38,6 +38,7 @@
         }
 
         .btn {
+            display: inline-block;
             padding: 10px 20px;
             font-size: 1rem;
             font-weight: bold;
@@ -49,6 +50,7 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
             text-decoration: none;
+            margin: 10px 5px; /* spacing between buttons */
         }
 
         .btn:hover {
@@ -61,6 +63,7 @@
         <h1><i class="fas fa-check-circle"></i> Confirmation</h1>
         <p>@ViewBag.Message</p>
         <a href="/" class="btn">Retour à l'accueil</a>
+        <a href="/Produits/Payment" class="btn">Passer au paiement</a>
     </div>
 </body>
 </html>

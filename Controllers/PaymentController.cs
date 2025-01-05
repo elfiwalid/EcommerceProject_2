@@ -1,45 +1,47 @@
-using EcommerceProject.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
-using System.IO;
-using System.Threading.Tasks;
+    using EcommerceProject.Models;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Logging;
+    using System;
+    using System.IO;
+    using System.Threading.Tasks;
 
-namespace EcommerceProject.Controllers
-{
-    public class PaymentController : Controller
+    namespace EcommerceProject.Controllers
     {
-        private readonly ILogger<PaymentController> _logger;
-
-        public PaymentController(ILogger<PaymentController> logger)
+        public class PaymentController : Controller
         {
-            _logger = logger;
-        }
+            private readonly ILogger<PaymentController> _logger;
 
-        [HttpGet]
-        public IActionResult Index()
-        {
-            ViewData["Total"] = 100.00; // Example total amount
-            return View(new PaymentViewModel());
-        }
+            public PaymentController(ILogger<PaymentController> logger)
+            {
+                _logger = logger;
+            }
 
-        [HttpPost]
-public async Task<IActionResult> ProcessPayment(PaymentViewModel model)
+            [HttpGet]
+            public IActionResult Index()
+            {
+                ViewData["Total"] = 100.00; // Example total amount
+                return View(new PaymentViewModel());
+            }
+
+            [HttpPost]
+            [Route("Payment/ProcessPayment")]
+            public async Task<IActionResult> ProcessPayment(PaymentViewModel model)
 {
+    _logger.LogInformation("ProcessPayment method called");
+
     if (ModelState.IsValid)
     {
         switch (model.PaymentMethod)
         {
             case "CreditCard":
-                // Process Credit Card payment
+                _logger.LogInformation("Credit Card payment selected");
                 TempData["SuccessMessage"] = "Votre paiement par carte a été traité avec succès.";
                 return RedirectToAction("Confirmation");
 
             case "PayPal":
-                // Redirect to PayPal
+                _logger.LogInformation("PayPal payment selected");
                 string paypalUrl = "https://www.sandbox.paypal.com/cgi-bin/webscr";
                 string businessEmail = "your-paypal-email@example.com";
-
                 string returnUrl = Url.Action("Confirmation", "Payment", null, Request.Scheme);
                 string cancelUrl = Url.Action("Cancel", "Payment", null, Request.Scheme);
 
@@ -47,26 +49,21 @@ public async Task<IActionResult> ProcessPayment(PaymentViewModel model)
                 return Redirect(paypalUrl + queryString);
 
             case "COD":
-                // Handle Cash on Delivery
+                _logger.LogInformation("Cash on Delivery payment selected");
                 TempData["SuccessMessage"] = "Votre commande a été enregistrée avec Paiement à la livraison.";
                 return RedirectToAction("Confirmation");
 
             case "BankTransfer":
-                // Process Bank Transfer
+                _logger.LogInformation("Bank Transfer payment selected");
                 if (model.BankTransferFile != null && model.BankTransferFile.Length > 0)
                 {
-                    // Generate a unique file name
                     var fileName = $"{Guid.NewGuid()}_{Path.GetFileName(model.BankTransferFile.FileName)}";
-
-                    // Define the path to save the file (e.g., "wwwroot/uploads")
                     var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads", fileName);
 
-                    // Save the file to the server
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
                         await model.BankTransferFile.CopyToAsync(stream);
                     }
-
                     TempData["SuccessMessage"] = "Votre preuve de virement bancaire a été téléchargée avec succès.";
                 }
                 else
@@ -77,29 +74,28 @@ public async Task<IActionResult> ProcessPayment(PaymentViewModel model)
                 return RedirectToAction("Confirmation");
 
             default:
-                // If no valid payment method is selected
+                _logger.LogWarning("Invalid payment method selected");
                 ModelState.AddModelError("", "Méthode de paiement invalide.");
                 return View("Index", model);
         }
     }
 
-    // If model state is invalid, return to the form
+    _logger.LogWarning("ModelState is invalid");
     return View("Index", model);
 }
 
+            [HttpGet]
+            public IActionResult Confirmation()
+            {
+                ViewBag.Message = TempData["SuccessMessage"] ?? "Votre paiement a été traité.";
+                return View();
+            }
 
-        [HttpGet]
-        public IActionResult Confirmation()
-        {
-            ViewBag.Message = TempData["SuccessMessage"] ?? "Votre paiement a été traité.";
-            return View();
-        }
-
-        [HttpGet]
-        public IActionResult Cancel()
-        {
-            ViewBag.Message = "Le paiement a été annulé.";
-            return View("Confirmation");
+            [HttpGet]
+            public IActionResult Cancel()
+            {
+                ViewBag.Message = "Le paiement a été annulé.";
+                return View("Confirmation");
+            }
         }
     }
-}
