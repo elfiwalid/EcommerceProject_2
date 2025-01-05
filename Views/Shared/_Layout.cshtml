@@ -71,74 +71,114 @@
 </script>
 
 
-    <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
     <div class="container">
-        <a class="navbar-brand fw-bold text-danger" href="/">mekog.</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <!-- Logo -->
+        <a class="navbar-brand fw-bold text-primary" href="/" style="font-size: 1.8rem; font-family: 'Poppins', sans-serif;">
+            mekog.
+        </a>
+
+        <!-- Burger Menu -->
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!-- Navigation Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link" href="/Home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="/account/shop">Shop</a></li>
+            <ul class="navbar-nav me-auto align-items-center">
                 <li class="nav-item">
-                    <div class="dropdown">
-                        <button class="btn btn-light dropdown-toggle nav-link" type="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                            Categories
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
-                            <li><a class="dropdown-item" href="/Categories/Electronics">Electronics</a></li>
-                            <li><a class="dropdown-item" href="/Categories/Fashion">Fashion</a></li>
-                            <li><a class="dropdown-item" href="/Categories/Home">Home</a></li>
-                        </ul>
-                    </div>
+                    <a class="nav-link text-dark fw-semibold px-3" href="/Home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-semibold px-3" href="/account/shop">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark fw-semibold px-3" href="/Order">Mes Commandes</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark fw-semibold px-3" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Categories
+                    </a>
+                    <ul class="dropdown-menu shadow-sm border-0 rounded-3" aria-labelledby="categoriesDropdown">
+                        <li><a class="dropdown-item text-dark" href="/Categories/Electronics">Electronics</a></li>
+                        <li><a class="dropdown-item text-dark" href="/Categories/Fashion">Fashion</a></li>
+                        <li><a class="dropdown-item text-dark" href="/Categories/Home">Home</a></li>
+                    </ul>
                 </li>
             </ul>
 
-            <!-- Dashboard button visible only to Admins -->
-            @if (User.IsInRole("Admin"))
-            {
-                <a href="/Admin/Dashboard" class="btn btn-dashboard me-3">
-                    <i class="bi bi-speedometer2 me-2"></i> Dashboard
-                </a>
-            }
-            <!-- Login/Logout buttons -->
+            <!-- Actions Section -->
+            <div class="d-flex align-items-center">
+                <!-- Dashboard Button (Admin Only) -->
+                @if (User.IsInRole("Admin"))
+                {
+                    <a href="/Admin/Dashboard" class="btn btn-outline-primary fw-semibold me-3 rounded-pill">
+                        <i class="bi bi-speedometer2"></i> Dashboard
+                    </a>
+                }
 
-            <!-- Barre de recherche -->
-            <form class="d-flex me-3" method="get" action="/Produits/Recherche">
-                <input class="form-control me-2" type="search" name="terme" placeholder="Search...">
-                <button class="btn btn-outline-danger" type="submit">Search</button>
-            </form>
-            <!-- Bouton Panier -->
-            <a href="/Produits/Panier" class="btn btn-danger position-relative">
-                <i class="bi bi-cart"></i> Panier
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning">
-                    @if (ViewData["CartCount"] != null) {
-                        @ViewData["CartCount"]
-                    }
-                </span>
-            </a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
+                <!-- Search Bar -->
+                <form class="d-flex me-3" method="get" action="/Produits/Recherche">
+                    <input class="form-control rounded-pill border-light shadow-sm" type="search" name="terme" placeholder="Search..." style="max-width: 200px;">
+                    <button class="btn btn-primary rounded-pill ms-2" type="submit">Search</button>
+                </form>
+
+                <!-- Cart Button -->
+                <a href="/Produits/Panier" class="btn btn-primary position-relative rounded-pill px-4">
+                    <i class="bi bi-cart me-2"></i> Panier
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark shadow-sm">
+                        @if (ViewData["CartCount"] != null) {
+                            @ViewData["CartCount"]
+                        }
+                    </span>
+                </a>
+
+                <!-- Authentication Links -->
                 @if (User.Identity.IsAuthenticated)
                 {
-                    <li class="nav-item">
-                        <form asp-action="Logout" asp-controller="Account" method="post" class="d-inline">
-                            <button type="submit" class="btn btn-link nav-link" style="border: none;">Logout</button>
-                        </form>
-                    </li>
+                    <form asp-action="Logout" asp-controller="Account" method="post" class="d-inline ms-3">
+                        <button type="submit" class="btn btn-link text-danger fw-medium">Logout</button>
+                    </form>
                 }
                 else
                 {
-                    <li class="nav-item"><a class="nav-link" href="/Account/Login">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/Account/Register">Register</a></li>
+                    <a class="btn btn-link text-dark fw-medium ms-3" href="/Account/Login">Login</a>
+                    <a class="btn btn-outline-primary rounded-pill ms-2 px-4 fw-medium" href="/Account/Register">Register</a>
                 }
-            </ul>
+            </div>
         </div>
     </div>
 </nav>
+<style>
+.nav-link:hover, .dropdown-item:hover {
+    color: #0056b3;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #004494;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.4em 0.6em;
+}
+
+
+</style>
+
 
     <!-- Content -->
     <main>

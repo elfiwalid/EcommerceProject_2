@@ -3,7 +3,7 @@
 <!-- Hero Section -->
 <section class="hero bg-dark text-white text-center py-5" style="position: relative;">
     <div class="overlay"></div>
-    <img src="/images/techno.png" alt="Techno" class="hero-background" />
+    <img src="/images/image.png" alt="Techno" class="hero-background" />
     <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-shadow">
         <h1 class="display-2 fw-bold mb-4">Bienvenue à <span class="text-primary">Mekog</span></h1>
         <p class="fs-4 mb-4">Des produits exceptionnels, des prix incroyables. Profitez-en maintenant !</p>
@@ -93,14 +93,13 @@
                             <p class="text-muted small text-truncate" title="@produit.Description">@produit.Description</p>
                             <div class="price-container d-flex justify-content-between align-items-center mt-3">
                                 <span class="text-danger fw-bold h4">@produit.Prix €</span>
-                                <div>
-                                    <a href="/Produits/Details/@produit.Id" class="btn btn-outline-primary btn-sm rounded-pill px-3">
-                                        Détails
-                                    </a>
-                                    <a href="/Produits/AjouterAuPanier/@produit.Id" class="btn btn-primary btn-sm rounded-pill px-3">
-                                        Ajouter
-                                    </a>
-                                </div>
+<div class="product-action-buttons d-flex align-items-center justify-content-center mt-4">
+    <a href="/Produits/Details/@produit.Id" class="btn btn-details">🔍 View Details</a>
+    <a href="/Produits/AjouterAuPanier/@produit.Id" class="btn btn-add">🛒 Ajouter</a>
+</div>
+
+
+
                             </div>
                         </div>
                     </div>
@@ -496,4 +495,83 @@
 
 
 
+
+
+
+</style>
+<style>
+    /* Button Group */
+    .product-action-buttons {
+        gap: 20px; /* Space between buttons */
+    }
+
+    /* Common Button Styles */
+    .product-action-buttons .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 15px 30px;
+        border-radius: 50px; /* Fully rounded */
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white; /* Default text color */
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    }
+
+    /* View Details Button */
+    .product-action-buttons .btn-details {
+        background: linear-gradient(135deg, #ff512f, #dd2476); /* Orange to pink gradient */
+    }
+
+    .product-action-buttons .btn-details:hover {
+        background: linear-gradient(135deg, #dd2476, #ff512f); /* Reverse gradient on hover */
+        transform: translateY(-3px) scale(1.05); /* Lift and zoom on hover */
+        box-shadow: 0 12px 20px rgba(255, 81, 47, 0.4); /* Stronger shadow */
+    }
+
+    /* Ajouter Button */
+    .product-action-buttons .btn-add {
+        background: linear-gradient(135deg, #00c6ff, #0072ff); /* Cyan to blue gradient */
+    }
+
+    .product-action-buttons .btn-add:hover {
+        background: linear-gradient(135deg, #0072ff, #00c6ff); /* Reverse gradient on hover */
+        transform: translateY(-3px) scale(1.05); /* Lift and zoom on hover */
+        box-shadow: 0 12px 20px rgba(0, 198, 255, 0.4); /* Stronger shadow */
+    }
+
+    /* Button Icon Styling */
+    .product-action-buttons .btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 300%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.15); /* Light shimmer effect */
+        transform: skewX(-45deg); /* Angled shimmer */
+        transition: all 0.5s ease-in-out;
+        z-index: 1;
+    }
+
+    .product-action-buttons .btn:hover::before {
+        left: 0; /* Slide effect */
+    }
+
+    /* Responsive Design */
+    @@media (max-width: 768px) {
+        .product-action-buttons {
+            flex-direction: column; /* Stack buttons */
+            gap: 15px; /* Space between stacked buttons */
+        }
+
+        .product-action-buttons .btn {
+            width: 100%; /* Full-width on mobile */
+        }
+    }
 </style>

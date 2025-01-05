@@ -1,0 +1,54 @@
+@model List<EcommerceProject.Models.Order>
+
+<div class="container py-5">
+    <h1 class="text-center mb-4">Mes Commandes</h1>
+
+    @if (!Model.Any())
+    {
+        <div class="text-center">
+            <p class="lead">Vous n'avez pas encore passé de commande.</p>
+            <a href="/Produits" class="btn btn-primary btn-lg">Commencer mes achats</a>
+        </div>
+    }
+    else
+    {
+        <div class="accordion" id="ordersAccordion">
+            @foreach (var order in Model)
+            {
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header" id="heading-@order.OrderId">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#order-@order.OrderId" aria-expanded="false" aria-controls="order-@order.OrderId">
+                            Commande #@order.OrderId - @order.OrderDate.ToString("dd MMM yyyy")
+                        </button>
+                    </h2>
+                    <div id="order-@order.OrderId" class="accordion-collapse collapse" aria-labelledby="heading-@order.OrderId" data-bs-parent="#ordersAccordion">
+                        <div class="accordion-body">
+                            <h5>Total : @order.TotalAmount €</h5>
+                            <table class="table mt-3">
+                                <thead>
+                                    <tr>
+                                        <th>Produit</th>
+                                        <th>Quantité</th>
+                                        <th>Prix</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in order.Items)
+                                    {
+                                        <tr>
+                                            <td>@item.Nom</td>
+                                            <td>@item.Quantite</td>
+                                            <td>@item.Prix €</td>
+                                            <td>@(item.Quantite * item.Prix) €</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

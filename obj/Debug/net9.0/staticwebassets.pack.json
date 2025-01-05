@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets/images/headphone-icon.png"
     },
     {
+      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/image.png",
+      "PackagePath": "staticwebassets/images/image.png"
+    },
+    {
       "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/laptop-icon.png",
       "PackagePath": "staticwebassets/images/laptop-icon.png"
     },

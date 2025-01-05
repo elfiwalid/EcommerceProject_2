@@ -1,0 +1,30 @@
+@model EcommerceProject.Models.Order
+
+<div class="container py-5">
+    <h1 class="mb-4">Détails de la Commande #@Model.OrderId</h1>
+    <p><strong>Date :</strong> @Model.OrderDate.ToString("dd MMM yyyy")</p>
+    <p><strong>Montant Total :</strong> @Model.TotalAmount €</p>
+    <hr />
+    <h4>Articles :</h4>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Produit</th>
+                <th>Quantité</th>
+                <th>Prix Unitaire</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td>@item.Nom</td>
+                    <td>@item.Quantite</td>
+                    <td>@item.Prix €</td>
+                    <td>@(item.Prix * item.Quantite) €</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

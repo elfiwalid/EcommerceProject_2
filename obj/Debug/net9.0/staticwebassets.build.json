@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JhtdQEXJ2kNpnlquMtDxc/QSQrSqZ6xoN0yai8bFp7o=",
+  "Hash": "RO0rFdOHFW2EgpwEVtdiy9iI/q9EMBOiKa6PWccTCEI=",
   "Source": "EcommerceProject",
   "BasePath": "_content/EcommerceProject",
   "Mode": "Default",
@@ -1527,6 +1527,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/images/headphone-icon.png"
+    },
+    {
+      "Identity": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/image.png",
+      "SourceId": "EcommerceProject",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/",
+      "BasePath": "_content/EcommerceProject",
+      "RelativePath": "images/image#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "to8vrswuqx",
+      "Integrity": "vagvRVDZlNJZe09qwtfjsjFsOuSz+iOyzAw+pFSLBr0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/images/image.png"
     },
     {
       "Identity": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/laptop-icon.png",
@@ -3495,7 +3516,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 11:32:58 GMT"
+          "Value": "Sun, 05 Jan 2025 17:04:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3548,7 +3569,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 11:32:58 GMT"
+          "Value": "Sun, 05 Jan 2025 17:04:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3585,7 +3606,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 11:32:58 GMT"
+          "Value": "Sun, 05 Jan 2025 17:04:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3632,7 +3653,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 11:32:58 GMT"
+          "Value": "Sun, 05 Jan 2025 17:04:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3693,7 +3714,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 11:32:58 GMT"
+          "Value": "Sun, 05 Jan 2025 17:04:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3738,7 +3759,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 11:32:58 GMT"
+          "Value": "Sun, 05 Jan 2025 17:04:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3793,7 +3814,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 11:32:58 GMT"
+          "Value": "Sun, 05 Jan 2025 17:04:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3854,7 +3875,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 11:32:58 GMT"
+          "Value": "Sun, 05 Jan 2025 17:04:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3899,7 +3920,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 11:32:58 GMT"
+          "Value": "Sun, 05 Jan 2025 17:04:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3954,7 +3975,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 11:32:58 GMT"
+          "Value": "Sun, 05 Jan 2025 17:04:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4007,7 +4028,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 11:32:58 GMT"
+          "Value": "Sun, 05 Jan 2025 17:04:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4044,7 +4065,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 11:32:58 GMT"
+          "Value": "Sun, 05 Jan 2025 17:04:38 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4387,7 +4408,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 05 Jan 2025 13:40:35 GMT"
+          "Value": "Sun, 05 Jan 2025 17:06:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4432,7 +4453,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 05 Jan 2025 13:40:35 GMT"
+          "Value": "Sun, 05 Jan 2025 17:06:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4469,7 +4490,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 05 Jan 2025 13:39:05 GMT"
+          "Value": "Sun, 05 Jan 2025 17:06:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4514,7 +4535,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 05 Jan 2025 13:39:05 GMT"
+          "Value": "Sun, 05 Jan 2025 17:06:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4525,6 +4546,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-OyO5J+2HJcSlWQx9UDCF8793ovQfyo7ffQXM2y+AX30="
+        }
+      ]
+    },
+    {
+      "Route": "images/image.png",
+      "AssetFile": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1292429"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vagvRVDZlNJZe09qwtfjsjFsOuSz+iOyzAw+pFSLBr0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 17:29:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-vagvRVDZlNJZe09qwtfjsjFsOuSz+iOyzAw+pFSLBr0="
+        }
+      ]
+    },
+    {
+      "Route": "images/image.to8vrswuqx.png",
+      "AssetFile": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1292429"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"vagvRVDZlNJZe09qwtfjsjFsOuSz+iOyzAw+pFSLBr0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 05 Jan 2025 17:29:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "to8vrswuqx"
+        },
+        {
+          "Name": "label",
+          "Value": "images/image.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-vagvRVDZlNJZe09qwtfjsjFsOuSz+iOyzAw+pFSLBr0="
         }
       ]
     },
@@ -4551,7 +4654,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 05 Jan 2025 13:40:04 GMT"
+          "Value": "Sun, 05 Jan 2025 17:06:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4588,7 +4691,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 05 Jan 2025 13:40:04 GMT"
+          "Value": "Sun, 05 Jan 2025 17:06:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4633,7 +4736,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 22:14:09 GMT"
+          "Value": "Sun, 05 Jan 2025 17:06:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4670,7 +4773,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 22:14:09 GMT"
+          "Value": "Sun, 05 Jan 2025 17:06:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4715,7 +4818,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 22:15:37 GMT"
+          "Value": "Sun, 05 Jan 2025 17:06:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4752,7 +4855,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sat, 04 Jan 2025 22:15:37 GMT"
+          "Value": "Sun, 05 Jan 2025 17:06:27 GMT"
         },
         {
           "Name": "Cache-Control",
