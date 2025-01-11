@@ -31,9 +31,21 @@ namespace EcommerceProject.Controllers
                 {
                     new OrderItem { ProduitId = 3, Nom = "Samsung S24 Ultra", Quantite = 1, Prix = 899.99m }
                 }
+            },
+            new Order
+            {
+                OrderId = 3,
+                UserId = "user2", // Another user
+                OrderDate = DateTime.Now.AddDays(-5),
+                TotalAmount = 499.99m,
+                Items = new List<OrderItem>
+                {
+                    new OrderItem { ProduitId = 4, Nom = "iPad Air", Quantite = 1, Prix = 499.99m }
+                }
             }
         };
 
+        // Retourner les commandes d'un utilisateur spécifique
         public IActionResult Index()
         {
             // Simulate getting the logged-in user's ID
@@ -41,6 +53,12 @@ namespace EcommerceProject.Controllers
             var userOrders = orders.Where(o => o.UserId == currentUserId).ToList();
 
             return View(userOrders);
+        }
+
+        // Retourner toutes les commandes (pour administrateurs ou gestionnaires)
+        public IActionResult GetAllOrders()
+        {
+            return View(orders);
         }
     }
 }

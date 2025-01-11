@@ -5825,19 +5825,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/youssefkitabrhi/.nuget/packages/": {}
+    "/home/walid1234/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/youssefkitabrhi/Desktop/EcommerceProject/EcommerceProject.csproj",
+      "projectUniqueName": "/home/walid1234/Téléchargements/EcommerceProject/EcommerceProject.csproj",
       "projectName": "EcommerceProject",
-      "projectPath": "/Users/youssefkitabrhi/Desktop/EcommerceProject/EcommerceProject.csproj",
-      "packagesPath": "/Users/youssefkitabrhi/.nuget/packages/",
-      "outputPath": "/Users/youssefkitabrhi/Desktop/EcommerceProject/obj/",
+      "projectPath": "/home/walid1234/Téléchargements/EcommerceProject/EcommerceProject.csproj",
+      "packagesPath": "/home/walid1234/.nuget/packages/",
+      "outputPath": "/home/walid1234/Téléchargements/EcommerceProject/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/youssefkitabrhi/.nuget/NuGet/NuGet.Config"
+        "/home/walid1234/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
@@ -5913,7 +5913,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

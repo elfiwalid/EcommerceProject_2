@@ -136,6 +136,20 @@ namespace EcommerceProject.Controllers
             return View(produits);
         }
 
+        // GET: Details
+        [Route("account/details/{id}")]
+        public IActionResult Details(int id)
+        {
+            var produit = _context.Produits.FirstOrDefault(p => p.Id == id);
+            if (produit == null)
+            {
+                _logger.LogWarning("Produit non trouvé avec l'ID : {Id}", id);
+                return NotFound("Produit non trouvé.");
+            }
+
+            return View(produit);
+        }
+
         // GET: Profile
         public async Task<IActionResult> Profile()
         {

@@ -1,577 +1,964 @@
-@model List<EcommerceProject.Models.Produit>
+<!doctype html>
+<html lang="zxx">
 
-<!-- Hero Section -->
-<section class="hero bg-dark text-white text-center py-5" style="position: relative;">
-    <div class="overlay"></div>
-    <img src="/images/image.png" alt="Techno" class="hero-background" />
-    <div class="container h-100 d-flex flex-column justify-content-center align-items-center text-shadow">
-        <h1 class="display-2 fw-bold mb-4">Bienvenue à <span class="text-primary">Mekog</span></h1>
-        <p class="fs-4 mb-4">Des produits exceptionnels, des prix incroyables. Profitez-en maintenant !</p>
-        <a href="/account/shop" class="btn btn-primary btn-lg px-4 py-2 rounded-pill shadow-lg">Shop Now</a>
-    </div>
-</section>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>aranoz</title>
+    <link rel="icon" href="favicon.ico">
+    <!-- Bootstrap CSS -->
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<!-- animate CSS -->
+<link rel="stylesheet" href="/css/animate.css">
+<!-- owl carousel CSS -->
+<link rel="stylesheet" href="/css/owl.carousel.min.css">
+<!-- font awesome CSS -->
+<link rel="stylesheet" href="/css/all.css">
+<!-- flaticon CSS -->
+<link rel="stylesheet" href="/css/flaticon.css">
+<link rel="stylesheet" href="/css/themify-icons.css">
+<!-- font awesome CSS -->
+<link rel="stylesheet" href="/css/magnific-popup.css">
+<!-- swiper CSS -->
+<link rel="stylesheet" href="/css/slick.css">
+<!-- style CSS -->
+<link rel="stylesheet" href="/css/style.css">
 
-
-
-
-
-<!-- Categories Section -->
-<section class="categories py-5">
-    <div class="container">
-        <h2 class="text-center mb-5 fw-bold display-4 text-dark">Explorez Nos Catégories</h2>
-        <div class="row g-4">
-            <!-- Category Card with Image -->
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="category-card d-flex flex-column justify-content-center align-items-center shadow-lg rounded py-4">
-                    <div class="icon-container mb-3">
-                        <img src="/images/camera-icon.png" alt="Caméras" class="img-fluid" style="max-height: 80px; object-fit: contain;">
-                    </div>
-                    <h5 class="fw-bold text-secondary">Caméras</h5>
-                </div>
-            </div>
-            <!-- Category Card with Image -->
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="category-card d-flex flex-column justify-content-center align-items-center shadow-lg rounded py-4">
-                    <div class="icon-container mb-3">
-                        <img src="/images/phone-icon.png" alt="Téléphones" class="img-fluid" style="max-height: 80px; object-fit: contain;">
-                    </div>
-                    <h5 class="fw-bold text-secondary">Téléphones</h5>
-                </div>
-            </div>
-            <!-- Category Card with Image -->
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="category-card d-flex flex-column justify-content-center align-items-center shadow-lg rounded py-4">
-                    <div class="icon-container mb-3">
-                        <img src="/images/laptop-icon.png" alt="PC & Laptops" class="img-fluid" style="max-height: 80px; object-fit: contain;">
-                    </div>
-                    <h5 class="fw-bold text-secondary">PC & Laptops</h5>
-                </div>
-            </div>
-            <!-- Category Card with Image -->
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="category-card d-flex flex-column justify-content-center align-items-center shadow-lg rounded py-4">
-                    <div class="icon-container mb-3">
-                        <img src="/images/headphone-icon.png" alt="Écouteurs" class="img-fluid" style="max-height: 80px; object-fit: contain;">
-                    </div>
-                    <h5 class="fw-bold text-secondary">Écouteurs</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Flash Deals Section -->
-<section class="flash-deals py-5">
-    <div class="container">
-        <h2 class="text-center mb-5 fw-bold display-3 text-primary">Offres Flash Exclusives</h2>
-        <div class="row g-5">
-            @foreach (var produit in Model)
-            {
-                <div class="col-lg-4 col-md-6">
-                    <div class="product-card position-relative shadow-lg rounded-3 overflow-hidden bg-white">
-                        <!-- Image Produit -->
-                        <div class="product-image position-relative">
-                            <img src="@produit.ImageUrl" alt="@produit.Nom" class="img-fluid w-100">
-                            <div class="badge-discount position-absolute top-0 start-0 bg-danger text-white px-3 py-1 rounded-end">
-                                -20%
-                            </div>
-                            <div class="badge-stock position-absolute bottom-0 end-0 bg-warning text-dark px-3 py-1 rounded-start">
-                                Stock Limité
-                            </div>
-                        </div>
-                        <!-- Détails Produit -->
-                        <div class="product-info p-4 text-center">
-                            <h5 class="fw-bold text-dark mb-2 text-truncate" title="@produit.Nom">@produit.Nom</h5>
-                            <div class="rating mb-2">
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star text-warning"></i>
-                                <i class="fas fa-star-half-alt text-warning"></i>
-                                <i class="far fa-star text-muted"></i>
-                            </div>
-                            <p class="text-muted small text-truncate" title="@produit.Description">@produit.Description</p>
-                            <div class="price-container d-flex justify-content-between align-items-center mt-3">
-                                <span class="text-danger fw-bold h4">@produit.Prix €</span>
-<div class="product-action-buttons d-flex align-items-center justify-content-center mt-4">
-    <a href="/Produits/Details/@produit.Id" class="btn btn-details">🔍 View Details</a>
-    <a href="/Produits/AjouterAuPanier/@produit.Id" class="btn btn-add">🛒 Ajouter</a>
-</div>
-
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            }
-        </div>
-    </div>
-</section>
+</head>
 
 <style>
-   /* Section Offres Flash */
-   .flash-deals h2 {
-       font-size: 3rem;
-       font-weight: bold;
-       margin-bottom: 40px;
-       color: #0056b3;
-       letter-spacing: 1.5px;
-   }
 
-   /* Carte produit */
-   .product-card {
-       background-color: #fff;
-       border-radius: 15px;
-       transition: transform 0.3s ease, box-shadow 0.3s ease;
-       position: relative;
-       overflow: hidden;
-       height: 100%;
-   }
 
-   .product-card:hover {
-       transform: translateY(-10px);
-       box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-   }
-
-   /* Image du produit */
-   .product-image {
-       position: relative;
-       height: 250px;
-       overflow: hidden;
-   }
-
-   .product-image img {
-       width: 100%;
-       height: 100%;
-       object-fit: cover;
-       transition: transform 0.3s ease;
-   }
-
-   .product-card:hover .product-image img {
-       transform: scale(1.1);
-   }
-
-   /* Badge de réduction */
-   .badge-discount {
-       font-size: 0.9rem;
-       font-weight: bold;
-       border-radius: 0 10px 10px 0;
-       z-index: 1;
-   }
-
-   .badge-stock {
-       font-size: 0.9rem;
-       font-weight: bold;
-       border-radius: 10px 0 0 10px;
-       z-index: 1;
-   }
-
-   /* Informations sur le produit */
-   .product-info {
-       padding: 15px;
-       text-align: center;
-   }
-
-   .product-info h5 {
-       font-size: 1.2rem;
-       font-weight: 700;
-       margin-bottom: 10px;
-       color: #333;
-   }
-
-   .product-info p {
-       font-size: 0.9rem;
-       margin-bottom: 15px;
-       color: #777;
-   }
-
-   /* Boutons */
-   .product-info .btn {
-       font-size: 0.85rem;
-       font-weight: bold;
-       padding: 8px 20px;
-       transition: all 0.3s ease;
-   }
-
-   .btn-primary {
-       background-color: #007bff;
-       border-color: #007bff;
-   }
-
-   .btn-primary:hover {
-       background-color: #0056b3;
-       border-color: #0056b3;
-   }
-
-   .btn-outline-primary {
-       border: 2px solid #007bff;
-       color: #007bff;
-   }
-
-   .btn-outline-primary:hover {
-       background-color: #007bff;
-       color: white;
-   }
-
-   /* Animation des boutons */
-   .btn:hover {
-       opacity: 0.8;
-   }
-
-   /* Responsive */
-   @@media (max-width: 768px) {
-       .product-card {
-           margin-bottom: 30px;
-       }
-
-       .product-info h5 {
-           font-size: 1rem;
-       }
-
-       .product-info p {
-           font-size: 0.85rem;
-       }
-   }
-
- /* Hero Section */
-.hero {
+.banner_part {
     position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-color: rgba(225, 243, 255, 0.75);
     overflow: hidden;
-    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.single_banner_slider {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.banner_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.banner_text {
+    flex: 1;
     color: white;
-    animation: fadeInSection 1.5s ease-in-out forwards; /* Section fade-in animation */
+    padding: 20px;
+    text-align: left;
 }
 
-/* Full-Section Background Image */
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the entire section */
-    z-index: 0; /* Place it behind content */
-    animation: zoomInBackground 12s infinite alternate; /* Smooth zoom animation */
+.banner_text_iner {
+    max-width: 500px;
 }
 
-/* Overlay */
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Dark overlay for better text visibility */
-    z-index: 1;
-    animation: fadeInOverlay 1.5s ease-in-out forwards;
+.banner_text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-/* Text Content */
-.hero .container {
-    position: relative;
-    z-index: 2; /* Place content above the background and overlay */
-    text-align: center;
-    animation: slideInText 1.5s ease-out forwards; /* Text slide-in animation */
-}
-
-/* Button Styles */
-.hero .btn-primary {
-    margin-top: 20px;
-    background: linear-gradient(45deg, #ff7e5f, #feb47b);
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hero .btn-primary:hover {
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* Animations */
-@@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animated.fadeInUp {
-    animation: fadeInUp 1s ease-out;
-}
-
-/* Text styles */
-.hero h1 {
-    font-size: 3.5rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding shadow to make text stand out */
-}
-
-.hero p {
-    font-size: 1.5rem;
+.banner_text p {
+    font-size: 1rem;
     margin-bottom: 30px;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adding shadow to make text stand out */
 }
 
-/* Button styles */
-.hero .btn {
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+.btn_2 {
+    display: inline-block;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-.hero .btn:hover {
-    background-color: #003366;
-    transform: translateY(-5px); /* Adding hover effect to the button */
+.btn_2:hover {
+    background-color: #45a049;
 }
 
-/* Responsive Design */
-@@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    .hero .btn {
-        font-size: 1rem;
-    }
-}
-
-/* Fade-in Effect for Section */
-.categories {
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeIn 1.5s ease-in-out forwards;
-}
-
-@@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Category Card Hover Effects */
-.category-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background: white;
-}
-
-.category-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Icon Bounce Effect on Hover */
-.icon-container img {
-    transition: transform 0.3s ease;
-}
-
-.icon-container img:hover {
-    transform: scale(1.2) rotate(5deg);
-}
-
-/* Responsive Spacing */
-@@media (max-width: 576px) {
-    .category-card {
-        padding: 1rem;
-    }
-}
-
-
-
-
-
-/* Hero Section Styles */
-.hero {
-    position: relative;
-    overflow: hidden;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    color: white;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
-
-/* Button Position Below Text */
-.hero .btn-primary {
-    margin-top: 20px; /* Add spacing between text and button */
-    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Vibrant gradient */
-    border: none;
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 2; /* Ensure it's above the overlay */
-}
-
-/* Button Hover Effect */
-.hero .btn-primary:hover {
-    transform: translateY(-5px) scale(1.1); /* Lift and enlarge on hover */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* Overlay to Darken Background */
-.hero .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Stronger dark overlay */
-    z-index: 1;
-}
-
-/* Text Centering */
-.hero h1,
-.hero p {
-    z-index: 2; /* Ensure they appear above the overlay */
+.banner_img {
+    flex: 1;
     text-align: center;
 }
 
-
-/* Keyframe for Text Visibility and Fade-Out */
-@@keyframes fadeOutText {
-    0% {
-        opacity: 1; /* Fully visible */
-    }
-    83.33% { /* After 10 seconds (10s / 12s = ~83%) */
-        opacity: 1;
-    }
-    100% {
-        opacity: 0; /* Fully invisible */
-    }
+.banner_img img {
+    max-width: 900px;
+    height: 500px;
 }
 
-/* Button Hover Effect */
-.hero .btn-primary {
-    background: linear-gradient(45deg, #ff7e5f, #feb47b);
-    border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 3;
-}
-
-.hero .btn-primary:hover {
-    transform: translateY(-5px) scale(1.1);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-}
-
-/* Responsive Design */
 @@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
+    .banner_content {
+        flex-direction: column;
     }
 
-    .hero p {
-        font-size: 1.2rem;
+    .banner_text, .banner_img {
+        width: 100%;
+        text-align: center;
     }
 
-    .hero .btn-primary {
-        padding: 0.8rem 2rem;
+    .banner_text_iner {
+        margin: 0 auto;
     }
+}
+/* Appliquer la police Poppins et un texte en gras au titre */
+.banner_title {
+    font-family: 'Poppins', sans-serif; /* Police Poppins */
+    font-size: 3.5rem; /* Taille plus grande */
+    margin-bottom: 20px;
+    color: #ffffff; /* Texte blanc */
+    text-transform: uppercase; /* Mettre le texte en majuscules */
+    letter-spacing: 5px; /* Espacement des lettres */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre pour l'effet gras */
+}
+
+/* Style pour les autres éléments du texte */
+.banner_description {
+    font-family: 'Poppins', sans-serif; /* Appliquer la même police */
+    font-weight: 400; /* Poids normal */
+    font-size: 1.2rem; /* Augmenter la taille du texte de description */
+    margin-bottom: 30px;
+    color: rgba(0, 0, 0, 0.8); /* Texte plus doux */
+}
+
+/* Spécifier la taille de h1 à 3.5rem et s'assurer que l'espacement est correct */
+.banner_text h1 {
+    font-size: 3.5rem; /* Taille ajustée à 3.5rem */
+    margin-bottom: 20px;
+    color: #000000; /* Assurez-vous que le titre h1 est bien visible */
+    font-weight: 900; /* Font-weight plus gras */
+    text-transform: uppercase; /* Mettre le texte en majuscules */
+    letter-spacing: 3px; /* Espacement des lettres */
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+}
+
+/*.banner_content .banner_content .banner_content */
+.featured-category {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.product-card {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-info {
+  flex: 1;
+  padding-right: 30px;
+}
+
+.product-tag {
+  color: #2563eb;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.product-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  color: #eb2525;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.explore-btn:hover {
+  border: #1d4ed8;
+  transform: translateX(5px);
+}
+
+.explore-btn i {
+  margin-left: 8px;
+}
+
+.product-image {
+  flex: 1;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+@@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .product-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .product-info {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
+}
+
+.single_product_text h3 {
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+.single_product_text h4{
+    font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.section_tittle_2 h2{
+font-weight: 700;
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+
+.product_list_2{
+    background-color: #fff;
+}
+
+.single_product_text{
+    margin-top: 26px;
+}
+
+@@media (min-width: 992px){
+.col-lg-3{
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin-bottom: 60px;
+}
+}
+
+
+.add_cart_2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #5b6a88;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.add_cart_2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-color: #1d4ed8;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.add_cart_2:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.add_cart_2 i {
+  transition: transform 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.add_cart_2:hover i {
+  transform: translateX(4px) scale(1.1);
+}
+
+.add_cart_2 span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.add_cart_2:hover span {
+  transform: translateX(-2px);
 }
 
 
 
-
-
-
-
 </style>
-<style>
-    /* Button Group */
-    .product-action-buttons {
-        gap: 20px; /* Space between buttons */
-    }
+<body>
 
-    /* Common Button Styles */
-    .product-action-buttons .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 16px;
-        font-weight: bold;
-        padding: 15px 30px;
-        border-radius: 50px; /* Fully rounded */
-        text-transform: uppercase;
-        text-decoration: none;
-        color: white; /* Default text color */
-        position: relative;
-        overflow: hidden;
-        transition: all 0.3s ease-in-out;
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    }
 
-    /* View Details Button */
-    .product-action-buttons .btn-details {
-        background: linear-gradient(135deg, #ff512f, #dd2476); /* Orange to pink gradient */
-    }
 
-    .product-action-buttons .btn-details:hover {
-        background: linear-gradient(135deg, #dd2476, #ff512f); /* Reverse gradient on hover */
-        transform: translateY(-3px) scale(1.05); /* Lift and zoom on hover */
-        box-shadow: 0 12px 20px rgba(255, 81, 47, 0.4); /* Stronger shadow */
-    }
+<!-- banner part start-->
+<section class="banner_part">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-12">
+                <div class="banner_slider owl-carousel">
+                    <!-- First Banner Slider -->
+                    <div class="single_banner_slider">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-8 text-center">
+                                <div class="banner_text">
+                                    <div class="banner_text_iner">
+                                        <h1 class="banner_title">Wood & Cloth Sofa</h1>
+                                        <p class="banner_description">Discover the elegance of natural materials combined in this stylish sofa. Perfect for your home decor.</p>
+                                        <a href="#" class="btn_2">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <div class="banner_img">
+                                    <img src="images/watch1.png" alt="Wood & Cloth Sofa">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    /* Ajouter Button */
-    .product-action-buttons .btn-add {
-        background: linear-gradient(135deg, #00c6ff, #0072ff); /* Cyan to blue gradient */
-    }
+                    <!-- Second Banner Slider -->
+                    <div class="single_banner_slider">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-8 text-center">
+                                <div class="banner_text">
+                                    <div class="banner_text_iner">
+                                        <h1 class="banner_title">Cloth & Wood Sofa</h1>
+                                        <p class="banner_description">Experience comfort and style with this high-quality cloth and wood sofa, designed to complement any modern space.</p>
+                                        <a href="#" class="btn_2">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <div class="banner_img">
+                                    <img src="images/banner_img.png" alt="Cloth & Wood Sofa">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    .product-action-buttons .btn-add:hover {
-        background: linear-gradient(135deg, #0072ff, #00c6ff); /* Reverse gradient on hover */
-        transform: translateY(-3px) scale(1.05); /* Lift and zoom on hover */
-        box-shadow: 0 12px 20px rgba(0, 198, 255, 0.4); /* Stronger shadow */
-    }
+                    <!-- Third Banner Slider -->
+                    <div class="single_banner_slider">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-8 text-center">
+                                <div class="banner_text">
+                                    <div class="banner_text_iner">
+                                        <h1 class="banner_title">Modern Sofa Collection</h1>
+                                        <p class="banner_description">Indulge in luxurious comfort and timeless design with our premium sofa collection.</p>
+                                        <a href="#" class="btn_2">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <div class="banner_img">
+                                    <img src="images/banner_img.png" alt="Modern Sofa Collection">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    /* Button Icon Styling */
-    .product-action-buttons .btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 300%;
-        height: 100%;
-        background: rgba(255, 255, 255, 0.15); /* Light shimmer effect */
-        transform: skewX(-45deg); /* Angled shimmer */
-        transition: all 0.5s ease-in-out;
-        z-index: 1;
-    }
+                    <!-- Fourth Banner Slider -->
+                    <div class="single_banner_slider">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-8 text-center">
+                                <div class="banner_text">
+                                    <div class="banner_text_iner">
+                                        <h1 class="banner_title">Cloth & Wood Sofa</h1>
+                                        <p class="banner_description">Combine natural wood and soft cloth to create the perfect addition to your living room.</p>
+                                        <a href="#" class="btn_2">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-none d-lg-block">
+                                <div class="banner_img">
+                                    <img src="images/banner_img.png" alt="Cloth & Wood Sofa">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-counter"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- banner part end-->
+<section class="featured-category">
+  <div class="section-header">
+    <h2>Featured Category</h2>
+  </div>
+  
+  <div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-tag">Premium Quality</span>
+        <h3 class="product-title">Latest foam Sofa</h3>
+        <a href="#" class="explore-btn">
+          Explore Now
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="product-image">
+        <img src="images/w1.jpeg" alt="Blue Modern Chair" />
+      </div>
+    </div>
 
-    .product-action-buttons .btn:hover::before {
-        left: 0; /* Slide effect */
-    }
+    <!-- Product 2 -->
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-tag">Premium Quality</span>
+        <h3 class="product-title">Latest foam Sofa</h3>
+        <a href="#" class="explore-btn">
+          Explore Now
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="product-image">
+        <img src="images/w2.jpeg" alt="Orange Modern Chair" />
+      </div>
+    </div>
 
-    /* Responsive Design */
-    @@media (max-width: 768px) {
-        .product-action-buttons {
-            flex-direction: column; /* Stack buttons */
-            gap: 15px; /* Space between stacked buttons */
-        }
+    <!-- Product 3 -->
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-tag">Premium Quality</span>
+        <h3 class="product-title">Latest foam Sofa</h3>
+        <a href="#" class="explore-btn">
+          Explore Now
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="product-image">
+        <img src="images/w3.jpg" alt="Wicker Chair" />
+      </div>
+    </div>
 
-        .product-action-buttons .btn {
-            width: 100%; /* Full-width on mobile */
-        }
-    }
-</style>
+    <!-- Product 4 -->
+    <div class="product-card">
+      <div class="product-info">
+        <span class="product-tag">Premium Quality</span>
+        <h3 class="product-title">Latest foam Sofa</h3>
+        <a href="#" class="explore-btn">
+          Explore Now
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="product-image">
+        <img src="images/w5.jpeg" alt="Yellow Modern Sofa" />
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- product_list start-->
+    <section class="product_list_2">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="section_tittle_2 text-center">
+                        <h2>awesome shop</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="product_list_slider owl-carousel">
+                        <div class="single_product_list_slider">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_1.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_2.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_3.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart_2">
+          <span>add to cart</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_4.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_5.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_6.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_7.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_8.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_product_list_slider">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_1.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_2.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_3.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_4.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_5.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_6.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_7.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_8.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- product_list part start-->
+
+    <!-- awesome_shop start-->
+    <section class="our_offer section_padding">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-6">
+                    <div class="offer_img">
+                        <img src="images/offer_img.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="offer_text">
+                        <h2>Weekly Sale on
+                            60% Off All Products</h2>
+                        <div class="date_countdown">
+                            <div id="timer">
+                                <div id="days" class="date"></div>
+                                <div id="hours" class="date"></div>
+                                <div id="minutes" class="date"></div>
+                                <div id="seconds" class="date"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="enter email address"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <a href="#" class="input-group-text btn_2" id="basic-addon2">book now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- awesome_shop part start-->
+
+    <!-- product_list part start-->
+    <section class="product_list best_seller section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="section_tittle text-center">
+                        <h2>Best Sellers <span>shop</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-12">
+                    <div class="best_product_slider owl-carousel">
+                        <div class="single_product_item">
+                            <img src="images/product/product_1.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                        <div class="single_product_item">
+                            <img src="images/product/product_2.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                        <div class="single_product_item">
+                            <img src="images/product/product_3.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                        <div class="single_product_item">
+                            <img src="images/product/product_4.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                        <div class="single_product_item">
+                            <img src="images/product/product_5.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- product_list part end-->
+
+    <!-- subscribe_area part start-->
+    <section class="subscribe_area section_padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="subscribe_area_text text-center">
+                        <h5>Join Our Newsletter</h5>
+                        <h2>Subscribe to get Updated
+                            with new offers</h2>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="enter email address"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <a href="#" class="input-group-text btn_2" id="basic-addon2">subscribe now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--::subscribe_area part end::-->
+
+
+    <!--::footer_part start::-->
+    <footer class="footer_part">
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-sm-6 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Top Products</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="">Managed Website</a></li>
+                            <li><a href="">Manage Reputation</a></li>
+                            <li><a href="">Power Tools</a></li>
+                            <li><a href="">Marketing Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Quick Links</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="">Jobs</a></li>
+                            <li><a href="">Brand Assets</a></li>
+                            <li><a href="">Investor Relations</a></li>
+                            <li><a href="">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Features</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="">Jobs</a></li>
+                            <li><a href="">Brand Assets</a></li>
+                            <li><a href="">Investor Relations</a></li>
+                            <li><a href="">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Resources</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="">Guides</a></li>
+                            <li><a href="">Research</a></li>
+                            <li><a href="">Experts</a></li>
+                            <li><a href="">Agencies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="single_footer_part">
+                        <h4>Newsletter</h4>
+                        <p>Heaven fruitful doesn't over lesser in days. Appear creeping
+                        </p>
+                        <div id="mc_embed_signup">
+                            <form target="_blank"
+                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                method="get" class="subscribe_form relative mail_part">
+                                <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
+                                    class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = ' Email Address '">
+                                <button type="submit" name="submit" id="newsletter-submit"
+                                    class="email_icon newsletter-submit button-contactForm">subscribe</button>
+                                <div class="mt-10 info"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="copyright_part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="copyright_text">
+                            <P><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></P>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="footer_icon social_icon">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="single_social_icon"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" class="single_social_icon"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#" class="single_social_icon"><i class="fas fa-globe"></i></a></li>
+                                <li><a href="#" class="single_social_icon"><i class="fab fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--::footer_part end::-->
+<!-- jquery plugins here-->
+<script src="/js/jquery-1.12.1.min.js"></script>
+<!-- popper js -->
+<script src="/js/popper.min.js"></script>
+<!-- bootstrap js -->
+<script src="/js/bootstrap.min.js"></script>
+<!-- easing js -->
+<script src="/js/jquery.magnific-popup.js"></script>
+<!-- swiper js -->
+<script src="/js/swiper.min.js"></script>
+<!-- swiper js -->
+<script src="/js/masonry.pkgd.js"></script>
+<!-- particles js -->
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/jquery.nice-select.min.js"></script>
+<!-- slick js -->
+<script src="/js/slick.min.js"></script>
+<script src="/js/jquery.counterup.min.js"></script>
+<script src="/js/waypoints.min.js"></script>
+<script src="/js/contact.js"></script>
+<script src="/js/jquery.ajaxchimp.min.js"></script>
+<script src="/js/jquery.form.js"></script>
+<script src="/js/jquery.validate.min.js"></script>
+<script src="/js/mail-script.js"></script>
+<!-- custom js -->
+<script src="/js/custom.js"></script>
+
+</body>
+
+</html>

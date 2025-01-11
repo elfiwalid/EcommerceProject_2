@@ -18,6 +18,7 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequireUppercase = false;
     options.Password.RequireLowercase = false;
+    
 });
 
 builder.Services.AddLogging(logging =>
@@ -66,6 +67,8 @@ app.UseRouting();
 app.UseAuthentication(); // Activer l'authentification
 app.UseAuthorization();  // Activer l'autorisation
 app.UseSession(); // Utiliser les sessions
+app.UseStaticFiles();
+
 
 // Définir les routes
 app.MapControllerRoute(

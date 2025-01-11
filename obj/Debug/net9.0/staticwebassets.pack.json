@@ -1,287 +1,1651 @@
 {
   "Files": [
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/obj/Debug/net9.0/scopedcss/projectbundle/EcommerceProject.bundle.scp.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/obj/Debug/net9.0/scopedcss/projectbundle/EcommerceProject.bundle.scp.css",
       "PackagePath": "staticwebassets/EcommerceProject.k2c2ov7uga.bundle.scp.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/css/site.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/all.css",
+      "PackagePath": "staticwebassets/css/all.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/animate.css",
+      "PackagePath": "staticwebassets/css/animate.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/aos.css",
+      "PackagePath": "staticwebassets/css/aos.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/flaticon.css",
+      "PackagePath": "staticwebassets/css/flaticon.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/font-awesome.min.css",
+      "PackagePath": "staticwebassets/css/font-awesome.min.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/lightslider.min.css",
+      "PackagePath": "staticwebassets/css/lightslider.min.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/magnific-popup.css",
+      "PackagePath": "staticwebassets/css/magnific-popup.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/nice-select.css",
+      "PackagePath": "staticwebassets/css/nice-select.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/owl.carousel.min.css",
+      "PackagePath": "staticwebassets/css/owl.carousel.min.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/price_rangs.css",
+      "PackagePath": "staticwebassets/css/price_rangs.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/css/style.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/slick-theme.min.css",
+      "PackagePath": "staticwebassets/css/slick-theme.min.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/slick.css",
+      "PackagePath": "staticwebassets/css/slick.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/slick.min.css",
+      "PackagePath": "staticwebassets/css/slick.min.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/style.css",
       "PackagePath": "staticwebassets/css/style.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/favicon.ico",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/swiper.min.css",
+      "PackagePath": "staticwebassets/css/swiper.min.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/css/themify-icons.css",
+      "PackagePath": "staticwebassets/css/themify-icons.css"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/camera-icon.png",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/about_img.png",
+      "PackagePath": "staticwebassets/images/about_img.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/about_img_1.png",
+      "PackagePath": "staticwebassets/images/about_img_1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/about_shape.png",
+      "PackagePath": "staticwebassets/images/about_shape.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/animate_icon/Shape-13.png",
+      "PackagePath": "staticwebassets/images/animate_icon/Shape-13.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/animate_icon/Shape-14.png",
+      "PackagePath": "staticwebassets/images/animate_icon/Shape-14.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/animate_icon/Shape-16.png",
+      "PackagePath": "staticwebassets/images/animate_icon/Shape-16.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/animate_icon/shape-1.png",
+      "PackagePath": "staticwebassets/images/animate_icon/shape-1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/animate_icon/shape-10.png",
+      "PackagePath": "staticwebassets/images/animate_icon/shape-10.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/animate_icon/shape-3.png",
+      "PackagePath": "staticwebassets/images/animate_icon/shape-3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/animate_icon/shape-7.png",
+      "PackagePath": "staticwebassets/images/animate_icon/shape-7.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/animate_icon/shape-8.png",
+      "PackagePath": "staticwebassets/images/animate_icon/shape-8.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/animate_icon/shape.png",
+      "PackagePath": "staticwebassets/images/animate_icon/shape.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/author/author_1.png",
+      "PackagePath": "staticwebassets/images/author/author_1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/author/author_2.png",
+      "PackagePath": "staticwebassets/images/author/author_2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/author/author_3.png",
+      "PackagePath": "staticwebassets/images/author/author_3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/b1.jpg",
+      "PackagePath": "staticwebassets/images/b1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/b2.jpg",
+      "PackagePath": "staticwebassets/images/b2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/b3.jpg",
+      "PackagePath": "staticwebassets/images/b3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/banner/banner-bg.jpg",
+      "PackagePath": "staticwebassets/images/banner/banner-bg.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/banner_img.png",
+      "PackagePath": "staticwebassets/images/banner_img.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/add.jpg",
+      "PackagePath": "staticwebassets/images/blog/add.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/author.png",
+      "PackagePath": "staticwebassets/images/blog/author.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/blog1.png",
+      "PackagePath": "staticwebassets/images/blog/blog1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/blog2.png",
+      "PackagePath": "staticwebassets/images/blog/blog2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/blog3.png",
+      "PackagePath": "staticwebassets/images/blog/blog3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/blog_1.png",
+      "PackagePath": "staticwebassets/images/blog/blog_1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/blog_2.png",
+      "PackagePath": "staticwebassets/images/blog/blog_2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/blog_3.png",
+      "PackagePath": "staticwebassets/images/blog/blog_3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/blog_4.png",
+      "PackagePath": "staticwebassets/images/blog/blog_4.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/c1.png",
+      "PackagePath": "staticwebassets/images/blog/c1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/c2.png",
+      "PackagePath": "staticwebassets/images/blog/c2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/c3.png",
+      "PackagePath": "staticwebassets/images/blog/c3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/cat-post/cat-post-1.jpg",
+      "PackagePath": "staticwebassets/images/blog/cat-post/cat-post-1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/cat-post/cat-post-2.jpg",
+      "PackagePath": "staticwebassets/images/blog/cat-post/cat-post-2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/cat-post/cat-post-3.jpg",
+      "PackagePath": "staticwebassets/images/blog/cat-post/cat-post-3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/causes/causes-1.jpg",
+      "PackagePath": "staticwebassets/images/blog/causes/causes-1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/causes/causes-2.jpg",
+      "PackagePath": "staticwebassets/images/blog/causes/causes-2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/causes/causes-3.jpg",
+      "PackagePath": "staticwebassets/images/blog/causes/causes-3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/feature-img1.jpg",
+      "PackagePath": "staticwebassets/images/blog/feature-img1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/learn_about_bg.png",
+      "PackagePath": "staticwebassets/images/blog/learn_about_bg.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/main-blog/m-blog-1.jpg",
+      "PackagePath": "staticwebassets/images/blog/main-blog/m-blog-1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/main-blog/m-blog-2.jpg",
+      "PackagePath": "staticwebassets/images/blog/main-blog/m-blog-2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/main-blog/m-blog-3.jpg",
+      "PackagePath": "staticwebassets/images/blog/main-blog/m-blog-3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/main-blog/m-blog-4.jpg",
+      "PackagePath": "staticwebassets/images/blog/main-blog/m-blog-4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/main-blog/m-blog-5.jpg",
+      "PackagePath": "staticwebassets/images/blog/main-blog/m-blog-5.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/next.jpg",
+      "PackagePath": "staticwebassets/images/blog/next.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/popular-post/post1.jpg",
+      "PackagePath": "staticwebassets/images/blog/popular-post/post1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/popular-post/post2.jpg",
+      "PackagePath": "staticwebassets/images/blog/popular-post/post2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/popular-post/post3.jpg",
+      "PackagePath": "staticwebassets/images/blog/popular-post/post3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/popular-post/post4.jpg",
+      "PackagePath": "staticwebassets/images/blog/popular-post/post4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/post-img1.jpg",
+      "PackagePath": "staticwebassets/images/blog/post-img1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/post-img2.jpg",
+      "PackagePath": "staticwebassets/images/blog/post-img2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/prev.jpg",
+      "PackagePath": "staticwebassets/images/blog/prev.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/single_blog_1.png",
+      "PackagePath": "staticwebassets/images/blog/single_blog_1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/single_blog_2.png",
+      "PackagePath": "staticwebassets/images/blog/single_blog_2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/single_blog_3.png",
+      "PackagePath": "staticwebassets/images/blog/single_blog_3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/single_blog_4.png",
+      "PackagePath": "staticwebassets/images/blog/single_blog_4.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/single_blog_5.png",
+      "PackagePath": "staticwebassets/images/blog/single_blog_5.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/blog/slide_thumb_1.png",
+      "PackagePath": "staticwebassets/images/blog/slide_thumb_1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/breadcrumb.png",
+      "PackagePath": "staticwebassets/images/breadcrumb.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/breadcrumb/checkout-bg.jpg",
+      "PackagePath": "staticwebassets/images/breadcrumb/checkout-bg.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/camera-icon.png",
       "PackagePath": "staticwebassets/images/camera-icon.png"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/headphone-icon.png",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/client_logo/client_logo_1.png",
+      "PackagePath": "staticwebassets/images/client_logo/client_logo_1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/client_logo/client_logo_2.png",
+      "PackagePath": "staticwebassets/images/client_logo/client_logo_2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/client_logo/client_logo_3.png",
+      "PackagePath": "staticwebassets/images/client_logo/client_logo_3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/client_logo/client_logo_4.png",
+      "PackagePath": "staticwebassets/images/client_logo/client_logo_4.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/client_logo/client_logo_5.png",
+      "PackagePath": "staticwebassets/images/client_logo/client_logo_5.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/comment/comment_1.png",
+      "PackagePath": "staticwebassets/images/comment/comment_1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/comment/comment_2.png",
+      "PackagePath": "staticwebassets/images/comment/comment_2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/comment/comment_3.png",
+      "PackagePath": "staticwebassets/images/comment/comment_3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/cta_bg.png",
+      "PackagePath": "staticwebassets/images/cta_bg.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/_DS_Store",
+      "PackagePath": "staticwebassets/images/elements"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/a.jpg",
+      "PackagePath": "staticwebassets/images/elements/a.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/a2.jpg",
+      "PackagePath": "staticwebassets/images/elements/a2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/d.jpg",
+      "PackagePath": "staticwebassets/images/elements/d.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/disabled-check.png",
+      "PackagePath": "staticwebassets/images/elements/disabled-check.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/disabled-radio.png",
+      "PackagePath": "staticwebassets/images/elements/disabled-radio.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/f1.jpg",
+      "PackagePath": "staticwebassets/images/elements/f1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/f2.jpg",
+      "PackagePath": "staticwebassets/images/elements/f2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/f3.jpg",
+      "PackagePath": "staticwebassets/images/elements/f3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/f4.jpg",
+      "PackagePath": "staticwebassets/images/elements/f4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/f5.jpg",
+      "PackagePath": "staticwebassets/images/elements/f5.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/f6.jpg",
+      "PackagePath": "staticwebassets/images/elements/f6.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/f7.jpg",
+      "PackagePath": "staticwebassets/images/elements/f7.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/f8.jpg",
+      "PackagePath": "staticwebassets/images/elements/f8.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/g1.jpg",
+      "PackagePath": "staticwebassets/images/elements/g1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/g2.jpg",
+      "PackagePath": "staticwebassets/images/elements/g2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/g3.jpg",
+      "PackagePath": "staticwebassets/images/elements/g3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/g4.jpg",
+      "PackagePath": "staticwebassets/images/elements/g4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/g5.jpg",
+      "PackagePath": "staticwebassets/images/elements/g5.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/g6.jpg",
+      "PackagePath": "staticwebassets/images/elements/g6.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/g7.jpg",
+      "PackagePath": "staticwebassets/images/elements/g7.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/g8.jpg",
+      "PackagePath": "staticwebassets/images/elements/g8.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/primary-check.png",
+      "PackagePath": "staticwebassets/images/elements/primary-check.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/primary-radio.png",
+      "PackagePath": "staticwebassets/images/elements/primary-radio.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/success-check.png",
+      "PackagePath": "staticwebassets/images/elements/success-check.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/success-radio.png",
+      "PackagePath": "staticwebassets/images/elements/success-radio.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/user1.png",
+      "PackagePath": "staticwebassets/images/elements/user1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/elements/user2.png",
+      "PackagePath": "staticwebassets/images/elements/user2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/favicon.png",
+      "PackagePath": "staticwebassets/images/favicon.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/feature/feature_1.png",
+      "PackagePath": "staticwebassets/images/feature/feature_1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/feature/feature_2.png",
+      "PackagePath": "staticwebassets/images/feature/feature_2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/feature/feature_3.png",
+      "PackagePath": "staticwebassets/images/feature/feature_3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/feature/feature_4.png",
+      "PackagePath": "staticwebassets/images/feature/feature_4.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/fevicon.png",
+      "PackagePath": "staticwebassets/images/fevicon.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/footer_bg.png",
+      "PackagePath": "staticwebassets/images/footer_bg.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/footer_logo.png",
+      "PackagePath": "staticwebassets/images/footer_logo.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/headphone-icon.png",
       "PackagePath": "staticwebassets/images/headphone-icon.png"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/image.png",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/icon/color_star.svg",
+      "PackagePath": "staticwebassets/images/icon/color_star.svg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/icon/feature_icon_1.png",
+      "PackagePath": "staticwebassets/images/icon/feature_icon_1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/icon/feature_icon_1.svg",
+      "PackagePath": "staticwebassets/images/icon/feature_icon_1.svg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/icon/feature_icon_2.png",
+      "PackagePath": "staticwebassets/images/icon/feature_icon_2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/icon/feature_icon_2.svg",
+      "PackagePath": "staticwebassets/images/icon/feature_icon_2.svg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/icon/feature_icon_3.png",
+      "PackagePath": "staticwebassets/images/icon/feature_icon_3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/icon/feature_icon_3.svg",
+      "PackagePath": "staticwebassets/images/icon/feature_icon_3.svg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/icon/left.svg",
+      "PackagePath": "staticwebassets/images/icon/left.svg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/icon/play.svg",
+      "PackagePath": "staticwebassets/images/icon/play.svg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/icon/quate.svg",
+      "PackagePath": "staticwebassets/images/icon/quate.svg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/icon/right-arrow.svg",
+      "PackagePath": "staticwebassets/images/icon/right-arrow.svg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/icon/right.svg",
+      "PackagePath": "staticwebassets/images/icon/right.svg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/icon/star.svg",
+      "PackagePath": "staticwebassets/images/icon/star.svg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/image.png",
       "PackagePath": "staticwebassets/images/image.png"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/laptop-icon.png",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/instagram/i1.jpg",
+      "PackagePath": "staticwebassets/images/instagram/i1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/instagram/i2.jpg",
+      "PackagePath": "staticwebassets/images/instagram/i2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/instagram/i3.jpg",
+      "PackagePath": "staticwebassets/images/instagram/i3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/instagram/i4.jpg",
+      "PackagePath": "staticwebassets/images/instagram/i4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/instagram/i5.jpg",
+      "PackagePath": "staticwebassets/images/instagram/i5.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/instagram/i6.jpg",
+      "PackagePath": "staticwebassets/images/instagram/i6.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/instagram/i7.jpg",
+      "PackagePath": "staticwebassets/images/instagram/i7.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/instagram/i8.jpg",
+      "PackagePath": "staticwebassets/images/instagram/i8.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/instagram/widget-i1.png",
+      "PackagePath": "staticwebassets/images/instagram/widget-i1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/instagram/widget-i2.png",
+      "PackagePath": "staticwebassets/images/instagram/widget-i2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/instagram/widget-i3.png",
+      "PackagePath": "staticwebassets/images/instagram/widget-i3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/instagram/widget-i4.png",
+      "PackagePath": "staticwebassets/images/instagram/widget-i4.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/instagram/widget-i5.png",
+      "PackagePath": "staticwebassets/images/instagram/widget-i5.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/instagram/widget-i6.png",
+      "PackagePath": "staticwebassets/images/instagram/widget-i6.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/laptop-icon.png",
       "PackagePath": "staticwebassets/images/laptop-icon.png"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/phone-icon.png",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/left_sharp.png",
+      "PackagePath": "staticwebassets/images/left_sharp.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/login.jpg",
+      "PackagePath": "staticwebassets/images/login.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/logo.png",
+      "PackagePath": "staticwebassets/images/logo.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/offer-bg.png",
+      "PackagePath": "staticwebassets/images/offer-bg.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/offer_img.png",
+      "PackagePath": "staticwebassets/images/offer_img.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/phone-icon.png",
       "PackagePath": "staticwebassets/images/phone-icon.png"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/images/techno.png",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/post/next.png",
+      "PackagePath": "staticwebassets/images/post/next.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/post/post_1.png",
+      "PackagePath": "staticwebassets/images/post/post_1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/post/post_10.png",
+      "PackagePath": "staticwebassets/images/post/post_10.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/post/post_2.png",
+      "PackagePath": "staticwebassets/images/post/post_2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/post/post_3.png",
+      "PackagePath": "staticwebassets/images/post/post_3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/post/post_4.png",
+      "PackagePath": "staticwebassets/images/post/post_4.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/post/post_5.png",
+      "PackagePath": "staticwebassets/images/post/post_5.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/post/post_6.png",
+      "PackagePath": "staticwebassets/images/post/post_6.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/post/post_7.png",
+      "PackagePath": "staticwebassets/images/post/post_7.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/post/post_8.png",
+      "PackagePath": "staticwebassets/images/post/post_8.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/post/post_9.png",
+      "PackagePath": "staticwebassets/images/post/post_9.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/post/preview.png",
+      "PackagePath": "staticwebassets/images/post/preview.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/b1.jpg",
+      "PackagePath": "staticwebassets/images/product/b1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/b2.jpg",
+      "PackagePath": "staticwebassets/images/product/b2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/b3.jpg",
+      "PackagePath": "staticwebassets/images/product/b3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/banner/banner-bg.jpg",
+      "PackagePath": "staticwebassets/images/product/banner/banner-bg.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/add.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/add.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/author.png",
+      "PackagePath": "staticwebassets/images/product/blog/author.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/blog1.png",
+      "PackagePath": "staticwebassets/images/product/blog/blog1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/blog2.png",
+      "PackagePath": "staticwebassets/images/product/blog/blog2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/blog3.png",
+      "PackagePath": "staticwebassets/images/product/blog/blog3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/c1.png",
+      "PackagePath": "staticwebassets/images/product/blog/c1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/c2.png",
+      "PackagePath": "staticwebassets/images/product/blog/c2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/c3.png",
+      "PackagePath": "staticwebassets/images/product/blog/c3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/cat-post/cat-post-1.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/cat-post/cat-post-1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/cat-post/cat-post-2.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/cat-post/cat-post-2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/cat-post/cat-post-3.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/cat-post/cat-post-3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/causes/causes-1.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/causes/causes-1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/causes/causes-2.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/causes/causes-2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/causes/causes-3.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/causes/causes-3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/feature-img1.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/feature-img1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/main-blog/m-blog-1.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/main-blog/m-blog-1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/main-blog/m-blog-2.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/main-blog/m-blog-2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/main-blog/m-blog-3.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/main-blog/m-blog-3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/main-blog/m-blog-4.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/main-blog/m-blog-4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/main-blog/m-blog-5.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/main-blog/m-blog-5.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/next.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/next.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/popular-post/post1.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/popular-post/post1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/popular-post/post2.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/popular-post/post2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/popular-post/post3.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/popular-post/post3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/popular-post/post4.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/popular-post/post4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/post-img1.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/post-img1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/post-img2.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/post-img2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/blog/prev.jpg",
+      "PackagePath": "staticwebassets/images/product/blog/prev.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/breadcrumb/checkout-bg.jpg",
+      "PackagePath": "staticwebassets/images/product/breadcrumb/checkout-bg.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/feature-product/f-p-1.jpg",
+      "PackagePath": "staticwebassets/images/product/feature-product/f-p-1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/feature-product/f-p-2.jpg",
+      "PackagePath": "staticwebassets/images/product/feature-product/f-p-2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/feature-product/f-p-3.jpg",
+      "PackagePath": "staticwebassets/images/product/feature-product/f-p-3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/fevicon.png",
+      "PackagePath": "staticwebassets/images/product/fevicon.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/inspired-product/i1.jpg",
+      "PackagePath": "staticwebassets/images/product/inspired-product/i1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/inspired-product/i2.jpg",
+      "PackagePath": "staticwebassets/images/product/inspired-product/i2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/inspired-product/i3.jpg",
+      "PackagePath": "staticwebassets/images/product/inspired-product/i3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/inspired-product/i4.jpg",
+      "PackagePath": "staticwebassets/images/product/inspired-product/i4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/inspired-product/i5.jpg",
+      "PackagePath": "staticwebassets/images/product/inspired-product/i5.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/inspired-product/i6.jpg",
+      "PackagePath": "staticwebassets/images/product/inspired-product/i6.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/inspired-product/i7.jpg",
+      "PackagePath": "staticwebassets/images/product/inspired-product/i7.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/inspired-product/i8.jpg",
+      "PackagePath": "staticwebassets/images/product/inspired-product/i8.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/instagram/i1.jpg",
+      "PackagePath": "staticwebassets/images/product/instagram/i1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/instagram/i2.jpg",
+      "PackagePath": "staticwebassets/images/product/instagram/i2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/instagram/i3.jpg",
+      "PackagePath": "staticwebassets/images/product/instagram/i3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/instagram/i4.jpg",
+      "PackagePath": "staticwebassets/images/product/instagram/i4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/instagram/i5.jpg",
+      "PackagePath": "staticwebassets/images/product/instagram/i5.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/instagram/i6.jpg",
+      "PackagePath": "staticwebassets/images/product/instagram/i6.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/instagram/i7.jpg",
+      "PackagePath": "staticwebassets/images/product/instagram/i7.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/instagram/i8.jpg",
+      "PackagePath": "staticwebassets/images/product/instagram/i8.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/instagram/widget-i1.png",
+      "PackagePath": "staticwebassets/images/product/instagram/widget-i1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/instagram/widget-i2.png",
+      "PackagePath": "staticwebassets/images/product/instagram/widget-i2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/instagram/widget-i3.png",
+      "PackagePath": "staticwebassets/images/product/instagram/widget-i3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/instagram/widget-i4.png",
+      "PackagePath": "staticwebassets/images/product/instagram/widget-i4.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/instagram/widget-i5.png",
+      "PackagePath": "staticwebassets/images/product/instagram/widget-i5.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/instagram/widget-i6.png",
+      "PackagePath": "staticwebassets/images/product/instagram/widget-i6.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/login.jpg",
+      "PackagePath": "staticwebassets/images/product/login.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/logo.png",
+      "PackagePath": "staticwebassets/images/product/logo.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/most-product/m-product-1.jpg",
+      "PackagePath": "staticwebassets/images/product/most-product/m-product-1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/most-product/m-product-10.jpg",
+      "PackagePath": "staticwebassets/images/product/most-product/m-product-10.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/most-product/m-product-11.jpg",
+      "PackagePath": "staticwebassets/images/product/most-product/m-product-11.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/most-product/m-product-12.jpg",
+      "PackagePath": "staticwebassets/images/product/most-product/m-product-12.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/most-product/m-product-2.jpg",
+      "PackagePath": "staticwebassets/images/product/most-product/m-product-2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/most-product/m-product-3.jpg",
+      "PackagePath": "staticwebassets/images/product/most-product/m-product-3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/most-product/m-product-4.jpg",
+      "PackagePath": "staticwebassets/images/product/most-product/m-product-4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/most-product/m-product-5.jpg",
+      "PackagePath": "staticwebassets/images/product/most-product/m-product-5.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/most-product/m-product-6.jpg",
+      "PackagePath": "staticwebassets/images/product/most-product/m-product-6.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/most-product/m-product-7.jpg",
+      "PackagePath": "staticwebassets/images/product/most-product/m-product-7.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/most-product/m-product-8.jpg",
+      "PackagePath": "staticwebassets/images/product/most-product/m-product-8.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/most-product/m-product-9.jpg",
+      "PackagePath": "staticwebassets/images/product/most-product/m-product-9.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/new-product/n1.jpg",
+      "PackagePath": "staticwebassets/images/product/new-product/n1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/new-product/n2.jpg",
+      "PackagePath": "staticwebassets/images/product/new-product/n2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/new-product/n3.jpg",
+      "PackagePath": "staticwebassets/images/product/new-product/n3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/new-product/n4.jpg",
+      "PackagePath": "staticwebassets/images/product/new-product/n4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/new-product/new-product1.png",
+      "PackagePath": "staticwebassets/images/product/new-product/new-product1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/offer-bg.png",
+      "PackagePath": "staticwebassets/images/product/offer-bg.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/feature-product/f-p-1.jpg",
+      "PackagePath": "staticwebassets/images/product/product/feature-product/f-p-1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/feature-product/f-p-2.jpg",
+      "PackagePath": "staticwebassets/images/product/product/feature-product/f-p-2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/feature-product/f-p-3.jpg",
+      "PackagePath": "staticwebassets/images/product/product/feature-product/f-p-3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/inspired-product/i1.jpg",
+      "PackagePath": "staticwebassets/images/product/product/inspired-product/i1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/inspired-product/i2.jpg",
+      "PackagePath": "staticwebassets/images/product/product/inspired-product/i2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/inspired-product/i3.jpg",
+      "PackagePath": "staticwebassets/images/product/product/inspired-product/i3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/inspired-product/i4.jpg",
+      "PackagePath": "staticwebassets/images/product/product/inspired-product/i4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/inspired-product/i5.jpg",
+      "PackagePath": "staticwebassets/images/product/product/inspired-product/i5.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/inspired-product/i6.jpg",
+      "PackagePath": "staticwebassets/images/product/product/inspired-product/i6.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/inspired-product/i7.jpg",
+      "PackagePath": "staticwebassets/images/product/product/inspired-product/i7.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/inspired-product/i8.jpg",
+      "PackagePath": "staticwebassets/images/product/product/inspired-product/i8.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/most-product/m-product-1.jpg",
+      "PackagePath": "staticwebassets/images/product/product/most-product/m-product-1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/most-product/m-product-10.jpg",
+      "PackagePath": "staticwebassets/images/product/product/most-product/m-product-10.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/most-product/m-product-11.jpg",
+      "PackagePath": "staticwebassets/images/product/product/most-product/m-product-11.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/most-product/m-product-12.jpg",
+      "PackagePath": "staticwebassets/images/product/product/most-product/m-product-12.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/most-product/m-product-2.jpg",
+      "PackagePath": "staticwebassets/images/product/product/most-product/m-product-2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/most-product/m-product-3.jpg",
+      "PackagePath": "staticwebassets/images/product/product/most-product/m-product-3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/most-product/m-product-4.jpg",
+      "PackagePath": "staticwebassets/images/product/product/most-product/m-product-4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/most-product/m-product-5.jpg",
+      "PackagePath": "staticwebassets/images/product/product/most-product/m-product-5.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/most-product/m-product-6.jpg",
+      "PackagePath": "staticwebassets/images/product/product/most-product/m-product-6.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/most-product/m-product-7.jpg",
+      "PackagePath": "staticwebassets/images/product/product/most-product/m-product-7.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/most-product/m-product-8.jpg",
+      "PackagePath": "staticwebassets/images/product/product/most-product/m-product-8.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/most-product/m-product-9.jpg",
+      "PackagePath": "staticwebassets/images/product/product/most-product/m-product-9.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/new-product/n1.jpg",
+      "PackagePath": "staticwebassets/images/product/product/new-product/n1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/new-product/n2.jpg",
+      "PackagePath": "staticwebassets/images/product/product/new-product/n2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/new-product/n3.jpg",
+      "PackagePath": "staticwebassets/images/product/product/new-product/n3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/new-product/n4.jpg",
+      "PackagePath": "staticwebassets/images/product/product/new-product/n4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/new-product/new-product1.png",
+      "PackagePath": "staticwebassets/images/product/product/new-product/new-product1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/single-product/card.jpg",
+      "PackagePath": "staticwebassets/images/product/product/single-product/card.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/single-product/cart-1.jpg",
+      "PackagePath": "staticwebassets/images/product/product/single-product/cart-1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/single-product/review-1.png",
+      "PackagePath": "staticwebassets/images/product/product/single-product/review-1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/single-product/review-2.png",
+      "PackagePath": "staticwebassets/images/product/product/single-product/review-2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/single-product/review-3.png",
+      "PackagePath": "staticwebassets/images/product/product/single-product/review-3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/single-product/s-product-1.jpg",
+      "PackagePath": "staticwebassets/images/product/product/single-product/s-product-1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/single-product/s-product-s-2.jpg",
+      "PackagePath": "staticwebassets/images/product/product/single-product/s-product-s-2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/single-product/s-product-s-3.jpg",
+      "PackagePath": "staticwebassets/images/product/product/single-product/s-product-s-3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product/single-product/s-product-s-4.jpg",
+      "PackagePath": "staticwebassets/images/product/product/single-product/s-product-s-4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product_1.png",
+      "PackagePath": "staticwebassets/images/product/product_1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product_2.png",
+      "PackagePath": "staticwebassets/images/product/product_2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product_3.png",
+      "PackagePath": "staticwebassets/images/product/product_3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product_4.png",
+      "PackagePath": "staticwebassets/images/product/product_4.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product_5.png",
+      "PackagePath": "staticwebassets/images/product/product_5.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product_6.png",
+      "PackagePath": "staticwebassets/images/product/product_6.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product_7.png",
+      "PackagePath": "staticwebassets/images/product/product_7.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/product_8.png",
+      "PackagePath": "staticwebassets/images/product/product_8.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/single-product/card.jpg",
+      "PackagePath": "staticwebassets/images/product/single-product/card.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/single-product/cart-1.jpg",
+      "PackagePath": "staticwebassets/images/product/single-product/cart-1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/single-product/product_1.png",
+      "PackagePath": "staticwebassets/images/product/single-product/product_1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/single-product/review-1.png",
+      "PackagePath": "staticwebassets/images/product/single-product/review-1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/single-product/review-2.png",
+      "PackagePath": "staticwebassets/images/product/single-product/review-2.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/single-product/review-3.png",
+      "PackagePath": "staticwebassets/images/product/single-product/review-3.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/single-product/s-product-1.jpg",
+      "PackagePath": "staticwebassets/images/product/single-product/s-product-1.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/single-product/s-product-s-2.jpg",
+      "PackagePath": "staticwebassets/images/product/single-product/s-product-s-2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/single-product/s-product-s-3.jpg",
+      "PackagePath": "staticwebassets/images/product/single-product/s-product-s-3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/product/single-product/s-product-s-4.jpg",
+      "PackagePath": "staticwebassets/images/product/single-product/s-product-s-4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/subscribe_area.png",
+      "PackagePath": "staticwebassets/images/subscribe_area.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/techno.png",
       "PackagePath": "staticwebassets/images/techno.png"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/js/site.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/vector-removebg-preview.png",
+      "PackagePath": "staticwebassets/images/vector-removebg-preview.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/vector.jpg",
+      "PackagePath": "staticwebassets/images/vector.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/vector2-removebg-preview.png",
+      "PackagePath": "staticwebassets/images/vector2-removebg-preview.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/vector2.jpg",
+      "PackagePath": "staticwebassets/images/vector2.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/w1.jpeg",
+      "PackagePath": "staticwebassets/images/w1.jpeg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/w2.jpeg",
+      "PackagePath": "staticwebassets/images/w2.jpeg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/w3.jpg",
+      "PackagePath": "staticwebassets/images/w3.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/w4.jpg",
+      "PackagePath": "staticwebassets/images/w4.jpg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/w5.jpeg",
+      "PackagePath": "staticwebassets/images/w5.jpeg"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/images/watch1.png",
+      "PackagePath": "staticwebassets/images/watch1.png"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/aos.js",
+      "PackagePath": "staticwebassets/js/aos.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/contact.js",
+      "PackagePath": "staticwebassets/js/contact.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/custom.js",
+      "PackagePath": "staticwebassets/js/custom.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/gmaps.min.js",
+      "PackagePath": "staticwebassets/js/gmaps.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/jquery-1.12.1.min.js",
+      "PackagePath": "staticwebassets/js/jquery-1.12.1.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/jquery-3.3.1.slim.min.js",
+      "PackagePath": "staticwebassets/js/jquery-3.3.1.slim.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/jquery.ajaxchimp.min.js",
+      "PackagePath": "staticwebassets/js/jquery.ajaxchimp.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/jquery.counterup.min.js",
+      "PackagePath": "staticwebassets/js/jquery.counterup.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/jquery.downCount.js",
+      "PackagePath": "staticwebassets/js/jquery.downCount.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/jquery.easing.min.js",
+      "PackagePath": "staticwebassets/js/jquery.easing.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/jquery.form.js",
+      "PackagePath": "staticwebassets/js/jquery.form.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/jquery.magnific-popup.js",
+      "PackagePath": "staticwebassets/js/jquery.magnific-popup.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets/js/jquery.nice-select.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/js/jquery.validate.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/lightslider.min.js",
+      "PackagePath": "staticwebassets/js/lightslider.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/mail-script.js",
+      "PackagePath": "staticwebassets/js/mail-script.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/masonry.pkgd.js",
+      "PackagePath": "staticwebassets/js/masonry.pkgd.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/masonry.pkgd.min.js",
+      "PackagePath": "staticwebassets/js/masonry.pkgd.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/owl.carousel.min.js",
+      "PackagePath": "staticwebassets/js/owl.carousel.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/particles.min.js",
+      "PackagePath": "staticwebassets/js/particles.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/popper.min.js",
+      "PackagePath": "staticwebassets/js/popper.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/price_rangs.js",
+      "PackagePath": "staticwebassets/js/price_rangs.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/LICENSE",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/slick.min.js",
+      "PackagePath": "staticwebassets/js/slick.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/stellar.js",
+      "PackagePath": "staticwebassets/js/stellar.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/swiper.jquery.js",
+      "PackagePath": "staticwebassets/js/swiper.jquery.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/swiper.min.js",
+      "PackagePath": "staticwebassets/js/swiper.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/swiper_custom.js",
+      "PackagePath": "staticwebassets/js/swiper_custom.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/theme.js",
+      "PackagePath": "staticwebassets/js/theme.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/js/waypoints.min.js",
+      "PackagePath": "staticwebassets/js/waypoints.min.js"
+    },
+    {
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/LICENSE",
       "PackagePath": "staticwebassets/lib/bootstrap"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery-validation/LICENSE.md",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery-validation/LICENSE.md",
       "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery-validation/dist/additional-methods.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
       "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery/LICENSE.txt",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery/LICENSE.txt",
       "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery/dist/jquery.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery/dist/jquery.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery/dist/jquery.min.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery/dist/jquery.min.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery/dist/jquery.min.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery/dist/jquery.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery/dist/jquery.slim.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery/dist/jquery.slim.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery/dist/jquery.slim.min.js",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery/dist/jquery.slim.min.js",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.js"
     },
     {
-      "Id": "/Users/youssefkitabrhi/Desktop/EcommerceProject/wwwroot/lib/jquery/dist/jquery.slim.min.map",
+      "Id": "/home/walid1234/Téléchargements/EcommerceProject/wwwroot/lib/jquery/dist/jquery.slim.min.map",
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.slim.min.map"
     },
     {
