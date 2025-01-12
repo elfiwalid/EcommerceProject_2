@@ -1,400 +1,966 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<!doctype html>
+<html lang="zxx">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Experience the ultimate in shopping, crafted just for you. Learn more about our values and explore our unique features.">
-    <meta name="keywords" content="ecommerce, shopping, quality, customer-centric, sustainable">
-    <meta name="author" content="Your Brand">
-    <title>Welcome to Our Universe</title>
-    <!-- External Libraries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <style>
-        /* General Styling */
-        body {
-            margin: 0;
-            font-family: 'Roboto', Arial, sans-serif;
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>aranoz</title>
+    <link rel="icon" href="favicon.ico">
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="/css/animate.css">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="/css/all.css">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="/css/flaticon.css">
+    <link rel="stylesheet" href="/css/themify-icons.css">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="/css/slick.css">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<style>
+
+
+    .banner_part {
+        position: relative;
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        background-color: rgba(225, 243, 255, 0.75);
+        overflow: hidden;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    .single_banner_slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+    }
+
+    .banner_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .banner_text {
+        flex: 1;
+        color: white;
+        padding: 20px;
+        text-align: left;
+    }
+
+    .banner_text_iner {
+        max-width: 500px;
+    }
+
+    .banner_text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .banner_text p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .btn_2 {
+        display: inline-block;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn_2:hover {
+            background-color: #45a049;
+        }
+
+    .banner_img {
+        flex: 1;
+        text-align: center;
+    }
+
+        .banner_img img {
+            max-width: 900px;
+            height: 500px;
+        }
+
+    @@media (max-width: 768px) {
+        .banner_content {
+            flex-direction: column;
+        }
+
+        .banner_text, .banner_img {
+            width: 100%;
+            text-align: center;
+        }
+
+        .banner_text_iner {
+            margin: 0 auto;
+        }
+    }
+    /* Appliquer la police Poppins et un texte en gras au titre */
+    .banner_title {
+        font-family: 'Poppins', sans-serif; /* Police Poppins */
+        font-size: 3.5rem; /* Taille plus grande */
+        margin-bottom: 20px;
+        color: #ffffff; /* Texte blanc */
+        text-transform: uppercase; /* Mettre le texte en majuscules */
+        letter-spacing: 5px; /* Espacement des lettres */
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre pour l'effet gras */
+    }
+
+    /* Style pour les autres éléments du texte */
+    .banner_description {
+        font-family: 'Poppins', sans-serif; /* Appliquer la même police */
+        font-weight: 400; /* Poids normal */
+        font-size: 1.2rem; /* Augmenter la taille du texte de description */
+        margin-bottom: 30px;
+        color: rgba(0, 0, 0, 0.8); /* Texte plus doux */
+    }
+
+    /* Spécifier la taille de h1 à 3.5rem et s'assurer que l'espacement est correct */
+    .banner_text h1 {
+        font-size: 3.5rem; /* Taille ajustée à 3.5rem */
+        margin-bottom: 20px;
+        color: #000000; /* Assurez-vous que le titre h1 est bien visible */
+        font-weight: 900; /* Font-weight plus gras */
+        text-transform: uppercase; /* Mettre le texte en majuscules */
+        letter-spacing: 3px; /* Espacement des lettres */
+        text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5); /* Ombre plus marquée */
+    }
+
+    /*.banner_content .banner_content .banner_content */
+    .featured-category {
+        padding: 80px 0;
+        background-color: #fff;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
             color: #333;
-            background-color: #f8f9fa;
+            margin-bottom: 20px;
         }
 
-        .hero-section {
-            background: url('https://source.unsplash.com/1920x1080/?shopping,ecommerce') no-repeat center center/cover;
-            height: 100vh;
-            position: relative;
-            color: #fff;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .product-card {
+        background: #f8f9fa;
+        padding: 30px;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+        .product-card:hover {
+            transform: translateY(-5px);
         }
 
-        .hero-section .overlay {
-            background: rgba(0, 0, 0, 0.6);
+    .product-info {
+        flex: 1;
+        padding-right: 30px;
+    }
+
+    .product-tag {
+        color: #2563eb;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    .product-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 20px;
+    }
+
+    .explore-btn {
+        display: inline-flex;
+        align-items: center;
+        padding: 12px 24px;
+        color: #eb2525;
+        border: none;
+        border-radius: 25px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+    }
+
+        .explore-btn:hover {
+            border: #1d4ed8;
+            transform: translateX(5px);
+        }
+
+        .explore-btn i {
+            margin-left: 8px;
+        }
+
+    .product-image {
+        flex: 1;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border-radius: 8px;
+        padding: 20px;
+    }
+
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+    .product-card:hover .product-image img {
+        transform: scale(1.05);
+    }
+
+    @@media (max-width: 768px) {
+        .product-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+        }
+
+        .product-card {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .product-info {
+            padding-right: 0;
+            padding-bottom: 20px;
+        }
+    }
+
+    .single_product_text h3 {
+        font-weight: lighter;
+        font-size: 18px;
+    }
+
+    .single_product_text h4 {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 14px;
+    }
+
+    .section_tittle_2 h2 {
+        font-weight: 700;
+        font-size: 2.5rem;
+        color: #000000;
+        margin-bottom: 40px;
+    }
+
+
+    .product_list_2 {
+        background-color: #fff;
+    }
+
+    .single_product_text {
+        margin-top: 26px;
+    }
+
+    @@media (min-width: 992px) {
+        .col-lg-3 {
+            flex: 0 0 25%;
+            max-width: 25%;
+            margin-bottom: 60px;
+        }
+    }
+
+
+    .add_cart_2 {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: #5b6a88;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+
+        .add_cart_2::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            border-color: #1d4ed8;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+            z-index: -1;
         }
 
-        .btn-primary {
-            background-color: #007bff;
-            border: none;
-            padding: 12px 20px;
-            font-size: 1rem;
-            border-radius: 5px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
+        .add_cart_2:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
         }
 
-        .btn-primary:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
+        .add_cart_2 i {
+            transition: transform 0.3s ease;
+            font-size: 0.9rem;
         }
 
-        .card {
-            border-radius: 12px;
-            background-color: #fff;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .add_cart_2:hover i {
+            transform: translateX(4px) scale(1.1);
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-
-        .rating i {
-            color: #ffc107;
-            margin-right: 2px;
-        }
-
-        .functionalities .icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .functionalities h5 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        /* Enhanced Design */
-        .about-us {
-            background: #ffffff;
-            padding: 4rem 2rem;
-        }
-
-        .about-us h2 {
-            color: #343a40;
-        }
-
-        .icon-box i {
-            font-size: 3rem;
-            margin-bottom: 1rem;
+        .add_cart_2 span {
+            display: inline-block;
             transition: transform 0.3s ease;
         }
 
-        .icon-box:hover i {
-            transform: scale(1.2);
+        .add_cart_2:hover span {
+            transform: translateX(-2px);
         }
 
-        .icon-box:nth-child(1) i {
-            color: #ff6f61;
-        }
-
-        .icon-box:nth-child(2) i {
-            color: #8bc34a;
-        }
-
-        .icon-box:nth-child(3) i {
-            color: #ffc107;
-        }
-
-        .cta {
-            padding: 4rem 2rem;
-            text-align: center;
-            background: linear-gradient(to right, #007bff, #0056b3);
-            color: #fff;
-        }
-
-        .cta h2 {
-            font-size: 2.5rem;
-        }
-
-        .cta .btn-light {
-            background-color: #fff;
-            color: #007bff;
-            font-weight: bold;
-        }
-
-        .cta .btn-light:hover {
-            background-color: #eaeaea;
-        }
-
-        .newsletter {
-            padding: 4rem 2rem;
-            background: #343a40;
-            color: #fff;
-            text-align: center;
-        }
-
-        .newsletter input {
-            border-radius: 30px;
-            padding: 10px 20px;
-            border: none;
-            outline: none;
-        }
-
-        .newsletter button {
-            border-radius: 30px;
-            padding: 10px 20px;
-            border: none;
-            background: #007bff;
-            color: #fff;
-            font-weight: bold;
-        }
-
-        footer {
-            background-color: #343a40;
-            color: #fff;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        footer a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: #0056b3;
-        }
-
-        .features {
-            padding: 4rem 2rem;
-            background: #f9f9f9;
-        }
-
-        .features h2 {
-            font-size: 2.5rem;
-            color: #333;
-        }
-
-        .features .icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .features .icon:hover {
-            color: #007bff;
-        }
-
-        .trending-products {
-            padding: 4rem 2rem;
-            background: #ffffff;
-        }
-
-        .trending-products img {
-            border-radius: 10px;
-        }
-
-        @@media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 2rem;
-            }
-
-            .hero-section p {
-                font-size: 1rem;
-            }
-        }
-    </style>
-</head>
+</style>
 <body>
-<div class="container-fluid p-0">
-    <!-- Fullscreen Hero Section -->
-    <section class="hero-section d-flex align-items-center justify-content-center text-center">
-        <div class="overlay w-100 h-100"></div>
-        <div class="content position-relative z-index-2" data-aos="fade-up">
-            <h1 class="display-3 fw-bold mb-3 animate__animated animate__zoomIn">Welcome to Our Universe</h1>
-            <p class="lead mb-4 animate__animated animate__fadeInUp">Experience the ultimate in shopping, crafted just for you.</p>
-            <a href="#about-us" class="btn btn-primary btn-lg shadow hvr-sink" aria-label="Explore More About Us">Explore More</a>
+
+
+
+    <!-- banner part start-->
+    <section class="banner_part">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-12">
+                    <div class="banner_slider owl-carousel">
+                        <!-- First Banner Slider -->
+                        <div class="single_banner_slider">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-8 text-center">
+                                    <div class="banner_text">
+                                        <div class="banner_text_iner">
+                                            <h1 class="banner_title">Wood & Cloth Sofa</h1>
+                                            <p class="banner_description">Discover the elegance of natural materials combined in this stylish sofa. Perfect for your home decor.</p>
+                                            <a href="#" class="btn_2">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-none d-lg-block">
+                                    <div class="banner_img">
+                                        <img src="images/watch1.png" alt="Wood & Cloth Sofa">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Second Banner Slider -->
+                        <div class="single_banner_slider">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-8 text-center">
+                                    <div class="banner_text">
+                                        <div class="banner_text_iner">
+                                            <h1 class="banner_title">Cloth & Wood Sofa</h1>
+                                            <p class="banner_description">Experience comfort and style with this high-quality cloth and wood sofa, designed to complement any modern space.</p>
+                                            <a href="#" class="btn_2">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-none d-lg-block">
+                                    <div class="banner_img">
+                                        <img src="images/banner_img.png" alt="Cloth & Wood Sofa">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Third Banner Slider -->
+                        <div class="single_banner_slider">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-8 text-center">
+                                    <div class="banner_text">
+                                        <div class="banner_text_iner">
+                                            <h1 class="banner_title">Modern Sofa Collection</h1>
+                                            <p class="banner_description">Indulge in luxurious comfort and timeless design with our premium sofa collection.</p>
+                                            <a href="#" class="btn_2">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-none d-lg-block">
+                                    <div class="banner_img">
+                                        <img src="images/banner_img.png" alt="Modern Sofa Collection">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fourth Banner Slider -->
+                        <div class="single_banner_slider">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 col-md-8 text-center">
+                                    <div class="banner_text">
+                                        <div class="banner_text_iner">
+                                            <h1 class="banner_title">Cloth & Wood Sofa</h1>
+                                            <p class="banner_description">Combine natural wood and soft cloth to create the perfect addition to your living room.</p>
+                                            <a href="#" class="btn_2">Shop Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 d-none d-lg-block">
+                                    <div class="banner_img">
+                                        <img src="images/banner_img.png" alt="Cloth & Wood Sofa">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-counter"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner part end-->
+    <section class="featured-category">
+        <div class="section-header">
+            <h2>Featured Category</h2>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-info">
+                    <span class="product-tag">Premium Quality</span>
+                    <h3 class="product-title">Latest foam Sofa</h3>
+                    <a href="#" class="explore-btn">
+                        Explore Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="product-image">
+                    <img src="images/w1.jpeg" alt="Blue Modern Chair" />
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-info">
+                    <span class="product-tag">Premium Quality</span>
+                    <h3 class="product-title">Latest foam Sofa</h3>
+                    <a href="#" class="explore-btn">
+                        Explore Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="product-image">
+                    <img src="images/w2.jpeg" alt="Orange Modern Chair" />
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-info">
+                    <span class="product-tag">Premium Quality</span>
+                    <h3 class="product-title">Latest foam Sofa</h3>
+                    <a href="#" class="explore-btn">
+                        Explore Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="product-image">
+                    <img src="images/w3.jpg" alt="Wicker Chair" />
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-info">
+                    <span class="product-tag">Premium Quality</span>
+                    <h3 class="product-title">Latest foam Sofa</h3>
+                    <a href="#" class="explore-btn">
+                        Explore Now
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="product-image">
+                    <img src="images/w5.jpeg" alt="Yellow Modern Sofa" />
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about-us" class="about-us">
-        <div class="container text-center">
-            <h2 class="fw-bold mb-4 animate__animated animate__fadeInLeft" data-aos="fade-right">Who We Are</h2>
-            <p class="text-muted mb-5 animate__animated animate__fadeInRight" data-aos="fade-left">
-                We are more than just an online store; we are your trusted partner for quality and convenience. Explore our story, values, and dedication to excellence.
-            </p>
+    <!-- product_list start-->
+    <section class="product_list_2">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="section_tittle_2 text-center">
+                        <h2>awesome shop</h2>
+                    </div>
+                </div>
+            </div>
             <div class="row">
-                <div class="col-md-4 icon-box" data-aos="zoom-in">
-                    <i class="fas fa-heart"></i>
-                    <h5>Customer-Centric</h5>
-                    <p>We value our customers and aim to provide an unforgettable experience.</p>
-                </div>
-                <div class="col-md-4 icon-box" data-aos="zoom-in">
-                    <i class="fas fa-leaf"></i>
-                    <h5>Sustainable</h5>
-                    <p>We are committed to ethical practices and environmentally friendly solutions.</p>
-                </div>
-                <div class="col-md-4 icon-box" data-aos="zoom-in">
-                    <i class="fas fa-award"></i>
-                    <h5>Trusted Quality</h5>
-                    <p>All our products meet strict standards of quality and reliability.</p>
+                <div class="col-lg-12">
+                    <div class="product_list_slider owl-carousel">
+                        <div class="single_product_list_slider">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_1.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_2.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_3.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart_2">
+                                                <span>add to cart</span>
+                                                <i class="fas fa-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_4.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_5.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_6.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_7.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_8.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single_product_list_slider">
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_1.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_2.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_3.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_4.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_5.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_6.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_7.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class="single_product_item">
+                                        <img src="images/product/product_8.png" alt="">
+                                        <div class="single_product_text">
+                                            <h4>Quartz Belt Watch</h4>
+                                            <h3>$150.00</h3>
+                                            <a href="#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Features Section -->
-    <section class="features py-5 bg-light">
+    <!-- product_list part start-->
+    <!-- awesome_shop start-->
+    <section class="our_offer section_padding">
         <div class="container">
-            <h2 class="text-center fw-bold mb-4" data-aos="fade-up">Why Choose Us?</h2>
-            <div class="row text-center">
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-shipping-fast fa-3x text-primary mb-3"></i>
-                    <h5>Fast Delivery</h5>
-                    <p>Get your orders delivered quickly and efficiently.</p>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-6">
+                    <div class="offer_img">
+                        <img src="images/offer_img.png" alt="">
+                    </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-tags fa-3x text-success mb-3"></i>
-                    <h5>Exclusive Deals</h5>
-                    <p>Enjoy exclusive offers and discounts every day.</p>
-                </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-thumbs-up fa-3x text-warning mb-3"></i>
-                    <h5>Top Quality</h5>
-                    <p>We provide only the best quality products for you.</p>
+                <div class="col-lg-6 col-md-6">
+                    <div class="offer_text">
+                        <h2>
+                            Weekly Sale on
+                            60% Off All Products
+                        </h2>
+                        <div class="date_countdown">
+                            <div id="timer">
+                                <div id="days" class="date"></div>
+                                <div id="hours" class="date"></div>
+                                <div id="minutes" class="date"></div>
+                                <div id="seconds" class="date"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="enter email address"
+                                   aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <a href="#" class="input-group-text btn_2" id="basic-addon2">book now</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-
-<!-- Payment Options Section -->
-<section class="payment-options py-5 bg-white" id="payment-options">
-    <div class="container">
-        <h2 class="text-center fw-bold mb-4" data-aos="fade-up">Payment Options</h2>
-        <p class="text-center text-muted mb-5" data-aos="fade-up" data-aos-delay="100">
-            Choose the most convenient payment method for your purchase.
-        </p>
-        <div class="row gy-4">
-            <!-- PayPal -->
-            <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon mb-3 animate__animated animate__pulse animate__infinite">
-                    <i class="fab fa-paypal fa-3x text-primary"></i>
-                </div>
-                <h5 class="fw-bold">Pay with PayPal</h5>
-                <p>Quick and secure payments with PayPal.</p>
-            </div>
-
-            <!-- Credit Card -->
-            <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon mb-3 animate__animated animate__pulse animate__infinite">
-                    <i class="fas fa-credit-card fa-3x text-success"></i>
-                </div>
-                <h5 class="fw-bold">Credit Card</h5>
-                <p>Pay using your Visa, MasterCard, or other cards.</p>
-            </div>
-
-            <!-- Bank Transfer -->
-            <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon mb-3 animate__animated animate__pulse animate__infinite">
-                    <i class="fas fa-university fa-3x text-black"></i>
-                </div>
-                <h5 class="fw-bold">Bank Transfer</h5>
-                <p>Send your payment directly to our bank account.</p>
-            </div>
-
-            <!-- Cash on Delivery -->
-            <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon mb-3 animate__animated animate__pulse animate__infinite">
-                    <i class="fas fa-money-bill-wave fa-3x text-success"></i>
-                </div>
-                <h5 class="fw-bold">Cash on Delivery</h5>
-                <p>Pay for your order upon delivery.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-    <!-- Functionalities Section -->
-<section class="functionalities py-5">
-    <div class="container">
-        <h2 class="text-center fw-bold mb-4" data-aos="fade-up">Our Functionalities</h2>
-        <p class="text-center text-muted mb-5" data-aos="fade-up" data-aos-delay="100">
-            Discover how we make your experience better with cutting-edge features designed just for you.
-        </p>
-        <div class="row gy-4">
-            <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon mb-3">
-                    <i class="fas fa-search fa-2x text-info"></i>
-                </div>
-                <h5 class="fw-bold">Advanced Search</h5>
-                <p>Quickly locate what you need with our intelligent search engine.</p>
-            </div>
-            <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon mb-3">
-                    <i class="fas fa-sync-alt fa-2x text-primary"></i>
-                </div>
-                <h5 class="fw-bold">Easy Returns</h5>
-                <p>Flexible and hassle-free return policies for a smooth experience.</p>
-            </div>
-            <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon mb-3">
-                    <i class="fas fa-lock fa-2x text-warning"></i>
-                </div>
-                <h5 class="fw-bold">Secure Payments</h5>
-                <p>State-of-the-art security to ensure your transactions are safe.</p>
-            </div>
-            <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon mb-3">
-                    <i class="fas fa-headset fa-2x text-danger"></i>
-                </div>
-                <h5 class="fw-bold">24/7 Support</h5>
-                <p>Our support team is available anytime to assist you.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-    <section class="cta py-5">
+    <!-- awesome_shop part start-->
+    <!-- product_list part start-->
+    <section class="product_list best_seller section_padding">
         <div class="container">
-            <h2>Ready to Shop?</h2>
-            <p class="mb-4">Join thousands of happy customers and start your journey today.</p>
-            <a href="/account/Shop" class="btn btn-light btn-lg">Shop Now</a>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="section_tittle text-center">
+                        <h2>Best Sellers <span>shop</span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-12">
+                    <div class="best_product_slider owl-carousel">
+                        <div class="single_product_item">
+                            <img src="images/product/product_1.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                        <div class="single_product_item">
+                            <img src="images/product/product_2.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                        <div class="single_product_item">
+                            <img src="images/product/product_3.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                        <div class="single_product_item">
+                            <img src="images/product/product_4.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                        <div class="single_product_item">
+                            <img src="images/product/product_5.png" alt="">
+                            <div class="single_product_text">
+                                <h4>Quartz Belt Watch</h4>
+                                <h3>$150.00</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter py-5">
+    <!-- product_list part end-->
+    <!-- subscribe_area part start-->
+    <section class="subscribe_area section_padding">
         <div class="container">
-            <h3>Stay Updated</h3>
-            <p class="mb-4">Subscribe to our newsletter for the latest offers and news.</p>
-            <form class="d-flex justify-content-center">
-                <input type="email" class="form-control w-50 me-2" placeholder="Enter your email">
-                <button type="submit" class="btn btn-primary">Subscribe</button>
-            </form>
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="subscribe_area_text text-center">
+                        <h5>Join Our Newsletter</h5>
+                        <h2>
+                            Subscribe to get Updated
+                            with new offers
+                        </h2>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="enter email address"
+                                   aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <a href="#" class="input-group-text btn_2" id="basic-addon2">subscribe now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+    <!--::subscribe_area part end::-->
+    <!--::footer_part start::-->
+    <footer class="footer_part">
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-sm-6 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Top Products</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="">Managed Website</a></li>
+                            <li><a href="">Manage Reputation</a></li>
+                            <li><a href="">Power Tools</a></li>
+                            <li><a href="">Marketing Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Quick Links</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="">Jobs</a></li>
+                            <li><a href="">Brand Assets</a></li>
+                            <li><a href="">Investor Relations</a></li>
+                            <li><a href="">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Features</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="">Jobs</a></li>
+                            <li><a href="">Brand Assets</a></li>
+                            <li><a href="">Investor Relations</a></li>
+                            <li><a href="">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-2">
+                    <div class="single_footer_part">
+                        <h4>Resources</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="">Guides</a></li>
+                            <li><a href="">Research</a></li>
+                            <li><a href="">Experts</a></li>
+                            <li><a href="">Agencies</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="single_footer_part">
+                        <h4>Newsletter</h4>
+                        <p>
+                            Heaven fruitful doesn't over lesser in days. Appear creeping
+                        </p>
+                        <div id="mc_embed_signup">
+                            <form target="_blank"
+                                  action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                  method="get" class="subscribe_form relative mail_part">
+                                <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
+                                       class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+                                       onblur="this.placeholder = ' Email Address '">
+                                <button type="submit" name="submit" id="newsletter-submit"
+                                        class="email_icon newsletter-submit button-contactForm">
+                                    subscribe
+                                </button>
+                                <div class="mt-10 info"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    
-    
-</div>
+        </div>
+        <div class="copyright_part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="copyright_text">
+                            <P>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </P>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="footer_icon social_icon">
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="single_social_icon"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#" class="single_social_icon"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#" class="single_social_icon"><i class="fas fa-globe"></i></a></li>
+                                <li><a href="#" class="single_social_icon"><i class="fab fa-behance"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--::footer_part end::-->
+    <!-- jquery plugins here-->
+    <script src="/js/jquery-1.12.1.min.js"></script>
+    <!-- popper js -->
+    <script src="/js/popper.min.js"></script>
+    <!-- bootstrap js -->
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- easing js -->
+    <script src="/js/jquery.magnific-popup.js"></script>
+    <!-- swiper js -->
+    <script src="/js/swiper.min.js"></script>
+    <!-- swiper js -->
+    <script src="/js/masonry.pkgd.js"></script>
+    <!-- particles js -->
+    <script src="/js/owl.carousel.min.js"></script>
+    <script src="/js/jquery.nice-select.min.js"></script>
+    <!-- slick js -->
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/jquery.counterup.min.js"></script>
+    <script src="/js/waypoints.min.js"></script>
+    <script src="/js/contact.js"></script>
+    <script src="/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/js/jquery.form.js"></script>
+    <script src="/js/jquery.validate.min.js"></script>
+    <script src="/js/mail-script.js"></script>
+    <!-- custom js -->
+    <script src="/js/custom.js"></script>
 
-<!-- External Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-    AOS.init();
-</script>
 </body>
+
 </html>

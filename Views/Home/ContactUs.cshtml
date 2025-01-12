@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="container my-5">
+    <h1 class="display-4">Contact Us</h1>
+    <p class="lead">We’d love to hear from you! Feel free to get in touch with us using the information below.</p>
+
+    <h3>Contact Information</h3>
+    <ul class="list-unstyled">
+        <li><strong>Email:</strong> support@ecommerce.com</li>
+        <li><strong>Phone:</strong> +1 234 567 890</li>
+        <li><strong>Address:</strong> 123 E-commerce St, Online City, Web</li>
+    </ul>
+
+    <h3>Send Us a Message</h3>
+    <form method="post" action="/Home/SendContactMessage">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+</div>

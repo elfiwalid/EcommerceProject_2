@@ -15,7 +15,8 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        return View();
+        // Rediriger vers AboutUs si l'utilisateur accède à /Home
+        return RedirectToAction("AboutUs");
     }
 
     public IActionResult Privacy()
@@ -28,4 +29,17 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+    public IActionResult AboutUs()
+    {
+        return View();
+    }
+
+    public IActionResult ContactUs()
+    {
+        return View();
+    }
+  
+
+
+
 }

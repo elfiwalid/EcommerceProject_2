@@ -72,75 +72,90 @@
 </script>
 
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
-    <div class="container">
-        <!-- Logo -->
-        <a class="navbar-brand fw-bold text-primary" href="/" style="font-size: 1.8rem; font-family: 'Poppins', sans-serif;">
-            mekog.
-        </a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold text-primary" href="/Produits/Index" style="font-size: 1.8rem; font-family: 'Poppins', sans-serif;">
+                mekog.
+            </a>
 
-        <!-- Burger Menu -->
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <!-- Burger Menu -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <!-- Navigation Links -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link text-dark fw-semibold px-3" href="/Home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark fw-semibold px-3" href="/account/shop">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark fw-semibold px-3" href="/Order">Mes Commandes</a>
-                </li>
-                
-            </ul>
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-3" href="/Produits/Index">Home</a>
+                    </li>
 
-            <!-- Actions Section -->
-            <div class="d-flex align-items-center">
-                <!-- Dashboard Button (Admin Only) -->
-                @if (User.IsInRole("Admin"))
-                {
-                    <a href="/Admin/Dashboard" class="btn btn-outline-primary fw-semibold me-3 rounded-pill">
-                        <i class="bi bi-speedometer2"></i> Dashboard
-                    </a>
-                }
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-semibold px-3" href="/Account/Shop">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark fw-semibold px-3" href="/Order">Mes Commandes</a>
+                        </li>
+                    }
 
-                <!-- Search Bar -->
-                <form class="d-flex me-3" method="get" action="/Produits/Recherche">
-                    <input class="form-control rounded-pill border-light shadow-sm" type="search" name="terme" placeholder="Search..." style="max-width: 200px;">
-                    <button class="btn btn-primary rounded-pill ms-2" type="submit">Search</button>
-                </form>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-3" href="/Home/AboutUs">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark fw-semibold px-3" href="/Home/ContactUs">Contact Us</a>
+                    </li>
+                </ul>
 
-                <!-- Cart Button -->
-                <a href="/Produits/Panier" class="btn btn-primary position-relative rounded-pill px-4">
-                    <i class="bi bi-cart me-2"></i> Panier
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark shadow-sm">
-                        @if (ViewData["CartCount"] != null) {
-                            @ViewData["CartCount"]
-                        }
-                    </span>
-                </a>
+                <!-- Actions Section -->
+                <div class="d-flex align-items-center">
+                    <!-- Dashboard Button (Admin Only) -->
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a href="/Admin/Dashboard" class="btn btn-outline-primary fw-semibold me-3 rounded-pill">
+                            <i class="bi bi-speedometer2"></i> Dashboard
+                        </a>
+                    }
 
-                <!-- Authentication Links -->
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <form asp-action="Logout" asp-controller="Account" method="post" class="d-inline ms-3">
-                        <button type="submit" class="btn btn-link text-danger fw-medium">Logout</button>
+                    <!-- Search Bar -->
+                    <form class="d-flex me-3" method="get" action="/Produits/Recherche">
+                        <input class="form-control rounded-pill border-light shadow-sm" type="search" name="terme" placeholder="Search..." style="max-width: 200px;">
+                        <button class="btn btn-primary rounded-pill ms-2" type="submit">Search</button>
                     </form>
-                }
-                else
-                {
-                    <a class="btn btn-link text-dark fw-medium ms-3" href="/Account/Login">Login</a>
-                    <a class="btn btn-outline-primary rounded-pill ms-2 px-4 fw-medium" href="/Account/Register">Register</a>
-                }
+
+                    <!-- Cart Button -->
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a href="/Produits/Panier" class="btn btn-primary position-relative rounded-pill px-4">
+                            <i class="bi bi-cart me-2"></i> Panier
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark shadow-sm">
+                                @if (ViewData["CartCount"] != null)
+                                {
+                                    @ViewData["CartCount"]
+                                }
+                            </span>
+                        </a>
+                    }
+
+                    <!-- Authentication Links -->
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <form asp-action="Logout" asp-controller="Account" method="post" class="d-inline ms-3">
+                            <button type="submit" class="btn btn-link text-danger fw-medium">Logout</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <a class="btn btn-link text-dark fw-medium ms-3" href="/Account/Login">Login</a>
+                        <a class="btn btn-outline-primary rounded-pill ms-2 px-4 fw-medium" href="/Account/Register">Register</a>
+                    }
+                </div>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
+
 <style>
 .nav-link:hover, .dropdown-item:hover {
     color: #0056b3;

@@ -36,8 +36,9 @@ namespace EcommerceProject.Controllers
         }
 
         // POST: Register
+        // POST: Register
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterViewModel model, string role)
+        public async Task<IActionResult> Register(RegisterViewModel model)
         {
             if (ModelState.IsValid)
             {
@@ -52,27 +53,21 @@ namespace EcommerceProject.Controllers
                 {
                     _logger.LogInformation("Utilisateur inscrit : {Email}", model.Email);
 
-                    if (string.IsNullOrEmpty(role) || role.ToLower() == "user")
+                    // Assigner directement le rôle "User"
+                    if (!await _roleManager.RoleExistsAsync("User"))
                     {
-                        if (!await _roleManager.RoleExistsAsync("User"))
-                        {
-                            await _roleManager.CreateAsync(new IdentityRole("User"));
-                        }
-                        await _userManager.AddToRoleAsync(user, "User");
-                    }
-                    else if (role.ToLower() == "admin")
-                    {
-                        if (!await _roleManager.RoleExistsAsync("Admin"))
-                        {
-                            await _roleManager.CreateAsync(new IdentityRole("Admin"));
-                        }
-                        await _userManager.AddToRoleAsync(user, "Admin");
+                        await _roleManager.CreateAsync(new IdentityRole("User"));
                     }
 
+                    await _userManager.AddToRoleAsync(user, "User");
+
+                    // Connexion automatique après l'inscription
                     await _signInManager.SignInAsync(user, isPersistent: false);
+
                     return RedirectToAction("Index", "Home");
                 }
 
+                // Gérer les erreurs d'inscription
                 foreach (var error in result.Errors)
                 {
                     _logger.LogWarning("Erreur lors de l'inscription : {Error}", error.Description);
@@ -82,6 +77,7 @@ namespace EcommerceProject.Controllers
 
             return View(model);
         }
+
 
         // GET: Login
         public IActionResult Login()
