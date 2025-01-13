@@ -14,104 +14,58 @@ namespace EcommerceProject.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ApplicationDbContext _context;
 
-         public class AccountController : Controller
-    {
-        private readonly UserManager<IdentityUser> _userManager;
-
-        public AccountController(UserManager<IdentityUser> userManager)
-        {
-            _userManager = userManager;
-        }
-
-        // Forgot Password - GET
-        public IActionResult ForgotPassword()
-        {
-            return View();
-        }
-
-        // Forgot Password - POST
-        [HttpPost]
-        public async Task<IActionResult> ForgotPassword(string email)
-        {
-            if (string.IsNullOrEmpty(email))
-            {
-                ModelState.AddModelError("", "Email is required.");
-                return View();
-            }
-
-            var user = await _userManager.FindByEmailAsync(email);
-            if (user == null)
-            {
-                ModelState.AddModelError("", "No user found with this email.");
-                return View();
-            }
-
-            // Generate reset token
-            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-
-            // Build reset link
-            var resetLink = Url.Action("ResetPassword", "Account", new { token, email = user.Email }, Request.Scheme);
-
-            // Log the reset link (for testing purposes; replace with email logic in production)
-            ViewBag.Message = $"Password reset link: <a href='{resetLink}'>{resetLink}</a>";
-            return View();
-        }
-    }
-
         public AdminController(UserManager<IdentityUser> userManager, ApplicationDbContext context)
         {
             _userManager = userManager;
             _context = context;
         }
 
-        // Dashboard
+        // Tableau de bord
         public IActionResult Dashboard()
         {
             return View();
         }
 
-        // View all users
+        // Liste des utilisateurs
         public IActionResult Users()
         {
             var users = _userManager.Users.ToList();
             return View(users);
         }
 
-        // Add User via Modal
+        // Ajouter un utilisateur
         [HttpPost]
-public async Task<IActionResult> AddUser(string userName, string email, string password)
-{
-    if (ModelState.IsValid)
-    {
-        var user = new IdentityUser
+        public async Task<IActionResult> AddUser(string userName, string email, string password)
         {
-            UserName = userName,
-            Email = email,
-            EmailConfirmed = true // Automatically confirm the email
-        };
+            if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+            {
+                ModelState.AddModelError("", "Tous les champs sont obligatoires.");
+                return RedirectToAction("Users");
+            }
 
-        // Create the user
-        var result = await _userManager.CreateAsync(user, password);
+            var user = new IdentityUser
+            {
+                UserName = userName,
+                Email = email,
+                EmailConfirmed = true
+            };
 
-        if (result.Succeeded)
-        {
-            // Assign a default role
-            await _userManager.AddToRoleAsync(user, "User");
+            var result = await _userManager.CreateAsync(user, password);
+            if (result.Succeeded)
+            {
+                await _userManager.AddToRoleAsync(user, "User");
+                return RedirectToAction("Users");
+            }
 
-            return RedirectToAction("Users"); // Redirect to the Users view
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
+
+            return RedirectToAction("Users");
         }
 
-        // Handle errors during user creation
-        foreach (var error in result.Errors)
-        {
-            ModelState.AddModelError("", error.Description);
-        }
-    }
-
-    return RedirectToAction("Users"); // Redirect in case of failure
-}
-
-        // Edit User via Modal
+        // Modifier un utilisateur
         [HttpPost]
         public async Task<IActionResult> EditUser(string id, string userName, string email)
         {
@@ -138,7 +92,7 @@ public async Task<IActionResult> AddUser(string userName, string email, string p
             return RedirectToAction("Users");
         }
 
-        // Delete User via Modal
+        // Supprimer un utilisateur
         [HttpPost]
         public async Task<IActionResult> DeleteUser(string id)
         {
@@ -150,14 +104,14 @@ public async Task<IActionResult> AddUser(string userName, string email, string p
             return RedirectToAction("Users");
         }
 
-        // List Products
+        // Liste des produits
         public IActionResult Produits()
         {
             var produits = _context.Produits.ToList();
             return View(produits);
         }
 
-        // Add Product
+        // Ajouter un produit
         [HttpPost]
         public async Task<IActionResult> AjouterProduit(Produit produit)
         {
@@ -167,10 +121,11 @@ public async Task<IActionResult> AddUser(string userName, string email, string p
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Produits");
             }
+
             return RedirectToAction("Produits");
         }
 
-        // Edit Product
+        // Modifier un produit
         [HttpPost]
         public async Task<IActionResult> ModifierProduit(Produit produit)
         {
@@ -180,10 +135,11 @@ public async Task<IActionResult> AddUser(string userName, string email, string p
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Produits");
             }
+
             return RedirectToAction("Produits");
         }
 
-        // Delete Product
+        // Supprimer un produit
         [HttpPost]
         public async Task<IActionResult> SupprimerProduit(int id)
         {
@@ -194,6 +150,12 @@ public async Task<IActionResult> AddUser(string userName, string email, string p
                 await _context.SaveChangesAsync();
             }
             return RedirectToAction("Produits");
+        }
+        // Liste des livraisons
+        public IActionResult Order()
+        {
+            var deliveries = _context.Deliveries.ToList(); // Remplacez 'Deliveries' par le nom correct de votre DbSet pour les livraisons
+            return View(deliveries);
         }
     }
 }

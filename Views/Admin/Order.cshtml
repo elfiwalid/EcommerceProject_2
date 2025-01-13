@@ -6,7 +6,7 @@
     @if (!Model.Any())
     {
         <div class="text-center">
-            <p class="lead">Aucune livraison enregistrÃ©e pour le moment.</p>
+            <p class="lead">Aucune livraison enregistrée pour le moment.</p>
             <a href="/Produits" class="btn btn-primary btn-lg">
                 <i class="fas fa-shopping-cart"></i> Commencer mes achats
             </a>
@@ -20,7 +20,7 @@
                 <div class="accordion-item mb-3">
                     <h2 class="accordion-header" id="heading-@delivery.Id">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#delivery-@delivery.Id" aria-expanded="false" aria-controls="delivery-@delivery.Id">
-                            Livraison #@delivery.Id - @delivery.CreatedAt.ToString("dd MMM yyyy Ã  HH:mm")
+                            Livraison #@delivery.Id - @delivery.CreatedAt.ToString("dd MMM yyyy à HH:mm")
                         </button>
                     </h2>
                     <div id="delivery-@delivery.Id" class="accordion-collapse collapse" aria-labelledby="heading-@delivery.Id" data-bs-parent="#deliveryAccordion">
@@ -30,7 +30,7 @@
                             <p><strong>Ville :</strong> @delivery.City</p>
                             <p><strong>Code postal :</strong> @delivery.PostalCode</p>
                             <p><strong>Pays :</strong> @delivery.Country</p>
-                            <p><strong>TÃ©lÃ©phone :</strong> @delivery.PhoneNumber</p>
+                            <p><strong>Téléphone :</strong> @delivery.PhoneNumber</p>
                         </div>
                     </div>
                 </div>
