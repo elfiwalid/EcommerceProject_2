@@ -1,20 +1,125 @@
-    @model IEnumerable<IdentityUser>
-    @using Microsoft.AspNetCore.Identity
 
-    @{
-        ViewData["Title"] = "User Management";
+@model IEnumerable<IdentityUser>
+@using Microsoft.AspNetCore.Identity
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<style>
+    .bg-dark {
+        background: linear-gradient(to right, #003a74,#0053a6 ) !important;}
+    .nav-item .nav-link.active {
+    color: #021c35 !important;
+    background-color: #4a92db !important; /* ou une autre couleur si nécessaire */
+}
+
+ .nav-item .nav-link:hover {
+    color: #ffffff !important;
+    background-color: #021c35;
+}
+
+/* Hover effect on cards */
+    .card:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    <div class="container-fluid py-5">
-        <!-- Page Header -->
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h1 class="fw-bold text-primary">User Management</h1>
-            <button class="btn btn-primary btn-lg shadow-sm" data-bs-toggle="modal" data-bs-target="#addUserModal">
-                <i class="bi bi-person-plus"></i> Add User
-            </button>
-        </div>
+    /* Button hover effect */
+    .btn-outline-primary:hover, .btn-outline-danger:hover {
+        background-color: #f8f9fa;
+        border-color: #75b3f1;
+        color: #75b3f1;
+        transition: all 0.3s ease;
+    }
 
-        <!-- User Grid -->
+    /* Shadow effect for cards */
+    .card {
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Rounded corners */
+    .card-body {
+        border-radius: 10px;
+    }
+
+    /* Button size and padding */
+    .btn-sm {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    /* Modern layout for the modal buttons */
+    .btn-outline-primary, .btn-outline-danger {
+        font-weight: 500;
+        border-radius: 25px;
+    }
+
+    /* Modal buttons style */
+    .modal-footer .btn {
+        border-radius: 30px;
+    }
+    
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-3 col-lg-2 d-md-block bg-dark text-white sidebar">
+            <button class="btn btn-light btn-sm d-md-none my-3 ms-3" id="toggleSidebar">
+                <i class="bi bi-list"></i> Menu
+            </button>
+            <div class="sidebar-sticky pt-3" id="sidebarContent">
+                <h4 class="text-center text-uppercase fw-bold mb-4">Admin Panel</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Admin">
+                            <i class="bi bi-house-door-fill me-2"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Admin/Produits">
+                            <i class="bi bi-box me-2"></i> Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Admin/Orders">
+                            <i class="bi bi-bag me-2"></i> Orders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="/Admin/Users">
+                            <i class="bi bi-people me-2"></i> Users
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Admin/Settings">
+                            <i class="bi bi-gear me-2"></i> Settings
+                        </a>
+                    </li>
+                </ul>
+                <div class="mt-5 text-center">
+                    <a href="/Account/Logout" class="btn btn-danger btn-sm w-75">Logout</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            
+
+<!-- User Management Section -->
+<div class="container-fluid py-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold text-primary">User Management</h1>
+        <button class="btn btn-primary btn-lg shadow-sm" data-bs-toggle="modal" data-bs-target="#addUserModal">
+            <i class="bi bi-person-plus"></i> Add User
+        </button>
+    </div>
+
+            <!-- User Grid -->
         <div class="row g-4">
             @if (!Model.Any())
             {
@@ -100,34 +205,72 @@
         </div>
     </div>
 
-    <!-- Add User Modal -->
-    <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-primary text-white">
-                    <h5 class="modal-title" id="addUserModalLabel">Add New User</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form asp-action="AddUser" method="post">
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label for="UserName" class="form-label">Username</label>
-                            <input type="text" name="UserName" class="form-control shadow-sm" id="UserName" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="Email" class="form-label">Email</label>
-                            <input type="email" name="Email" class="form-control shadow-sm" id="Email" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="Password" class="form-label">Password</label>
-                            <input type="password" name="Password" class="form-control shadow-sm" id="Password" required />
-                        </div>
-              
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-primary">Add User</button>
-                    </div>
-                </form>
+<!-- Add User Modal -->
+<div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="addUserModalLabel">Add New User</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <form asp-action="AddUser" method="post">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="UserName" class="form-label">Username</label>
+                        <input type="text" name="UserName" class="form-control shadow-sm" id="UserName" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Email" class="form-label">Email</label>
+                        <input type="email" name="Email" class="form-control shadow-sm" id="Email" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="Password" class="form-label">Password</label>
+                        <input type="password" name="Password" class="form-control shadow-sm" id="Password" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Add User</button>
+                </div>
+            </form>
         </div>
     </div>
+</div>
+<script>
+    var ctx = document.getElementById('adminDashboardChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Users', 'Products', 'Categories'],
+            datasets: [{
+                label: 'Total Count',
+                data: [
+                    @ViewData["TotalUsers"],
+                    @ViewData["TotalProducts"],
+                    @ViewData["TotalCategories"]
+                ],
+                backgroundColor: ['#4e73df', '#1cc88a', '#f6c23e'],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        font: {
+                            size: 12
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.raw;
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script> 

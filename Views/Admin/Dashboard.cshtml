@@ -2,6 +2,72 @@
     ViewData["Title"] = "Admin Dashboard";
 }
 
+
+<style>
+    #adminDashboardChart {
+        width: 485px !important;
+        height: 485px !important;
+        display: block;
+        
+    }
+
+        .bg-dark {
+        background: linear-gradient(to right, #003a74,#0053a6 ) !important;}
+    .nav-item .nav-link.active {
+    color: #021c35 !important;
+    background-color: #4a92db !important; /* ou une autre couleur si nécessaire */
+}
+
+ .nav-item .nav-link:hover {
+    color: #ffffff !important;
+    background-color: #021c35;
+}
+
+/* Hover effect on cards */
+    .card:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Button hover effect */
+    .btn-outline-primary:hover, .btn-outline-danger:hover {
+        background-color: #f8f9fa;
+        border-color: #75b3f1;
+        color: #75b3f1;
+        transition: all 0.3s ease;
+    }
+
+    /* Shadow effect for cards */
+    .card {
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Rounded corners */
+    .card-body {
+        border-radius: 10px;
+    }
+
+    /* Button size and padding */
+    .btn-sm {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    /* Modern layout for the modal buttons */
+    .btn-outline-primary, .btn-outline-danger {
+        font-weight: 500;
+        border-radius: 25px;
+    }
+
+    /* Modal buttons style */
+    .modal-footer .btn {
+        border-radius: 30px;
+    }
+    
+</style>
+
 <div class="container-fluid">
     <div class="row">
         <!-- Sidebar -->
@@ -13,17 +79,17 @@
                 <h4 class="text-center text-uppercase fw-bold mb-4">Admin Panel</h4>
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link text-white active" href="#">
+                        <a class="nav-link text-white active" href="/Admin">
                             <i class="bi bi-house-door-fill me-2"></i> Dashboard
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white"  href="/Admin/Produits">
+                        <a class="nav-link text-white" href="/Admin/Produits">
                             <i class="bi bi-box me-2"></i> Products
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">
+                        <a class="nav-link text-white" href="/Admin/Orders">
                             <i class="bi bi-bag me-2"></i> Orders
                         </a>
                     </li>
@@ -33,7 +99,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/Admin/ForgotPassword">
+                        <a class="nav-link text-white" href="/Admin/Settings">
                             <i class="bi bi-gear me-2"></i> Settings
                         </a>
                     </li>
@@ -46,10 +112,7 @@
 
         <!-- Main Content -->
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <div class="d-flex justify-content-between align-items-center pt-3 pb-2 mb-3 border-bottom">
-                <h1 class="h4 fw-bold">Welcome Back, Admin</h1>
-                <button class="btn btn-primary btn-lg shadow-sm">Generate Report</button>
-            </div>
+            
 
             <!-- Stats Section -->
             <div class="row g-4 mb-4">
@@ -61,7 +124,7 @@
                             </div>
                             <div>
                                 <h6 class="text-muted">Total Users</h6>
-                                <h4 class="fw-bold">89,935</h4>
+                                <h4 class="fw-bold">@ViewData["TotalUsers"]</h4>
                             </div>
                         </div>
                     </div>
@@ -74,7 +137,7 @@
                             </div>
                             <div>
                                 <h6 class="text-muted">Products</h6>
-                                <h4 class="fw-bold">23,283</h4>
+                                <h4 class="fw-bold">@ViewData["TotalProducts"]</h4>
                             </div>
                         </div>
                     </div>
@@ -83,86 +146,67 @@
                     <div class="card shadow-sm border-0">
                         <div class="card-body d-flex align-items-center">
                             <div class="icon bg-warning text-white rounded-circle p-3 me-3">
-                                <i class="bi bi-cart fs-3"></i>
+                                <i class="bi bi-tags fs-3"></i>
                             </div>
                             <div>
-                                <h6 class="text-muted">New Orders</h6>
-                                <h4 class="fw-bold">46,827</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card shadow-sm border-0">
-                        <div class="card-body d-flex align-items-center">
-                            <div class="icon bg-danger text-white rounded-circle p-3 me-3">
-                                <i class="bi bi-currency-dollar fs-3"></i>
-                            </div>
-                            <div>
-                                <h6 class="text-muted">Earnings</h6>
-                                <h4 class="fw-bold">$124,854</h4>
+                                <h6 class="text-muted">Categories</h6>
+                                <h4 class="fw-bold">@ViewData["TotalCategories"]</h4>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Recent Orders -->
+            <!-- Chart Section -->
             <div class="card shadow-sm mt-4">
                 <div class="card-header bg-primary text-white">
-                    <h5 class="mb-0">Recent Orders</h5>
+                    <h5 class="mb-0">Product, User & Category Distribution</h5>
                 </div>
                 <div class="card-body">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Order ID</th>
-                                <th>Date</th>
-                                <th>Customer</th>
-                                <th>Amount</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>#12594</td>
-                                <td>Dec 1, 2021</td>
-                                <td>John Doe</td>
-                                <td>$847.69</td>
-                                <td><span class="badge bg-success">Completed</span></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>#12595</td>
-                                <td>Dec 2, 2021</td>
-                                <td>Jane Doe</td>
-                                <td>$1,200.00</td>
-                                <td><span class="badge bg-warning">Pending</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <canvas id="adminDashboardChart" style="display: block; box-sizing: border-box; height: 485px; width: 485px;"></canvas>
                 </div>
             </div>
         </main>
     </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Chart.js Script -->
 <script>
-    const salesCtx = document.getElementById('salesChart').getContext('2d');
-    const salesChart = new Chart(salesCtx, {
-        type: 'line',
+    var ctx = document.getElementById('adminDashboardChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'doughnut', // Doughnut chart for a circular design
         data: {
-            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            labels: ['Users', 'Products', 'Categories'], // Labels for the chart
             datasets: [{
-                label: 'Sales',
-                data: [1200, 1900, 3000, 5000, 2000, 3000],
-                borderColor: 'rgba(54, 162, 235, 1)',
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                tension: 0.3
+                label: 'Total Count',
+                data: [
+                    @ViewData["TotalUsers"],   // Total users
+                    @ViewData["TotalProducts"], // Total products
+                    @ViewData["TotalCategories"] // Total categories
+                ],
+                backgroundColor: ['#4e73df', '#1cc88a', '#f6c23e'], // Slice colors
+                borderWidth: 1
             }]
+        },
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: {
+                        font: {
+                            size: 12 // Ajuster la taille de la police de la légende
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.raw;
+                        }
+                    }
+                }
+            }
         }
     });
 </script>

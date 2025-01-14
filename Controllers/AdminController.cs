@@ -66,9 +66,17 @@ namespace EcommerceProject.Controllers
 
         // Dashboard
         public IActionResult Dashboard()
-        {
-            return View();
-        }
+{
+    var totalUsers = _context.Users.Count();
+    var totalProducts = _context.Produits.Count();
+    var totalCategories = _context.Categories.Count();
+
+    ViewData["TotalUsers"] = totalUsers;
+    ViewData["TotalProducts"] = totalProducts;
+    ViewData["TotalCategories"] = totalCategories;
+
+    return View();
+}
 
         // View all users
         public IActionResult Users()

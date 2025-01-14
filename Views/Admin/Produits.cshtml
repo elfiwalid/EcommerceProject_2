@@ -4,125 +4,227 @@
     ViewData["Title"] = "Product Management Dashboard";
 }
 
-<div class="container-fluid py-5">
-    <!-- Header -->
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1 class="fw-bold text-danger">Product Management</h1>
-        <button class="btn btn-danger btn-lg shadow-sm" data-bs-toggle="modal" data-bs-target="#addProductModal">
-            <i class="bi bi-plus-circle"></i> Add Product
-        </button>
-    </div>
+<style>
+    .bg-dark {
+        background: linear-gradient(to right, #003a74,#0053a6 ) !important;}
+    .nav-item .nav-link.active {
+    color: #021c35 !important;
+    background-color: #4a92db !important; /* ou une autre couleur si nécessaire */
+}
 
-    <!-- Search and Filter Section -->
-    <div class="row mb-4">
-        <div class="col-md-6">
-            <input type="text" id="searchBox" class="form-control shadow-sm" placeholder="Search products...">
-        </div>
-        <div class="col-md-4">
-            <select id="categoryFilter" class="form-select shadow-sm">
-                <option value="">All Categories</option>
-                @foreach (var category in Model.Select(p => string.IsNullOrEmpty(p.Categorie) ? "Uncategorized" : p.Categorie).Distinct())
-                {
-                    <option value="@category">@category</option>
-                }
-            </select>
-        </div>
-        <div class="col-md-2 text-end">
-            <button class="btn btn-outline-dark btn-sm shadow-sm" id="resetFilters">
-                <i class="bi bi-arrow-clockwise"></i> Reset Filters
+ .nav-item .nav-link:hover {
+    color: #ffffff !important;
+    background-color: #021c35;
+}
+
+.text-danger {
+    color: #0080ff!important;
+}
+
+/* Hover effect on cards */
+    .card:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Button hover effect */
+    .btn-outline-primary:hover, .btn-outline-danger:hover {
+        background-color: #f8f9fa;
+        border-color: #75b3f1;
+        color: #75b3f1;
+        transition: all 0.3s ease;
+    }
+
+    /* Shadow effect for cards */
+    .card {
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Rounded corners */
+    .card-body {
+        border-radius: 10px;
+    }
+
+    /* Button size and padding */
+    .btn-sm {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    /* Modern layout for the modal buttons */
+    .btn-outline-primary, .btn-outline-danger {
+        font-weight: 500;
+        border-radius: 25px;
+    }
+
+    /* Modal buttons style */
+    .modal-footer .btn {
+        border-radius: 30px;
+    }
+    
+</style>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-3 col-lg-2 d-md-block bg-dark text-white sidebar">
+            <button class="btn btn-light btn-sm d-md-none my-3 ms-3" id="toggleSidebar">
+                <i class="bi bi-list"></i> Menu
             </button>
-        </div>
-    </div>
+            <div class="sidebar-sticky pt-3" id="sidebarContent">
+                <h4 class="text-center text-uppercase fw-bold mb-4">Admin Panel</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Admin">
+                            <i class="bi bi-house-door-fill me-2"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="/Admin/Produits">
+                            <i class="bi bi-box me-2"></i> Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Admin/Orders">
+                            <i class="bi bi-bag me-2"></i> Orders
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Admin/Users">
+                            <i class="bi bi-people me-2"></i> Users
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Admin/Settings">
+                            <i class="bi bi-gear me-2"></i> Settings
+                        </a>
+                    </li>
+                </ul>
+                <div class="mt-5 text-center">
+                    <a href="/Account/Logout" class="btn btn-danger btn-sm w-75">Logout</a>
+                </div>
+            </div>
+        </nav>
+        <!-- Main Content -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1 class="fw-bold text-danger">Product Management</h1>
+                <button class="btn btn-danger btn-lg shadow-sm" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                    <i class="bi bi-plus-circle"></i> Add Product
+                </button>
+            </div>
 
-    <!-- Product Grid -->
-    <div id="productGrid" class="row g-4">
-        @foreach (var product in Model)
-        {
-            <div class="col-md-4">
-                <div class="card h-100 shadow-sm border-0">
-                    <img src="@product.ImageUrl" class="card-img-top" alt="@product.Nom" style="height: 200px; object-fit: cover;">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold text-truncate">@product.Nom</h5>
-                        <p class="card-text text-muted text-truncate">@product.Description</p>
-                        <p class="text-success fw-bold">$@product.Prix</p>
-                        <p class="text-muted"><small>Category: @(string.IsNullOrEmpty(product.Categorie) ? "Uncategorized" : product.Categorie)</small></p>
-                    </div>
-                    <div class="card-footer bg-white border-0 d-flex justify-content-between">
-                        <button class="btn btn-warning btn-sm shadow-sm" data-bs-toggle="modal" data-bs-target="#editProductModal-@product.Id">
+            <!-- Search and Filter Section -->
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <input type="text" id="searchBox" class="form-control shadow-sm" placeholder="Search products...">
+                </div>
+                <div class="col-md-4">
+                    <select id="categoryFilter" class="form-select shadow-sm">
+                        <option value="">All Categories</option>
+                        @foreach (var category in Model.Select(p => string.IsNullOrEmpty(p.Categorie) ? "Uncategorized" : p.Categorie).Distinct())
+                        {
+                            <option value="@category">@category</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-md-2 text-end">
+                    <button class="btn btn-outline-dark btn-sm shadow-sm" id="resetFilters">
+                        <i class="bi bi-arrow-clockwise"></i> Reset Filters
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+<div id="productGrid" class="row g-4">
+    @foreach (var product in Model)
+    {
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card h-100 border-0 shadow-sm rounded-3 hover-shadow">
+                <img src="@product.ImageUrl" class="card-img-top rounded-top" alt="@product.Nom" style="height: 150px; object-fit: contain;">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title text-truncate fw-bold">@product.Nom</h5>
+                    <p class="card-text text-muted text-truncate" style="font-size: 0.9rem;">@product.Description</p>
+                    <p class="text-success fw-bold" style="font-size: 1.1rem;">$@product.Prix</p>
+                    <p class="text-muted"><small>Category: @(string.IsNullOrEmpty(product.Categorie) ? "Uncategorized" : product.Categorie)</small></p>
+                    <div class="d-flex justify-content-between mt-auto">
+                        <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editProductModal-@product.Id">
                             <i class="bi bi-pencil-square"></i> Edit
                         </button>
-                        <button class="btn btn-danger btn-sm shadow-sm" data-bs-toggle="modal" data-bs-target="#deleteProductModal-@product.Id">
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteProductModal-@product.Id">
                             <i class="bi bi-trash"></i> Delete
                         </button>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Edit Product Modal -->
-            <div class="modal fade" id="editProductModal-@product.Id" tabindex="-1" aria-labelledby="editProductModalLabel-@product.Id" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header bg-danger text-white">
-                            <h5 class="modal-title" id="editProductModalLabel-@product.Id">Edit Product</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <form asp-action="ModifierProduit" method="post">
-                            <div class="modal-body">
-                                <input type="hidden" name="Id" value="@product.Id" />
-                                <div class="mb-3">
-                                    <label for="Nom-@product.Id" class="form-label">Name</label>
-                                    <input type="text" name="Nom" class="form-control shadow-sm" id="Nom-@product.Id" value="@product.Nom" required />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="Description-@product.Id" class="form-label">Description</label>
-                                    <textarea name="Description" class="form-control shadow-sm" id="Description-@product.Id" required>@product.Description</textarea>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="Prix-@product.Id" class="form-label">Price</label>
-                                    <input type="number" name="Prix" class="form-control shadow-sm" id="Prix-@product.Id" value="@product.Prix" required />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="Categorie-@product.Id" class="form-label">Category</label>
-                                    <input type="text" name="Categorie" class="form-control shadow-sm" id="Categorie-@product.Id" value="@product.Categorie" required />
-                                </div>
-                                <div class="mb-3">
-                                    <label for="ImageUrl-@product.Id" class="form-label">Image URL</label>
-                                    <input type="text" name="ImageUrl" class="form-control shadow-sm" id="ImageUrl-@product.Id" value="@product.ImageUrl" required />
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-danger">Save Changes</button>
-                            </div>
-                        </form>
+        <!-- Edit Product Modal -->
+        <div class="modal fade" id="editProductModal-@product.Id" tabindex="-1" aria-labelledby="editProductModalLabel-@product.Id" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-danger text-white">
+                        <h5 class="modal-title" id="editProductModalLabel-@product.Id">Edit Product</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <form asp-action="ModifierProduit" method="post">
+                        <div class="modal-body">
+                            <input type="hidden" name="Id" value="@product.Id" />
+                            <div class="mb-3">
+                                <label for="Nom-@product.Id" class="form-label">Name</label>
+                                <input type="text" name="Nom" class="form-control shadow-sm" id="Nom-@product.Id" value="@product.Nom" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="Description-@product.Id" class="form-label">Description</label>
+                                <textarea name="Description" class="form-control shadow-sm" id="Description-@product.Id" required>@product.Description</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="Prix-@product.Id" class="form-label">Price</label>
+                                <input type="number" name="Prix" class="form-control shadow-sm" id="Prix-@product.Id" value="@product.Prix" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="Categorie-@product.Id" class="form-label">Category</label>
+                                <input type="text" name="Categorie" class="form-control shadow-sm" id="Categorie-@product.Id" value="@product.Categorie" required />
+                            </div>
+                            <div class="mb-3">
+                                <label for="ImageUrl-@product.Id" class="form-label">Image URL</label>
+                                <input type="text" name="ImageUrl" class="form-control shadow-sm" id="ImageUrl-@product.Id" value="@product.ImageUrl" required />
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger">Save Changes</button>
+                        </div>
+                    </form>
                 </div>
             </div>
+        </div>
 
-            <!-- Delete Product Modal -->
-            <div class="modal fade" id="deleteProductModal-@product.Id" tabindex="-1" aria-labelledby="deleteProductModalLabel-@product.Id" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header bg-danger text-white">
-                            <h5 class="modal-title" id="deleteProductModalLabel-@product.Id">Delete Product</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <form asp-action="SupprimerProduit" method="post">
-                            <div class="modal-body">
-                                <p>Are you sure you want to delete <strong>@product.Nom</strong>?</p>
-                                <input type="hidden" name="Id" value="@product.Id" />
-                            </div>
-                            <div class="modal-footer">
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            </div>
-                        </form>
+        <!-- Delete Product Modal -->
+        <div class="modal fade" id="deleteProductModal-@product.Id" tabindex="-1" aria-labelledby="deleteProductModalLabel-@product.Id" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-danger text-white">
+                        <h5 class="modal-title" id="deleteProductModalLabel-@product.Id">Delete Product</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <form asp-action="SupprimerProduit" method="post">
+                        <div class="modal-body">
+                            <p>Are you sure you want to delete <strong>@product.Nom</strong>?</p>
+                            <input type="hidden" name="Id" value="@product.Id" />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-        }
-    </div>
+        </div>
+    }
 </div>
-
 <!-- Add Product Modal -->
 <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
     <div class="modal-dialog">
