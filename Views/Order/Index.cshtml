@@ -1,50 +1,161 @@
-@model List<EcommerceProject.Models.Order>
+@model List<EcommerceProject.Models.DeliveryViewModel>
+
+
+<style>
+    #adminDashboardChart {
+        width: 485px !important;
+        height: 485px !important;
+        display: block;
+        
+    }
+
+        .bg-dark {
+        background: linear-gradient(to right, #003a74,#0053a6 ) !important;}
+    .nav-item .nav-link.active {
+    color: #021c35 !important;
+    background-color: #4a92db !important; /* ou une autre couleur si nécessaire */
+}
+
+ .nav-item .nav-link:hover {
+    color: #ffffff !important;
+    background-color: #021c35;
+}
+
+/* Hover effect on cards */
+    .card:hover {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Button hover effect */
+    .btn-outline-primary:hover, .btn-outline-danger:hover {
+        background-color: #f8f9fa;
+        border-color: #75b3f1;
+        color: #75b3f1;
+        transition: all 0.3s ease;
+    }
+
+    /* Shadow effect for cards */
+    .card {
+        border: none;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Rounded corners */
+    .card-body {
+        border-radius: 10px;
+    }
+
+    /* Button size and padding */
+    .btn-sm {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    /* Modern layout for the modal buttons */
+    .btn-outline-primary, .btn-outline-danger {
+        font-weight: 500;
+        border-radius: 25px;
+    }
+
+    /* Modal buttons style */
+    .modal-footer .btn {
+        border-radius: 30px;
+    }
+
+    .sidebar {
+    height: 100vh; /* Hauteur de la sidebar sur toute la hauteur de la fenêtre */
+    padding-top: 20px; /* Un peu de marge en haut */
+    position: fixed; /* Rendre la sidebar fixe sur la page */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px; /* Largeur fixe */
+    z-index: 100; /* Assurez-vous qu'elle se trouve au-dessus des autres éléments */
+}
+    
+</style>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-md-3 col-lg-2 d-md-block bg-dark text-white sidebar">
+            <button class="btn btn-light btn-sm d-md-none my-3 ms-3" id="toggleSidebar">
+                <i class="bi bi-list"></i> Menu
+            </button>
+            <div class="sidebar-sticky pt-3" id="sidebarContent">
+                <h4 class="text-center text-uppercase fw-bold mb-4">Admin Panel</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Admin">
+                            <i class="bi bi-house-door-fill me-2"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Admin/Produits">
+                            <i class="bi bi-box me-2"></i> Products
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="/Order">
+                            <i class="bi bi-bag me-2"></i> Order
+                        </a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Admin/Users">
+                            <i class="bi bi-people me-2"></i> Users
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Admin/Settings">
+                            <i class="bi bi-gear me-2"></i> Settings
+                        </a>
+                    </li>
+                </ul>
+                <div class="mt-5 text-center">
+                    <a href="/Account/Logout" class="btn btn-danger btn-sm w-75">Logout</a>
+                </div>
+            </div>
+        </nav>
+
+
 
 <div class="container py-5">
-    <h1 class="text-center mb-4">Mes Commandes</h1>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold text-primary">Liste Livraison</h1>
+    </div>
 
     @if (!Model.Any())
     {
         <div class="text-center">
-            <p class="lead">Vous n'avez pas encore passé de commande.</p>
-            <a href="/Produits" class="btn btn-primary btn-lg">Commencer mes achats</a>
+            <p class="lead">Aucune livraison enregistrée pour le moment.</p>
+            <a href="/Produits" class="btn btn-primary btn-lg">
+                <i class="fas fa-shopping-cart"></i> Commencer mes achats
+            </a>
         </div>
     }
     else
     {
-        <div class="accordion" id="ordersAccordion">
-            @foreach (var order in Model)
+        <div class="accordion" id="deliveryAccordion">
+            @foreach (var delivery in Model)
             {
                 <div class="accordion-item mb-3">
-                    <h2 class="accordion-header" id="heading-@order.OrderId">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#order-@order.OrderId" aria-expanded="false" aria-controls="order-@order.OrderId">
-                            Commande #@order.OrderId - @order.OrderDate.ToString("dd MMM yyyy")
+                    <h2 class="accordion-header" id="heading-@delivery.Id">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#delivery-@delivery.Id" aria-expanded="false" aria-controls="delivery-@delivery.Id">
+                            Livraison #@delivery.Id - @delivery.CreatedAt.ToString("dd MMM yyyy à HH:mm")
                         </button>
                     </h2>
-                    <div id="order-@order.OrderId" class="accordion-collapse collapse" aria-labelledby="heading-@order.OrderId" data-bs-parent="#ordersAccordion">
+                    <div id="delivery-@delivery.Id" class="accordion-collapse collapse" aria-labelledby="heading-@delivery.Id" data-bs-parent="#deliveryAccordion">
                         <div class="accordion-body">
-                            <h5>Total : @order.TotalAmount €</h5>
-                            <table class="table mt-3">
-                                <thead>
-                                    <tr>
-                                        <th>Produit</th>
-                                        <th>Quantité</th>
-                                        <th>Prix</th>
-                                        <th>Total</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (var item in order.Items)
-                                    {
-                                        <tr>
-                                            <td>@item.Nom</td>
-                                            <td>@item.Quantite</td>
-                                            <td>@item.Prix €</td>
-                                            <td>@(item.Quantite * item.Prix) €</td>
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
+                            <p><strong>Nom complet :</strong> @delivery.FullName</p>
+                            <p><strong>Adresse :</strong> @delivery.Address</p>
+                            <p><strong>Ville :</strong> @delivery.City</p>
+                            <p><strong>Code postal :</strong> @delivery.PostalCode</p>
+                            <p><strong>Pays :</strong> @delivery.Country</p>
+                            <p><strong>Téléphone :</strong> @delivery.PhoneNumber</p>
                         </div>
                     </div>
                 </div>

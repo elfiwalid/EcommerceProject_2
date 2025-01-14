@@ -1,11 +1,20 @@
 using Microsoft.AspNetCore.Mvc;
 using EcommerceProject.Models;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using EcommerceProject.Data;
+using EcommerceProject.Models;
 
 namespace EcommerceProject.Controllers
 {
     public class OrderController : Controller
     {
+        private readonly ApplicationDbContext _context;
+
+        public OrderController(ApplicationDbContext context)
+        {
+            _context = context;
+        }
         // Simulating orders data for demonstration
         private static List<Order> orders = new List<Order>
         {
@@ -46,18 +55,17 @@ namespace EcommerceProject.Controllers
         };
 
         // Retourner les commandes d'un utilisateur spécifique
-        public IActionResult Index()
-        {
-            // Simulate getting the logged-in user's ID
-            string currentUserId = "user1"; // Replace with actual user ID retrieval logic
-            var userOrders = orders.Where(o => o.UserId == currentUserId).ToList();
-
-            return View(userOrders);
-        }
+       
 
         // Retourner toutes les commandes (pour administrateurs ou gestionnaires)
         public IActionResult GetAllOrders()
         {
+            return View(orders);
+        }
+        [HttpGet]
+        public IActionResult Index()
+        {
+            var orders = _context.Deliveries.ToList();
             return View(orders);
         }
     }

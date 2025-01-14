@@ -68,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vTW9kaWZpZXJQcm9kdWl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/walid1234/Téléchargements/EcommerceProject/Views/Admin/Order.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vT3JkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/walid1234/Téléchargements/EcommerceProject/Views/Admin/Produits.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vUHJvZHVpdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -52,5 +52,11 @@ namespace EcommerceProject.Controllers
             ViewBag.Message = TempData["Message"] ?? "Informations de livraison soumises.";
             return View();
         }
+        [HttpGet]
+        public IActionResult List()
+        {
+            var deliveries = _context.Deliveries.ToList();
+            return View(deliveries);
+        }
     }
 }

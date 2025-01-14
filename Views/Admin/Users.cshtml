@@ -19,6 +19,17 @@
     background-color: #021c35;
 }
 
+.sidebar {
+    height: 100vh; /* Hauteur de la sidebar sur toute la hauteur de la fenêtre */
+    padding-top: 20px; /* Un peu de marge en haut */
+    position: fixed; /* Rendre la sidebar fixe sur la page */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px; /* Largeur fixe */
+    z-index: 100; /* Assurez-vous qu'elle se trouve au-dessus des autres éléments */
+}
+
 /* Hover effect on cards */
     .card:hover {
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -85,7 +96,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="/Admin/Orders">
+                        <a class="nav-link text-white" href="/Order">
                             <i class="bi bi-bag me-2"></i> Orders
                         </a>
                     </li>
